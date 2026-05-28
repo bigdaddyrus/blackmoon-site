@@ -1,0 +1,1583 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ─── SEO META ────────────────────────────────────────────── -->
+  <title>Blackmoon | Vinyl Listening Bar in Beijing</title>
+  <meta name="description" content="黑月 · 乌鸦 · 古耳 — a trinity of vinyl, dining, and coffee in Beijing's Beiluoguxiang hutongs. Daytime roastery by 古耳, evening kitchen by 乌鸦, and a wax-only listening room by 黑月." />
+  <link rel="canonical" href="https://blackmoon.bar/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blackmoon | Vinyl Listening Bar in Beijing" />
+  <meta property="og:description" content="黑月 · 乌鸦 · 古耳 — vinyl, dining &amp; coffee in one hutong courtyard. Jazz, soul, hip-hop on wax." />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <link rel="alternate" hreflang="en" href="https://blackmoon.bar/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://blackmoon.bar/zh/" />
+  <link rel="alternate" hreflang="x-default" href="https://blackmoon.bar/" />
+
+  <!-- ─── JSON-LD: LocalBusiness / Bar ────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["BarOrPub", "Restaurant"],
+    "name": "Blackmoon Listening Bar 黑月",
+    "description": "Vinyl listening bar and sanctuary for roots music in Beijing's Beiluoguxiang hutongs. Hi-fi analog sound; a core curation of Hip-hop, Soul/Funk, Jazz and City Pop; craft beers and signature pours.",
+    "url": "https://blackmoon.bar/",
+    "image": "https://blackmoon.bar/og.jpg",
+    "telephone": "+86-10-XXXX-XXXX",
+    "priceRange": "$$",
+    "servesCuisine": ["Bar", "Snacks", "Asian"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "33 1/3 Beiluoguxiang",
+      "addressLocality": "Dongcheng District",
+      "addressRegion": "Beijing",
+      "postalCode": "100000",
+      "addressCountry": "CN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.9420",
+      "longitude": "116.4030"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "name": "Coffee (by 古耳)", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "name": "Bar", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "17:30", "closes": "01:00" },
+      { "@type": "OpeningHoursSpecification", "name": "Bar", "dayOfWeek": ["Friday","Saturday"], "opens": "17:30", "closes": "02:00" },
+      { "@type": "OpeningHoursSpecification", "name": "Bar", "dayOfWeek": ["Sunday"], "opens": "16:00", "closes": "00:00" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/blackmoon.beijing/",
+      "https://www.xiaohongshu.com/user/profile/blackmoon"
+    ]
+  }
+  </script>
+
+  <!-- ─── ANALYTICS placeholder (Plausible) ───────────────────── -->
+  <!-- <script defer data-domain="blackmoon.bar" src="https://plausible.io/js/script.js"></script> -->
+
+  <!-- ─── Fonts ──────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@300;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:          #0a0a0a;
+      --bg-2:        #121212;
+      --bg-3:        #161616;
+      --fg:          #ece8e1;       /* warm off-white */
+      --fg-dim:      #9a948a;
+      --fg-faint:    #5a544c;
+      --rule:        #232220;
+      --rule-soft:   #1a1917;
+      --accent:      #c89860;       /* tungsten amber */
+      --accent-2:    #8a5a2b;
+
+      --f-display: 'Cormorant Garamond', 'Noto Serif SC', ui-serif, Georgia, serif;
+      --f-body:    'DM Sans', ui-sans-serif, system-ui, sans-serif;
+      --f-mono:    'JetBrains Mono', ui-monospace, monospace;
+      --f-cn:      'Noto Serif SC', 'Cormorant Garamond', serif;
+
+      --max: 1240px;
+      --pad: clamp(20px, 4vw, 56px);
+    }
+
+    /* Subtle film-grain overlay — vinyl/analog texture */
+    body::before{
+      content:"";position:fixed;inset:0;z-index:1000;pointer-events:none;
+      opacity:0.06;mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.92  0 0 0 0 0.85  0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      background-size:200px 200px;
+    }
+    /* Vignette to deepen the room corners */
+    body::after{
+      content:"";position:fixed;inset:0;z-index:999;pointer-events:none;
+      background:radial-gradient(ellipse 90% 70% at 50% 50%, transparent 40%, rgba(0,0,0,0.55) 100%);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-weight:300;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+    html{overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img,svg{display:block;max-width:100%}
+    ::selection{background:var(--accent);color:var(--bg)}
+    html{scroll-behavior:smooth}
+
+    /* ─── Typography utilities ─── */
+    .display{font-family:var(--f-display);font-weight:300;letter-spacing:-0.01em;line-height:1.02}
+    .mono{font-family:var(--f-mono);font-size:11px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--fg-dim)}
+    .cn{font-family:var(--f-cn);font-weight:300}
+    .eyebrow{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-faint)}
+
+    /* ─── Layout ─── */
+    .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+    section{position:relative;border-top:1px solid var(--rule)}
+    section:first-of-type{border-top:0}
+
+    /* ─── Top nav ─── */
+    .nav{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);background:rgba(10,10,10,0.82);border-bottom:1px solid var(--rule-soft)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+    /* Logo mark — SVG as mask so it inherits currentColor */
+    .brand-mark{width:30px;height:30px;display:inline-block;flex-shrink:0;
+      background-color:var(--fg);
+      -webkit-mask:url('assets/blackmoon-logo.svg') center / contain no-repeat;
+              mask:url('assets/blackmoon-logo.svg') center / contain no-repeat;
+      filter:drop-shadow(0 0 14px rgba(200,152,96,0.22))}
+    .brand-mark.lg{width:54px;height:54px}
+    .brand{display:flex;align-items:center;gap:12px;font-family:var(--f-display);font-size:18px;letter-spacing:0.01em}
+    .brand-cn{font-family:var(--f-cn);color:var(--fg-dim);font-size:14px;margin-left:2px}
+    .nav ul{list-style:none;display:flex;gap:28px;align-items:center}
+    .nav ul a{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-dim);transition:color .2s}
+    .nav ul a:hover{color:var(--fg)}
+    .nav-cta{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--rule);border-radius:999px;transition:all .2s}
+    .nav-cta:hover{border-color:var(--accent);color:var(--accent)}
+    @media (max-width: 720px){ .nav ul{display:none} }
+
+    /* ─── Hero ─── */
+    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;padding-bottom:64px;position:relative;overflow:hidden}
+    .hero-media{position:absolute;inset:0;z-index:0;background-image:url('assets/hero.jpg');background-size:cover;background-position:center;filter:brightness(0.78) saturate(1.05)}
+    .hero-media::after{content:"";position:absolute;inset:0;background:
+      radial-gradient(ellipse 70% 55% at 50% 45%, transparent 0%, rgba(10,10,10,0.55) 65%, var(--bg) 100%),
+      linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.15) 25%, rgba(10,10,10,0.25) 55%, var(--bg) 100%),
+      linear-gradient(90deg, rgba(10,10,10,0.45) 0%, transparent 35%, transparent 65%, rgba(10,10,10,0.45) 100%)}
+    .hero-placeholder{position:absolute;inset:0;display:grid;place-items:center;
+      background:
+        radial-gradient(circle at 65% 50%, oklch(0.25 0.01 60) 0%, oklch(0.16 0.008 60) 35%, var(--bg) 70%),
+        repeating-linear-gradient(45deg, transparent 0 22px, color-mix(in oklch,var(--fg-faint) 6%,transparent) 22px 23px)}
+    .record{position:absolute;right:-8%;top:50%;transform:translateY(-50%);width:min(78vh,860px);aspect-ratio:1;border-radius:50%;
+      background:
+        radial-gradient(circle at center, oklch(0.32 0.02 30) 0 14%, oklch(0.13 0.006 60) 14.1% 15.5%, var(--accent) 15.6% 16.2%, oklch(0.13 0.006 60) 16.3% 18%, oklch(0.16 0 0) 18.1% 100%),
+        repeating-radial-gradient(circle at center, color-mix(in oklch,var(--fg-faint) 0%,transparent) 0 1.5px, color-mix(in oklch,var(--fg-faint) 14%,transparent) 1.5px 2px);
+      box-shadow:0 60px 120px -20px oklch(0 0 0 / 0.7), inset 0 0 60px oklch(0 0 0 / 0.6);
+      opacity:0.55;animation:spin 28s linear infinite}
+    @keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+    .hero-content{position:relative;z-index:2}
+    .hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:36px}
+    .hero-eyebrow .bar{width:48px;height:1px;background:var(--accent)}
+    .hero-title{font-size:clamp(64px, 12vw, 168px);font-weight:300;margin-bottom:18px}
+    .hero-title .ital{font-style:italic;color:var(--accent)}
+    .hero-subtitle{font-family:var(--f-display);font-size:clamp(20px,2.6vw,30px);font-weight:300;color:var(--fg-dim);max-width:620px;line-height:1.35;margin-bottom:48px;font-style:italic}
+    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;font-family:var(--f-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;border:1px solid var(--rule);transition:all .25s ease;color:var(--fg)}
+    .btn .arr{transition:transform .25s ease}
+    .btn:hover .arr{transform:translateX(4px)}
+    .btn-primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+    .btn-primary:hover{background:#d9a868;border-color:#d9a868}
+    .btn-ghost{background:transparent;color:var(--fg);border-color:var(--rule)}
+    .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+    .nav-cta{border-radius:0 !important}
+
+    .hero-foot{position:absolute;left:var(--pad);right:var(--pad);bottom:24px;display:flex;justify-content:space-between;align-items:flex-end;z-index:2;gap:24px;flex-wrap:wrap}
+    .hero-foot .col{display:flex;flex-direction:column;gap:6px}
+    .hero-foot .val{font-family:var(--f-display);font-size:18px;color:var(--fg)}
+
+    /* ─── Section headers ─── */
+    .sec{padding:120px 0 120px}
+    .sec-head{display:grid;grid-template-columns:120px 1fr;gap:48px;margin-bottom:72px;align-items:start}
+    @media (max-width:720px){ .sec-head{grid-template-columns:1fr;gap:16px} .sec{padding:80px 0} }
+    .sec-num{font-family:var(--f-mono);font-size:11px;letter-spacing:0.2em;color:var(--fg-faint);padding-top:14px}
+    .sec-title{font-family:var(--f-display);font-size:clamp(44px,6vw,80px);font-weight:300;letter-spacing:-0.01em;line-height:1.02}
+    .sec-title .ital{font-style:italic;color:var(--accent)}
+    .sec-title .cn{display:block;font-size:0.42em;color:var(--fg-faint);margin-top:14px;letter-spacing:0.04em}
+
+    /* ─── Sound section ─── */
+    .sound-grid{display:grid;grid-template-columns:120px 1fr 1fr;gap:48px}
+    @media (max-width:880px){ .sound-grid{grid-template-columns:1fr;gap:36px} }
+    .sound-lede{font-family:var(--f-display);font-size:clamp(22px,2.4vw,28px);line-height:1.4;color:var(--fg);font-weight:300}
+    .sound-lede .accent{color:var(--accent);font-style:italic}
+    .sound-body p{color:var(--fg-dim);margin-bottom:18px;max-width:46ch}
+    .core{margin-top:48px;border-top:1px solid var(--rule);padding-top:32px;display:grid;grid-template-columns:120px 1fr;gap:48px;align-items:start}
+    @media (max-width:880px){ .core{grid-template-columns:1fr;gap:18px} }
+    .core-label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-faint)}
+    .core-line{font-family:var(--f-display);font-style:italic;font-size:clamp(20px,2vw,24px);line-height:1.5;color:var(--fg);font-weight:300;max-width:48ch}
+    .core-line .accent{color:var(--accent);font-style:normal;font-weight:400}
+
+    .genres{display:flex;gap:8px;flex-wrap:wrap;margin-top:36px}
+    .genre{padding:9px 14px;border:1px solid var(--rule);font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim)}
+    .genre.on{color:var(--accent);border-color:var(--accent)}
+
+    /* ─── Marquee divider ─── */
+    .marquee{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);overflow:hidden;white-space:nowrap;padding:22px 0;display:flex;gap:48px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+    .marquee-track{display:inline-flex;gap:48px;animation:slide 40s linear infinite;font-family:var(--f-display);font-size:clamp(28px,4vw,44px);font-style:italic;color:var(--fg-dim);white-space:nowrap}
+    .marquee-track span{display:inline-flex;align-items:center;gap:48px}
+    .marquee-track .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+    @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ─── Location ─── */
+    .loc-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:stretch}
+    @media (max-width:880px){ .loc-grid{grid-template-columns:1fr;gap:36px} }
+    .map-card{position:relative;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--rule);background:var(--bg-2);transition:transform .35s ease, border-color .35s ease}
+    .map-card:hover{border-color:var(--accent)}
+    .map-svg{position:absolute;inset:0;width:100%;height:100%}
+    .map-pin{position:absolute;left:54%;top:50%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:6px}
+    .map-pin-dot{width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px color-mix(in oklch,var(--accent) 24%,transparent),0 0 24px var(--accent);animation:pulse 2.4s ease-in-out infinite}
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 6px color-mix(in oklch,var(--accent) 24%,transparent),0 0 24px var(--accent)}50%{box-shadow:0 0 0 14px color-mix(in oklch,var(--accent) 6%,transparent),0 0 28px var(--accent)}}
+    .map-pin-label{font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg);background:rgba(10,10,10,0.85);padding:4px 8px;border:1px solid var(--rule)}
+    .map-overlay{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;align-items:flex-end;pointer-events:none}
+    .map-overlay:hover{border-color:var(--accent)}
+    .map-coord{font-family:var(--f-mono);font-size:10px;letter-spacing:0.12em;color:var(--fg-dim);background:rgba(10,10,10,0.75);padding:4px 8px;border:1px solid var(--rule-soft)}
+
+    .addr{display:flex;flex-direction:column;gap:28px;font-style:normal}
+    .addr-block{display:flex;flex-direction:column;gap:8px}
+    .addr-label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-faint)}
+    .addr-line{font-family:var(--f-display);font-size:23px;line-height:1.45;color:var(--fg);font-weight:300}
+    .addr-line.cn{font-family:var(--f-cn);font-size:21px}
+    .addr-meta{font-family:var(--f-mono);font-size:11px;color:var(--fg-dim);letter-spacing:0.06em}
+    .map-ctas{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+    .map-ctas .btn{width:100%;justify-content:space-between}
+
+    .hours{margin-top:8px;border-top:1px solid var(--rule);padding-top:24px}
+    .hours-row{display:grid;grid-template-columns:1fr auto;padding:10px 0;border-bottom:1px solid color-mix(in oklch,var(--rule) 50%,transparent);font-family:var(--f-mono);font-size:11px;letter-spacing:0.1em;color:var(--fg-dim)}
+    .hours-row:last-child{border-bottom:0}
+    .hours-row.today{color:var(--accent)}
+    .hours-row .day{text-transform:uppercase;letter-spacing:0.16em}
+
+    /* ─── Contact (Stay in Touch) ─── */
+    .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    @media (max-width:720px){ .contact-grid{grid-template-columns:1fr} }
+    .contact-card{border:1px solid var(--rule);padding:32px;display:flex;flex-direction:column;gap:14px;background:var(--bg-2);transition:border-color .3s, background .3s}
+    .contact-card:hover{border-color:var(--accent);background:var(--bg-3)}
+    .contact-icon{width:38px;height:38px;border-radius:50%;border:1px solid var(--rule);display:grid;place-items:center;color:var(--accent);font-family:var(--f-mono);font-size:12px}
+    .contact-title{font-family:var(--f-display);font-size:28px;color:var(--fg);font-weight:400}
+    .contact-handle{font-family:var(--f-mono);font-size:11px;color:var(--fg-dim);letter-spacing:0.1em}
+    .contact-body{color:var(--fg-dim);max-width:42ch;font-size:14.5px}
+    .contact-action{margin-top:auto}
+
+    /* WeChat reveal */
+    .wechat-card{position:relative}
+    .qr-wrap{display:flex;align-items:flex-start;gap:20px;margin-top:8px}
+    .qr-placeholder{width:124px;height:124px;background:#fafaf7;display:grid;place-items:center;flex-shrink:0;border:1px solid var(--rule);position:relative;overflow:hidden;
+      opacity:0;transform:scale(0.94) translateY(8px);transition:opacity .35s ease, transform .35s ease;pointer-events:none}
+    .wechat-card.revealed .qr-placeholder{opacity:1;transform:scale(1) translateY(0)}
+    .qr-img{width:124px;height:124px;object-fit:contain;flex-shrink:0;opacity:0;transform:scale(.92) translateY(6px);transition:opacity .5s ease,transform .5s ease}
+    .wechat-card.revealed .qr-img{opacity:1;transform:scale(1) translateY(0)}
+    .qr-placeholder::before{content:"";position:absolute;inset:8px;
+      background:
+        linear-gradient(#0a0a0a,#0a0a0a) 0 0/22% 22% no-repeat,
+        linear-gradient(#0a0a0a,#0a0a0a) 78% 0/22% 22% no-repeat,
+        linear-gradient(#0a0a0a,#0a0a0a) 0 78%/22% 22% no-repeat,
+        repeating-conic-gradient(#0a0a0a 0 25%, transparent 0 50%) 0 0/12% 12%}
+    .qr-placeholder::after{content:"placeholder";position:absolute;bottom:6px;left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:8px;letter-spacing:0.12em;color:#999;text-transform:uppercase;background:#fafaf7;padding-top:2px}
+    .qr-caption{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--fg-faint);max-width:18ch;line-height:1.6;opacity:0;transition:opacity .4s ease .1s}
+    .wechat-card.revealed .qr-caption{opacity:1}
+
+    /* ─── Press / Quote strip ─── */
+    .quote{padding:120px 0;border-top:1px solid var(--rule);text-align:center}
+    .quote-text{font-family:var(--f-display);font-size:clamp(28px,3.6vw,46px);font-weight:300;font-style:italic;line-height:1.35;max-width:20ch;margin:0 auto;color:var(--fg)}
+    .quote-attr{margin-top:32px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--fg-faint)}
+
+    /* ─── Footer ─── */
+    footer{border-top:1px solid var(--rule);padding:48px 0 32px}
+    .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+    .foot-brand{font-family:var(--f-display);font-size:22px;display:flex;align-items:center;gap:10px}
+    .foot-meta{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.14em;color:var(--fg-faint);text-transform:uppercase}
+    .foot-bottom{margin-top:40px;display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:10.5px;color:var(--fg-faint);letter-spacing:0.1em;flex-wrap:wrap;gap:10px}
+
+    /* ─── Section number marker mode (toggleable) ─── */
+    [data-numbers="off"] .sec-num{display:none}
+    [data-numbers="off"] .sec-head{grid-template-columns:1fr}
+    [data-numbers="off"] .sound-grid{grid-template-columns:1fr 1fr}
+    @media (max-width:880px){ [data-numbers="off"] .sound-grid{grid-template-columns:1fr} }
+
+    /* ─── Gallery sections (Drinks / Food / Space) ─── */
+    .gallery-intro{display:grid;grid-template-columns:120px 1fr 1fr;gap:48px;margin-bottom:56px}
+    @media (max-width:880px){ .gallery-intro{grid-template-columns:1fr;gap:24px} }
+    .gallery-lede{font-family:var(--f-display);font-size:clamp(22px,2.4vw,28px);line-height:1.45;color:var(--fg);font-weight:300}
+    .gallery-lede .accent{color:var(--accent);font-style:italic}
+    .gallery-body p{color:var(--fg-dim);max-width:44ch;font-size:14.5px}
+
+    .gal-grid{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:repeat(2,auto);gap:16px}
+    @media (max-width:720px){ .gal-grid{grid-template-columns:1fr} }
+    .gal-slot{position:relative;background:var(--bg-2);border:1px solid var(--rule);overflow:hidden}
+    .gal-slot.hero{grid-row:span 2;aspect-ratio:4/5}
+    .gal-slot.sm{aspect-ratio:5/4}
+    @media (max-width:720px){ .gal-slot.hero{grid-row:auto;aspect-ratio:4/5} }
+    .gal-slot image-slot{width:100%;height:100%;display:block}
+    .gal-slot img{width:100%;height:100%;display:block;object-fit:cover}
+    .gal-cap{position:absolute;left:14px;bottom:12px;font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);background:rgba(10,10,10,0.7);padding:5px 9px;border:1px solid var(--rule-soft);pointer-events:none;z-index:2}
+
+    .gal-wide{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:16px;aspect-ratio:16/8}
+    @media (max-width:880px){ .gal-wide{grid-template-columns:1fr 1fr;aspect-ratio:auto} }
+    .gal-wide .w-hero{grid-row:1 / span 2}
+    .gal-wide .gal-slot{aspect-ratio:auto}
+    @media (max-width:880px){ .gal-wide .w-hero{grid-row:span 1} .gal-wide .gal-slot{aspect-ratio:5/4} }
+
+    .menu{margin-top:20px;border-top:1px solid var(--rule);padding-top:24px}
+    .menu-row{display:grid;grid-template-columns:1fr auto;gap:16px;padding:18px 0;border-bottom:1px solid var(--rule-soft);align-items:baseline}
+    .menu-row:last-child{border-bottom:0}
+    .menu-name{font-family:var(--f-display);font-size:22px;color:var(--fg);font-weight:300}
+    .menu-name .ital{font-style:italic;color:var(--accent);font-weight:300}
+    .menu-desc{display:block;font-family:var(--f-body);font-size:13px;color:var(--fg-dim);margin-top:5px;letter-spacing:0.01em;font-weight:300;max-width:46ch}
+    .menu-price{font-family:var(--f-mono);font-size:12px;color:var(--accent);letter-spacing:0.08em;white-space:nowrap}
+
+    .space-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;border-top:1px solid var(--rule);padding-top:28px}
+    @media (max-width:720px){ .space-meta{grid-template-columns:repeat(2,1fr)} }
+    .space-stat-label{font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-faint);display:block;margin-bottom:6px}
+    .space-stat-val{font-family:var(--f-display);font-size:24px;color:var(--fg);font-weight:300;letter-spacing:-0.01em}
+    .space-stat-val .ital{font-style:italic;color:var(--accent)}
+
+    /* ─── Vinyl scrollable gallery (Core Curation) ─── */
+    .vinyl-wrap{margin-top:48px}
+    .vinyl-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px;gap:24px;flex-wrap:wrap}
+    .vinyl-head .label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-faint)}
+    .vinyl-head .hint{font-family:var(--f-mono);font-size:10px;letter-spacing:0.14em;color:var(--fg-faint);text-transform:uppercase}
+    .vinyl-head .hint::before{content:"← → ";color:var(--accent);margin-right:6px}
+    .vinyl-rail{
+      display:flex;gap:18px;overflow-x:auto;overflow-y:hidden;
+      padding:4px 0 22px;
+      scroll-snap-type:x mandatory;
+      scrollbar-width:thin;scrollbar-color:var(--rule) transparent;
+      -webkit-overflow-scrolling:touch;
+    }
+    .vinyl-rail::-webkit-scrollbar{height:6px}
+    .vinyl-rail::-webkit-scrollbar-track{background:transparent}
+    .vinyl-rail::-webkit-scrollbar-thumb{background:var(--rule);border-radius:3px}
+    .vinyl-rail::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+    .lp{flex:0 0 220px;scroll-snap-align:start;display:flex;flex-direction:column;gap:14px}
+    @media (max-width:720px){ .lp{flex:0 0 170px} }
+    .lp-sleeve{aspect-ratio:1;background:var(--bg-2);border:1px solid var(--rule);position:relative;overflow:hidden;transition:transform .25s ease, border-color .25s ease}
+    .lp-sleeve:hover{transform:translateY(-3px);border-color:var(--accent)}
+    .lp-sleeve image-slot,.lp-sleeve img{width:100%;height:100%;display:block;object-fit:cover}
+    .lp-sleeve::after{content:"";position:absolute;left:-4%;top:50%;width:18%;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#0a0a0a 0 1.5px,#1a1a1a 1.5px 2.5px);transform:translateY(-50%);box-shadow:inset 0 0 0 2px #0a0a0a, 0 0 0 1px rgba(200,152,96,0.25);pointer-events:none;opacity:0.85}
+    .lp-info{display:flex;flex-direction:column;gap:4px;padding:0 2px}
+    .lp-artist{font-family:var(--f-display);font-size:16px;color:var(--fg);font-weight:400;line-height:1.2;letter-spacing:-0.005em}
+    .lp-album{font-family:var(--f-display);font-style:italic;font-size:14px;color:var(--fg-dim);line-height:1.3}
+    .lp-meta{display:flex;gap:10px;margin-top:4px;font-family:var(--f-mono);font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--fg-faint)}
+    .lp-meta .dot{color:var(--rule)}
+    .lp-meta .genre-tag{color:var(--accent)}
+
+    /* Mini-program QR card at the end of the vinyl rail */
+    .lp-qr{flex:0 0 260px;scroll-snap-align:start;display:flex;flex-direction:column;gap:14px;padding:18px;border:1px dashed var(--accent);background:linear-gradient(180deg,rgba(200,152,96,0.04),transparent)}
+    @media (max-width:720px){ .lp-qr{flex:0 0 220px} }
+    .lp-qr-head{display:flex;align-items:center;gap:8px}
+    .lp-qr-head .pip{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+    .lp-qr-head span{font-family:var(--f-mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent)}
+    .lp-qr-title{font-family:var(--f-display);font-size:22px;color:var(--fg);font-weight:300;line-height:1.15;letter-spacing:-0.005em;margin-top:2px}
+    .lp-qr-title .ital{font-style:italic;color:var(--accent)}
+    .lp-qr-sub{font-family:var(--f-cn);font-size:12px;color:var(--fg-dim);letter-spacing:0.04em}
+    .lp-qr-slot{aspect-ratio:1;background:#fafaf7;border:1px solid var(--rule);display:grid;place-items:center;position:relative;overflow:hidden;margin-top:4px}
+    .lp-qr-slot::before{content:"";position:absolute;inset:14px;
+      background:
+        linear-gradient(#0a0a0a,#0a0a0a) 0 0/22% 22% no-repeat,
+        linear-gradient(#0a0a0a,#0a0a0a) 78% 0/22% 22% no-repeat,
+        linear-gradient(#0a0a0a,#0a0a0a) 0 78%/22% 22% no-repeat,
+        repeating-conic-gradient(#0a0a0a 0 25%, transparent 0 50%) 0 0/13% 13%}
+    .lp-qr-slot::after{content:"微信小程序 · mini-program";position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:8.5px;letter-spacing:0.14em;color:#666;text-transform:uppercase;background:#fafaf7;padding:3px 0}
+    .lp-qr-slot:has(img)::before,.lp-qr-slot:has(img)::after{display:none}
+    .lp-qr-foot{font-family:var(--f-mono);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-faint);margin-top:2px}
+
+    /* ─── Ravens hours band (Plate) ─── */
+    /* (uses .coffee-hours class shape but with different label color rules — styles handled inline where needed) */
+
+    /* ─── People section ─── */
+    .people-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    @media (max-width:880px){ .people-grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:540px){ .people-grid{grid-template-columns:1fr} }
+    .person{display:flex;flex-direction:column;gap:18px}
+    .person-portrait{aspect-ratio:3/4;background:var(--bg-2);border:1px solid var(--rule);overflow:hidden;position:relative;transition:border-color .3s}
+    .person:hover .person-portrait{border-color:var(--accent)}
+    .person-portrait image-slot{width:100%;height:100%;display:block}
+    .person-info{display:flex;flex-direction:column;gap:6px}
+    .person-name{font-family:var(--f-display);font-size:22px;color:var(--fg);font-weight:400;line-height:1.15;letter-spacing:-0.005em}
+    .person-name .cn{color:var(--fg-dim);font-size:0.7em;margin-left:4px;font-weight:300}
+    .person-role{font-family:var(--f-mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent)}
+    .person-bio{font-family:var(--f-body);font-size:13px;line-height:1.55;color:var(--fg-dim);margin-top:4px;font-weight:300;max-width:30ch}
+
+    /* ─── Cat easter egg (bottom backdrop) ─── */
+    .cat-egg{position:relative;height:64vh;min-height:480px;border-top:1px solid var(--rule);overflow:hidden;display:flex;align-items:flex-end}
+    .cat-egg-img{position:absolute;inset:0;background-image:url('assets/cat.jpg');background-size:cover;background-position:center;filter:brightness(0.55) saturate(1.05);transform:scale(1.02)}
+    .cat-egg::before{content:"";position:absolute;inset:0;background:
+      linear-gradient(180deg, var(--bg) 0%, rgba(10,10,10,0.4) 18%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.45) 92%, var(--bg) 100%),
+      radial-gradient(ellipse 60% 50% at 50% 60%, transparent 0%, rgba(10,10,10,0.55) 80%);
+      z-index:1;pointer-events:none}
+    .cat-egg-caption{position:relative;z-index:2;width:100%;padding:0 var(--pad) 56px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+    .cat-egg-caption .left{display:flex;flex-direction:column;gap:8px}
+    .cat-egg-caption .eyebrow{color:var(--accent)}
+    .cat-egg-caption h3{font-family:var(--f-display);font-size:clamp(36px,5vw,68px);font-weight:300;color:var(--fg);line-height:1.05;letter-spacing:-0.01em}
+    .cat-egg-caption h3 .ital{font-style:italic;color:var(--accent)}
+    .cat-egg-caption .right{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-dim);text-align:right;max-width:30ch;line-height:1.7}
+
+    /* Coffee hours band — daytime program */
+    .coffee-hours{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:48px 0 56px;padding:32px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);align-items:start}
+    @media (max-width:720px){ .coffee-hours{grid-template-columns:1fr;gap:24px} }
+    .ch-block{display:flex;flex-direction:column;gap:8px}
+    .ch-right{text-align:right;align-items:flex-end}
+    @media (max-width:720px){ .ch-right{text-align:left;align-items:flex-start} }
+    .ch-label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-faint)}
+    .ch-val{font-family:var(--f-display);font-size:clamp(28px,3.4vw,42px);color:var(--fg);font-weight:300;letter-spacing:-0.01em;line-height:1.1}
+    .ch-val .ital{font-style:italic;color:var(--accent)}
+    .ch-meta{font-family:var(--f-cn);font-size:13px;color:var(--fg-dim);letter-spacing:0.04em}
+
+    /* Reservations callout band */
+    .reserve-band{margin-bottom:36px;padding:28px 32px;border:1px solid var(--accent);background:linear-gradient(180deg,rgba(200,152,96,0.06),transparent);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+    .reserve-band .left{display:flex;flex-direction:column;gap:6px}
+    .reserve-band .label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent)}
+    .reserve-band .title{font-family:var(--f-display);font-size:clamp(22px,2.4vw,28px);font-weight:300;color:var(--fg);letter-spacing:-0.01em}
+    .reserve-band .title .ital{font-style:italic;color:var(--accent)}
+    .reserve-band .meta{font-family:var(--f-cn);font-size:13px;color:var(--fg-dim);margin-top:2px}
+    .reserve-band .actions{display:flex;gap:10px;flex-wrap:wrap}
+
+    /* ─── Mobile Responsive ─── */
+
+    /* Small tablets & large phones */
+    @media (max-width:600px){
+      :root{--pad:16px}
+
+      /* Nav */
+      .nav-inner{height:52px}
+      .nav-cta{display:none}
+      .brand{font-size:16px;gap:8px}
+      .brand-cn{font-size:12px}
+      .brand-mark{width:24px;height:24px}
+
+      /* Hero */
+      .hero{min-height:85vh;padding-top:80px;padding-bottom:40px}
+      .hero-eyebrow{margin-bottom:20px}
+      .hero-subtitle{font-size:18px;margin-bottom:32px;max-width:100%}
+      .hero-ctas{flex-direction:column;gap:10px}
+      .hero-ctas .btn{width:100%;justify-content:center}
+      .hero-foot{position:relative;left:auto;right:auto;bottom:auto;flex-direction:column;align-items:flex-start;gap:16px;margin-top:36px;padding-left:var(--pad);padding-right:var(--pad)}
+      .hero-foot .col{text-align:left !important}
+      .record{display:none}
+
+      /* Sections */
+      .sec{padding:56px 0}
+      .sec-head{margin-bottom:40px;gap:10px}
+      .sec-title{font-size:clamp(36px,10vw,52px)}
+
+      /* Sound grid — collapse the empty first column */
+      .sound-grid{grid-template-columns:1fr !important;gap:28px}
+      .sound-lede{font-size:20px}
+
+      /* Core curation */
+      .core{grid-template-columns:1fr !important;gap:14px;margin-top:32px;padding-top:24px}
+      .genres{gap:6px;margin-top:24px}
+      .genre{padding:7px 10px;font-size:9.5px}
+
+      /* Gallery intros — collapse the empty first column */
+      .gallery-intro{grid-template-columns:1fr !important;gap:18px;margin-bottom:36px}
+      .gallery-lede{font-size:20px}
+
+      /* Gallery grids */
+      .gal-grid{gap:10px}
+      .gal-wide{grid-template-columns:1fr !important;aspect-ratio:auto !important}
+      .gal-wide .gal-slot{aspect-ratio:4/3 !important}
+      .gal-wide .w-hero{grid-row:span 1 !important;aspect-ratio:4/3 !important}
+      .gal-cap{font-size:9px;left:8px;bottom:8px;padding:4px 7px}
+
+      /* Space meta stats */
+      .space-meta{grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;padding-top:20px}
+      .space-stat-val{font-size:20px}
+
+      /* Vinyl rail */
+      .vinyl-wrap{margin-top:32px}
+      .lp{flex:0 0 155px !important}
+      .lp-artist{font-size:14px}
+      .lp-album{font-size:12px}
+      .lp-qr{flex:0 0 200px !important;padding:14px}
+      .lp-qr-title{font-size:18px}
+
+      /* Menu */
+      .menu-row{gap:10px}
+      .menu-name{font-size:18px}
+      .menu-desc{font-size:12px}
+
+      /* Coffee hours band */
+      .coffee-hours{grid-template-columns:1fr !important;gap:18px;margin:32px 0 40px;padding:24px 0}
+      .ch-val{font-size:clamp(24px,6vw,32px)}
+      .ch-right{text-align:left !important;align-items:flex-start !important}
+
+      /* People */
+      .people-grid{grid-template-columns:1fr !important;gap:32px}
+      .person-portrait{aspect-ratio:4/5}
+      .person-bio{max-width:100%}
+
+      /* Location */
+      .loc-grid{gap:28px !important}
+      .map-card{aspect-ratio:3/2 !important;max-height:240px !important}
+      .addr-line{font-size:19px}
+      .addr-line.cn{font-size:17px}
+      .addr{gap:20px}
+      .map-overlay{left:8px;right:8px;bottom:8px}
+      .hours{margin-top:4px;padding-top:16px}
+      .hours-row{padding:8px 0;font-size:10px}
+
+      /* Contact */
+      .contact-grid{gap:16px}
+      .contact-card{padding:20px}
+      .contact-title{font-size:22px}
+      .contact-body{font-size:13px}
+      .qr-wrap{flex-direction:column;gap:12px}
+      .qr-placeholder{width:100px;height:100px}
+      .qr-img{width:100px;height:100px}
+
+      /* Reserve band */
+      .reserve-band{padding:20px 16px;flex-direction:column;align-items:flex-start;gap:18px}
+      .reserve-band .title{font-size:20px}
+      .reserve-band .meta{font-size:12px}
+      .reserve-band .actions{width:100%}
+      .reserve-band .actions .btn{flex:1;justify-content:center;text-align:center}
+
+      /* Press quote */
+      .quote{padding:64px 0}
+      .quote-text{font-size:clamp(22px,6vw,32px);max-width:100%}
+
+      /* Cat easter egg */
+      .cat-egg{height:50vh;min-height:360px}
+      .cat-egg-caption{flex-direction:column;align-items:flex-start;gap:16px;padding-bottom:32px}
+      .cat-egg-caption .right{text-align:left;font-size:10px}
+
+      /* Footer */
+      .foot-grid{flex-direction:column;gap:20px}
+      .foot-meta{text-align:left !important}
+      .foot-bottom{flex-direction:column;gap:6px}
+
+      /* Buttons — larger touch targets */
+      .btn{padding:14px 18px;font-size:10.5px}
+
+      /* Marquee */
+      .marquee{padding:16px 0}
+      .marquee-track{font-size:clamp(22px,5vw,32px);gap:32px}
+      .marquee-track span{gap:32px}
+    }
+
+    /* Extra small phones (≤380px) */
+    @media (max-width:380px){
+      :root{--pad:12px}
+      .hero-title{font-size:clamp(48px,14vw,64px)}
+      .sec-title{font-size:clamp(30px,9vw,44px)}
+      .contact-card{padding:16px}
+      .btn{padding:12px 14px;font-size:10px}
+      .reserve-band .actions{flex-direction:column}
+      .reserve-band .actions .btn{width:100%}
+      .map-card{max-height:200px !important}
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ─── Top nav ─────────────────────────────────────────────── -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand" aria-label="Blackmoon home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Blackmoon
+        <span class="brand-cn">黑月</span>
+      </a>
+      <ul>
+        <li><a href="#sound">Sound</a></li>
+        <li><a href="#space">Space</a></li>
+        <li><a href="#drinks">Pour</a></li>
+        <li><a href="#food">Plate</a></li>
+        <li><a href="#coffee">Day</a></li>
+        <li><a href="#location">Find Us</a></li>
+      </ul>
+      <a class="nav-cta" href="#contact">Reserve · 预订 →</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ─── 1. HERO ───────────────────────────────────────────── -->
+    <section class="hero" data-screen-label="Hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true"></div>
+
+      <div class="wrap hero-content">
+        <div class="hero-eyebrow">
+          <span class="bar"></span>
+          <span class="mono">Est. Beijing · 北京 · 北锣鼓巷</span>
+        </div>
+
+        <h1 class="display hero-title" id="hero-title">
+          Blackmoon<br />
+          <span class="ital">Listening Bar.</span>
+        </h1>
+
+        <p class="hero-subtitle"><span class="accent">黑月</span> · <span class="accent">乌鸦</span> · <span class="accent">古耳</span> — a trinity of listening, dining, and coffee tucked deep in Beijing's hutongs. Vinyl bar, kitchen, and roastery under one courtyard roof.</p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#location">
+            Find Us <span class="arr">→</span>
+          </a>
+          <a class="btn btn-ghost" href="#contact">
+            Reserve Now <span class="arr">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <div class="col">
+          <span class="eyebrow">Now Playing</span>
+          <span class="val">J Dilla &mdash; Donuts (B-side)</span>
+        </div>
+        <div class="col" style="text-align:right">
+          <span class="eyebrow">39.9420° N · 116.4030° E</span>
+          <span class="val mono" style="font-size:11px;letter-spacing:0.14em">OPEN TODAY · 10:00 — 02:00</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Marquee divider ──────────────────────────────────── -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Vinyl Only<span class="dot"></span>Hip-Hop · Soul / Funk · Jazz · City Pop<span class="dot"></span>Hutong Hi-Fi<span class="dot"></span>Roots Music<span class="dot"></span>33⅓ rpm<span class="dot"></span>北锣鼓巷<span class="dot"></span></span>
+        <span>Vinyl Only<span class="dot"></span>Hip-Hop · Soul / Funk · Jazz · City Pop<span class="dot"></span>Hutong Hi-Fi<span class="dot"></span>Roots Music<span class="dot"></span>33⅓ rpm<span class="dot"></span>北锣鼓巷<span class="dot"></span></span>
+      </div>
+    </div>
+
+    <section class="sec" id="sound" data-screen-label="The Sound" aria-labelledby="sound-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-num">01 / 07</div>
+          <h2 class="sec-title" id="sound-title">
+            The <span class="ital">Sound</span>.
+            <span class="cn mono">声音</span>
+          </h2>
+        </div>
+
+        <div class="sound-grid">
+          <div></div>
+          <div>
+            <p class="sound-lede">
+              A <span class="accent">sanctuary for roots music</span> and physical record culture &mdash; a room built around the record, where every needle drop is hand-chosen and every track plays end to end.
+            </p>
+          </div>
+          <div class="sound-body">
+            <p>Tucked behind a black hutong door, the room is tuned for low-volume listening: a carefully built analog signal path, acoustic treatment across the brick walls of a 200-year-old courtyard, and a wax-only rotation pulled from a decade of digging across China, New York, California, and Tokyo.</p>
+            <p>
+              Come early for quiet sets and a slow drink, stay for selectors deep into the night on weekends.
+            </p>
+          </div>
+        </div>
+
+        <div class="core">
+          <span class="core-label">Core curation</span>
+          <p class="core-line">
+            Hip-hop. Soul / Funk. Jazz. <span class="accent">City Pop.</span> &mdash; the soulful, dusty warmth of classic beat tapes and underground pressings.
+          </p>
+        </div>
+
+        <div class="genres" aria-label="Genres played">
+          <span class="genre on">Hip-Hop</span>
+          <span class="genre on">Soul / Funk</span>
+          <span class="genre on">Jazz</span>
+          <span class="genre on">City Pop</span>
+          <span class="genre">ROCK</span>
+          <span class="genre">ELECTRONIC</span>
+          <span class="genre">Boogie</span>
+          <span class="genre">Rare Groove</span>
+        </div>
+
+        <div class="vinyl-wrap">
+          <div class="vinyl-head">
+            <span class="label">From the wall &middot; selected pressings</span>
+            <span class="hint">Scroll horizontally</span>
+          </div>
+          <div class="vinyl-rail" role="list">
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/okcomputer.jpeg" alt="OK Computer album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Radiohead</span>
+                <span class="lp-album">OK Computer</span>
+                <span class="lp-meta"><span>1997</span><span class="dot">/</span><span class="genre-tag">Rock</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/abbey road.jpg" alt="Abbey Road album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">The Beatles</span>
+                <span class="lp-album">Abbey Road</span>
+                <span class="lp-meta"><span>1969</span><span class="dot">/</span><span class="genre-tag">Rock</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/for you.jpg" alt="For You album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Tatsuro Yamashita</span>
+                <span class="lp-album">For You</span>
+                <span class="lp-meta"><span>1982</span><span class="dot">/</span><span class="genre-tag">City Pop</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/Madvillainy-1080.jpg" alt="Madvillainy album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Madvillain</span>
+                <span class="lp-album">Madvillainy</span>
+                <span class="lp-meta"><span>2004</span><span class="dot">/</span><span class="genre-tag">Hip-Hop</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/illmatic.jpeg" alt="Illmatic album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Nas</span>
+                <span class="lp-album">Illmatic</span>
+                <span class="lp-meta"><span>1994</span><span class="dot">/</span><span class="genre-tag">Hip-Hop</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/The_Low_End_Theory.webp" alt="The Low End Theory album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">A Tribe Called Quest</span>
+                <span class="lp-album">The Low End Theory</span>
+                <span class="lp-meta"><span>1991</span><span class="dot">/</span><span class="genre-tag">Hip-Hop</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/the dark side of the moonpng.png" alt="The Dark Side of the Moon album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Pink Floyd</span>
+                <span class="lp-album">The Dark Side of the Moon</span>
+                <span class="lp-meta"><span>1973</span><span class="dot">/</span><span class="genre-tag">Rock</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/mama's gun.jpeg" alt="Mama's Gun album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Erykah Badu</span>
+                <span class="lp-album">Mama&rsquo;s Gun</span>
+                <span class="lp-meta"><span>2000</span><span class="dot">/</span><span class="genre-tag">Soul</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/new moon.webp" alt="New Moon album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Elliott Smith</span>
+                <span class="lp-album">New Moon</span>
+                <span class="lp-meta"><span>2007</span><span class="dot">/</span><span class="genre-tag">Indie / Folk</span></span>
+              </div>
+            </article>
+
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/promise_sade.webp" alt="Promise album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Sade</span>
+                <span class="lp-album">Promise</span>
+                <span class="lp-meta"><span>1985</span><span class="dot">/</span><span class="genre-tag">Soul</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/CharlesMingus TheBlackSaintCover.webp" alt="The Black Saint and the Sinner Lady album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Charles Mingus</span>
+                <span class="lp-album">The Black Saint and the Sinner Lady</span>
+                <span class="lp-meta"><span>1963</span><span class="dot">/</span><span class="genre-tag">Jazz</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/innervisions.jpg" alt="Innervisions album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Stevie Wonder</span>
+                <span class="lp-album">Innervisions</span>
+                <span class="lp-meta"><span>1973</span><span class="dot">/</span><span class="genre-tag">Soul</span></span>
+              </div>
+            </article>
+            <article class="lp" role="listitem">
+              <div class="lp-sleeve"><img src="assets/covers/kind of blue.jpg" alt="Kind of Blue album cover" loading="lazy"></div>
+              <div class="lp-info">
+                <span class="lp-artist">Miles Davis</span>
+                <span class="lp-album">Kind of Blue</span>
+                <span class="lp-meta"><span>1959</span><span class="dot">/</span><span class="genre-tag">Jazz</span></span>
+              </div>
+            </article>
+            <!-- Mini-program QR card — 检查完整收藏 -->
+            <article class="lp-qr" role="listitem" aria-label="Scan to view the complete vinyl collection in our WeChat mini-program">
+              <div class="lp-qr-head">
+                <span class="pip" aria-hidden="true"></span>
+                <span>Mini-Program &middot; 完整目录</span>
+              </div>
+              <div class="lp-qr-title">Check the <span class="ital">complete</span> collection</div>
+              <span class="lp-qr-sub">Scan with WeChat to see what we have</span>
+              <div class="lp-qr-slot" aria-label="WeChat mini-program QR placeholder">
+                <img src="assets/qrcodes/mini_program.png" alt="WeChat mini-program QR code" loading="lazy" style="width:100%;height:100%;object-fit:contain;position:relative;z-index:1">
+              </div>
+              <span class="lp-qr-foot">1,000+ records &middot; updated weekly</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec" id="space" data-screen-label="Space" aria-labelledby="space-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-num">02 / 07</div>
+          <h2 class="sec-title" id="space-title">
+            The <span class="ital">Space</span>.
+            <span class="cn mono">环境</span>
+          </h2>
+        </div>
+
+        <div class="gallery-intro">
+          <div></div>
+          <p class="gallery-lede">
+            A restored <span class="accent">siheyuan courtyard</span> behind a grey hutong door &mdash; brick, tungsten, vinyl, and very little else.
+          </p>
+          <div class="gallery-body">
+            <p>Twenty-five seats across the main listening room and a  lounge. A vinyl wall stretching the full length behind the bar, and a single warm-glow filament behind the booth.</p>
+          </div>
+        </div>
+
+        <div class="gal-wide">
+          <div class="gal-slot w-hero">
+            <image-slot id="space-hero" shape="rect" placeholder="Room · wide / hero"></image-slot>
+            <span class="gal-cap">Listening Room</span>
+          </div>
+          <div class="gal-slot">
+            <image-slot id="space-1" shape="rect" placeholder="Vinyl wall"></image-slot>
+            <span class="gal-cap">The Hallway</span>
+          </div>
+          <div class="gal-slot">
+            <image-slot id="space-2" shape="rect" placeholder="Booth / DJ corner"></image-slot>
+            <span class="gal-cap">The booth</span>
+          </div>
+          <div class="gal-slot">
+            <image-slot id="space-3" shape="rect" placeholder="Bar detail"></image-slot>
+            <span class="gal-cap">Vinyl wall</span>
+          </div>
+          <div class="gal-slot">
+            <image-slot id="space-4" shape="rect" placeholder="Courtyard / entrance"></image-slot>
+            <span class="gal-cap">Hutong Quietness</span>
+          </div>
+        </div>
+
+        <div class="space-meta">
+          <div>
+            <span class="space-stat-label">Capacity</span>
+            <span class="space-stat-val">42 <span class="ital">seats</span></span>
+          </div>
+          <div>
+            <span class="space-stat-label">Built</span>
+            <span class="space-stat-val">c. <span class="ital">2024</span></span>
+          </div>
+          <div>
+            <span class="space-stat-label">Records</span>
+            <span class="space-stat-val">1,000+<span class="ital"> records</span></span>
+          </div>
+          <div>
+            <span class="space-stat-label">Dress</span>
+            <span class="space-stat-val"><span class="ital">Easy</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec" id="drinks" data-screen-label="Drinks" aria-labelledby="drinks-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-num">03 / 07</div>
+          <h2 class="sec-title" id="drinks-title">
+            The <span class="ital">Pour</span>.
+            <span class="cn mono">饮品</span>
+          </h2>
+        </div>
+
+        <div class="gallery-intro">
+          <div></div>
+          <p class="gallery-lede">
+            Slow, <span class="accent">spirit-forward</span> cocktails &mdash; sours, negroni riffs, signatures with a story &mdash; plus eight craft taps, poured to match the room, not the rush.
+          </p>
+          <div class="gallery-body">
+            <p>A tight back bar, no menu acrobatics. Bourbon, rye, gin, and rum built into 35+ house pours that rotate with the season. Draft beer from ¥38, cocktails from ¥65.</p>
+          </div>
+        </div>
+
+        <div class="gal-grid">
+          <div class="gal-slot hero">
+            <image-slot id="drink-hero" shape="rect" placeholder="Signature pour · portrait"></image-slot>
+            <span class="gal-cap">Cocktails</span>
+          </div>
+          <div class="gal-slot sm">
+            <image-slot id="drink-1" shape="rect" placeholder="Back-bar detail"></image-slot>
+            <span class="gal-cap">Bottles</span>
+          </div>
+          <div class="gal-slot sm">
+            <image-slot id="drink-2" shape="rect" placeholder="Bottle / glass detail"></image-slot>
+            <span class="gal-cap">Craft Beers</span>
+          </div>
+          <div class="gal-slot sm">
+            <img src="assets/pics/2.png" alt="Cocktail detail" loading="lazy">
+            <span class="gal-cap">Cocktails</span>
+          </div>
+          <div class="gal-slot sm">
+            <img src="assets/pics/1.JPG" alt="Bar atmosphere" loading="lazy">
+            <span class="gal-cap">Atmosphere</span>
+          </div>
+        </div>
+
+        <div class="menu" aria-label="Signature pours">
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Eason Chen <span class="ital">Sour</span> <span class="cn">陈奕迅酸</span></span>
+              <span class="menu-desc">Bourbon, vanilla syrup, red wine, lemon juice, eggwhite or not. 葡萄成熟时、绵绵</span>
+            </div>
+            <span class="menu-price">¥ 65</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Ravens <span class="ital">Negroni</span></span>
+              <span class="menu-desc">Kyrö gin, Bigallet China, Aperal. "Hello darkness my old friend."</span>
+            </div>
+            <span class="menu-price">¥ 75</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Rye <span class="ital">Old Fashioned</span></span>
+              <span class="menu-desc">Bulleit rye, cube sugar or cacao liqueur, aromatic bitters. Cinnamon smoke optional.</span>
+            </div>
+            <span class="menu-price">¥ 80</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Hugin <span class="ital">祸金</span></span>
+              <span class="menu-desc">Wild Turkey bourbon, lemonade syrup, lemon purée, cream. House signature.</span>
+            </div>
+            <span class="menu-price">¥ 70</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Dark <span class="ital">Hemingway</span> <span class="cn">忧郁海明威</span></span>
+              <span class="menu-desc">Plantation dark rum, Matusalem rum, kirschwasser, grapefruit juice, lemon juice.</span>
+            </div>
+            <span class="menu-price">¥ 65</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Vanishing <span class="ital">Act</span> <span class="cn">消失殆尽世界的一切</span></span>
+              <span class="menu-desc">Absinth, Maker&rsquo;s Mark bourbon, D.O.M B&eacute;n&eacute;dictine, Green Chartreuse. 这里什么也没有，只有温暖的、原始的黑暗。</span>
+            </div>
+            <span class="menu-price">¥ 85</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Travelling <span class="ital">Water</span> <span class="cn">旅行的水</span></span>
+              <span class="menu-desc">Matusalem rum, gum syrup, elderflower liqueur, Cointreau, lemon juice. 已去过世界的尽头，也去过比这更远的地方。</span>
+            </div>
+            <span class="menu-price">¥ 70</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Friday Night and <span class="ital">Saturday Morning</span></span>
+              <span class="menu-desc">Gin, gum syrup, framboise liqueur, lemon juice, eggwhite. 每个周五夜周六朝。</span>
+            </div>
+            <span class="menu-price">¥ 65</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">23时59分</span>
+              <span class="menu-desc">Raspberry gin, sloe gin, apricot brandy, lemon juice, eggwhite. 若把从宇宙诞生到现在的时间比作一个月，人类诞生于最后一天的23时59分。</span>
+            </div>
+            <span class="menu-price">¥ 75</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Draft <span class="ital">Beer</span></span>
+              <span class="menu-desc">8 taps rotating &mdash; Asahi lager, hazy IPA, witbier, fruit sour ale, cider &amp; more.</span>
+            </div>
+            <span class="menu-price">¥ 38 — 68</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec" id="food" data-screen-label="Food" aria-labelledby="food-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-num">04 / 07</div>
+          <h2 class="sec-title" id="food-title">
+            The <span class="ital">Plate</span>.
+            <span class="cn mono">小菜</span>
+          </h2>
+        </div>
+
+        <div class="gallery-intro">
+          <div></div>
+          <p class="gallery-lede">
+            A real <span class="accent">kitchen</span>, not a snack menu &mdash; slow-cooked, fire-finished, plated to sit alongside a long pour and a longer record.
+          </p>
+          <div class="gallery-body">
+            <p>Food is served evenings only by <strong style="color:var(--fg);font-weight:400">Ravens &middot; 乌鸦</strong>, our in-house kitchen partner. Classic comfort plates with a touch of fire and patience: a confit overnight, a lasagna built in tray after tray, ribs over coals.</p>
+            <div style="margin-top: 20px; padding: 16px 20px; border: 1px solid var(--rule); background: rgba(255,255,255,0.02); border-radius: 4px;">
+              <p style="font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--accent); text-transform: uppercase; margin: 0 0 8px 0;">Recognition · 荣誉</p>
+              <p style="margin: 0 0 8px 0; font-size: 15px; line-height: 1.5;"><span style="color: var(--accent);">安定门西餐口味榜第一名</span> · Andingmen Western Food Taste Rankings #1</p>
+              <p style="margin: 0; font-size: 13px; color: var(--fg-dim); line-height: 1.6;">Established 2017 · 2017年开业 <span style="color: var(--rule);">/</span> 1300+ reviews · 4.8 rating on Dianping · 大众点评</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="coffee-hours" aria-label="Dinner service">
+          <div class="ch-block">
+            <span class="ch-label">Dinner service &middot; 晚餐时间</span>
+            <span class="ch-val">Daily <span class="ital">18:00 &mdash; 22:00</span></span>
+            <span class="ch-meta">每日 下午六点至晚上十点</span>
+          </div>
+          <div class="ch-block ch-right">
+            <span class="ch-label">Kitchen &middot; 厨房</span>
+            <span class="ch-val">By <span class="ital">Ravens</span></span>
+            <span class="ch-meta">乌鸦 &middot; in-house partner</span>
+          </div>
+        </div>
+
+        <div class="gal-grid">
+          <div class="gal-slot sm">
+            <image-slot id="food-1" shape="rect" placeholder="Plate · detail"></image-slot>
+            <span class="gal-cap">Plate</span>
+          </div>
+          <div class="gal-slot hero" style="grid-column:2;grid-row:1 / span 2">
+            <image-slot id="food-hero" shape="rect" placeholder="Signature plate · portrait"></image-slot>
+            <span class="gal-cap">Signature</span>
+          </div>
+          <div class="gal-slot sm" style="grid-column:1">
+            <image-slot id="food-2" shape="rect" placeholder="Kitchen / fire detail"></image-slot>
+            <span class="gal-cap">The fire</span>
+          </div>
+        </div>
+
+        <div class="menu" aria-label="Dinner menu by Ravens">
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Duck <span class="ital">Confit</span></span>
+              <span class="menu-desc">Twelve-hour duck leg, baked onion, carrot, mashed potato, apricot teriyaki.</span>
+            </div>
+            <span class="menu-price">¥ 128</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Balsamic <span class="ital">Rib-eye</span></span>
+              <span class="menu-desc">Grain-fed rib-eye, asparagus, chips, balsamic sauce.</span>
+            </div>
+            <span class="menu-price">¥ 198</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Honey-Glazed <span class="ital">Pork Ribs</span></span>
+              <span class="menu-desc">Seasoned ribs, fried carrot, sprout cabbage, homemade BBQ sauce, parmesan.</span>
+            </div>
+            <span class="menu-price">¥ 228</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Alibi <span class="ital">Beef Burger</span></span>
+              <span class="menu-desc">Egg benedict, lettuce, onion, pickle, cheddar, sweet chili mayo.</span>
+            </div>
+            <span class="menu-price">¥ 68</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Meat &amp; Cheese <span class="ital">Platter</span></span>
+              <span class="menu-desc">Moondarra cream cheese, prosciutto, salami, arugula, caramelised pecan, olive.</span>
+            </div>
+            <span class="menu-price">¥ 128</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Garden <span class="ital">Salad</span> <span class="cn">田园沙拉</span></span>
+              <span class="menu-desc">Mixed greens, cherry tomato, cucumber, avocado, feta cheese, balsamic dressing. Vegetarian.</span>
+            </div>
+            <span class="menu-price">¥ 55</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Roasted <span class="ital">Vegetable Salad</span> <span class="cn">烤蔬菜沙拉</span></span>
+              <span class="menu-desc">Roasted beetroot, pumpkin, zucchini, quinoa, candied walnut, goat cheese, honey mustard. Vegetarian.</span>
+            </div>
+            <span class="menu-price">¥ 65</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Nachos &amp; <span class="ital">Snacks</span></span>
+              <span class="menu-desc">Beef paste nachos with salsa, potato wedges, maple bacon &amp; more.</span>
+            </div>
+            <span class="menu-price">from ¥ 35</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec" id="coffee" data-screen-label="Coffee" aria-labelledby="coffee-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-num">05 / 07</div>
+          <h2 class="sec-title" id="coffee-title">
+            The <span class="ital">Day</span>.
+            <span class="cn mono">咖啡</span>
+          </h2>
+        </div>
+
+        <div class="gallery-intro">
+          <div></div>
+          <p class="gallery-lede">
+            Before the night unfolds, the room becomes a <span class="accent">daytime coffee bar</span> &mdash; a quiet, light-filled program served by <span class="accent">古耳</span>.
+          </p>
+          <div class="gallery-body">
+            <p>Single-origin espresso, slow filter, and a short list of seasonal signatures. Signature masterful Pour-over by the cup, beans for sale by the bag, and the same sound system playing soft sets through the afternoon.</p>
+            <p style="margin-top:14px">
+              <span class="mono" style="color:var(--accent);font-size:11px;letter-spacing:0.16em">In residency &middot; 入驻合作</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Hours band — daytime program -->
+        <div class="coffee-hours" aria-label="Coffee hours">
+          <div class="ch-block">
+            <span class="ch-label">Hours · 营业时间</span>
+            <span class="ch-val">Daily <span class="ital">10:00 &mdash; 18:00</span></span>
+            <span class="ch-meta">每日 上午十点至下午六点</span>
+          </div>
+          <div class="ch-block ch-right">
+            <span class="ch-label">Roaster · 咖啡品牌</span>
+            <span class="ch-val">By <span class="ital">古耳</span></span>
+            <span class="ch-meta">Gǔ Ěr Coffee · in residency</span>
+          </div>
+        </div>
+
+        <div class="gal-grid">
+          <div class="gal-slot hero">
+            <image-slot id="coffee-hero" shape="rect" placeholder="Pour-over · portrait"></image-slot>
+            <span class="gal-cap">Signature pour</span>
+          </div>
+          <div class="gal-slot sm">
+            <image-slot id="coffee-1" shape="rect" placeholder="Espresso bar detail"></image-slot>
+            <span class="gal-cap">Pour-over</span>
+          </div>
+          <div class="gal-slot sm">
+            <image-slot id="coffee-2" shape="rect" placeholder="Bean / cup detail"></image-slot>
+            <span class="gal-cap">Latte</span>
+          </div>
+        </div>
+
+        <div class="menu" aria-label="Coffee program">
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Americano <span class="ital">美式</span></span>
+              <span class="menu-desc">Hot or iced. Choose dark roast blend or light roast Hua Kui.</span>
+            </div>
+            <span class="menu-price">¥ 28</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Flat <span class="ital">White</span></span>
+              <span class="menu-desc">澳白. Velvety, whole milk. +¥5 for Oatly oat milk.</span>
+            </div>
+            <span class="menu-price">¥ 35</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Latte <span class="ital">拿铁</span></span>
+              <span class="menu-desc">Hot or iced. Classic milk coffee, two bean options.</span>
+            </div>
+            <span class="menu-price">¥ 35</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Pour <span class="ital">Over</span></span>
+              <span class="menu-desc">Hand-poured single cup. 18 single-origin lots &mdash; Ethiopia, Kenya, Colombia &amp; more.</span>
+            </div>
+            <span class="menu-price">¥ 39 — 49</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Signature <span class="ital">Tea</span></span>
+              <span class="menu-desc">Four house blends: pu'er mint, osmanthus oolong, rose oolong, cinnamon black tea.</span>
+            </div>
+            <span class="menu-price">¥ 48</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <span class="menu-name">Basque <span class="ital">Cheesecake</span></span>
+              <span class="menu-desc">巴斯克芝士. Rich, caramelised top, dense centre. Pairs with everything.</span>
+            </div>
+            <span class="menu-price">¥ 38</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="location" data-screen-label="Location" style="border-top:1px solid var(--rule)" aria-labelledby="loc-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-num">06 / 07</div>
+          <h2 class="sec-title" id="loc-title">
+            Find <span class="ital">Us</span>.
+            <span class="cn mono">地点</span>
+          </h2>
+        </div>
+
+        <div class="loc-grid">
+          <!-- Interactive Map Preview - Tencent Map -->
+          <div class="map-card" style="position: relative; aspect-ratio: 4/3; max-height: 450px;">
+            <iframe
+              width="100%"
+              height="100%"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://apis.map.qq.com/tools/poimarker?type=0&marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷33又1/3号&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=blackmoon&zoom=14"
+              style="border: 0; position: absolute; inset: 0; filter: grayscale(0.2) brightness(0.75) contrast(1.1); pointer-events: none; user-select: none;">
+            </iframe>
+
+            <!-- Styled label positioned above the map marker -->
+            <div style="position: absolute; left: 50%; top: 42%; transform: translate(-50%, -100%); pointer-events: none; z-index: 10;">
+              <div style="background: rgba(10,10,10,0.95); border: 1.5px solid var(--accent); padding: 6px 14px; border-radius: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.6); backdrop-filter: blur(4px);">
+                <span style="font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 500;">Blackmoon·黑月</span>
+              </div>
+              <!-- Arrow pointing to marker -->
+              <svg style="width: 16px; height: 8px; margin: 0 auto; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));" viewBox="0 0 16 8">
+                <path d="M 0 0 L 8 8 L 16 0 Z" fill="var(--accent)" />
+              </svg>
+            </div>
+
+            <!-- Overlay info with click action -->
+            <a href="https://apis.map.qq.com/uri/v1/marker?marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷33又1/3号"
+               target="_blank"
+               rel="noopener"
+               class="map-overlay"
+               style="pointer-events: auto; text-decoration: none; cursor: pointer; background: rgba(10,10,10,0.92); padding: 10px 14px; border-radius: 6px; transition: all 0.3s ease; backdrop-filter: blur(4px);"
+               title="Click to open in navigation app">
+              <span class="map-coord">39.9432° N · 116.4030° E</span>
+              <span class="map-coord" style="display: flex; align-items: center; gap: 6px; color: var(--accent); font-weight: 500;">
+                <span>Open in maps</span>
+                <span style="font-size: 14px;">↗</span>
+              </span>
+            </a>
+          </div>
+
+          <address class="addr">
+            <div class="addr-block">
+              <span class="addr-label">Venue Name · 店名</span>
+              <span class="addr-line" style="font-size: 1.1em; font-weight: 500; color: var(--accent);">Blackmoon·黑月</span>
+              <span class="addr-meta" style="font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.06em;">Heiyue · Listening Bar · 听音酒吧</span>
+            </div>
+
+            <div class="addr-block">
+              <span class="addr-label">Address · English</span>
+              <span class="addr-line">No. 33⅓ Beiluoguxiang,<br/>Dongcheng District, Beijing</span>
+              <span class="addr-meta">Nearest subway: Nanluoguxiang (Line 6/8) · 4 min walk</span>
+            </div>
+
+            <div class="addr-block">
+              <span class="addr-label">地址 · 中文</span>
+              <span class="addr-line cn">北京市东城区<br/>北锣鼓巷 33 又 1/3 号</span>
+              <span class="addr-meta">最近地铁站：什刹海/鼓楼大街（8 号线）步行 10 分钟</span>
+            </div>
+
+            <div class="map-ctas">
+              <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px;">
+                <span style="font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--fg-dim); text-transform: uppercase;">Navigate with · 导航工具</span>
+              </div>
+              <a class="btn btn-primary" href="https://surl.amap.com/7bUODlQV2Xv" target="_blank" rel="noopener" title="Open in Gaode Maps (高德地图) - Best for mainland China navigation">
+                <span style="display: flex; align-items: center; gap: 8px;">
+                  <span>高德地图 · Gaode Maps</span>
+                  <span class="arr">↗</span>
+                </span>
+              </a>
+              <a class="btn btn-ghost" href="https://apis.map.qq.com/uri/v1/marker?marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷33又1/3号" target="_blank" rel="noopener" title="Open in Tencent Maps (腾讯地图) - Alternative for mainland China">
+                <span style="display: flex; align-items: center; gap: 8px;">
+                  <span>腾讯地图 · Tencent Maps</span>
+                  <span class="arr">↗</span>
+                </span>
+              </a>
+              <a class="btn btn-ghost" href="https://maps.apple.com/?q=Heiyue&ll=39.943247,116.403009" target="_blank" rel="noopener" title="Open in Apple Maps - Search for 'Heiyue' (黑月)">
+                <span style="display: flex; align-items: center; gap: 8px;">
+                  <span>Apple Maps · 苹果地图</span>
+                  <span class="arr">↗</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="map-ctas" style="margin-top: 24px;">
+              <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px;">
+                <span style="font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--fg-dim); text-transform: uppercase;">Reviews & Info · 点评信息</span>
+              </div>
+              <a class="btn btn-ghost" href="https://www.dianping.com/shop/GaG2HftvNr6IAEis?responseCode=ee3a5df8f48a45e291e0276216d9ff77&requestCode=caa88a5bf154413e9a79b2b54577eddd" target="_blank" rel="noopener" title="View on Dianping (大众点评)">
+                <span style="display: flex; align-items: center; gap: 8px;">
+                  <span>大众点评 · Dianping</span>
+                  <span class="arr">↗</span>
+                </span>
+              </a>
+              <a class="btn btn-ghost" href="https://www.tripadvisor.com/Restaurant_Review-g294212-d34028649-Reviews-Blackmoon_Bar_Beijing-Beijing.html" target="_blank" rel="noopener" title="View on TripAdvisor">
+                <span style="display: flex; align-items: center; gap: 8px;">
+                  <span>TripAdvisor · 猫途鹰</span>
+                  <span class="arr">↗</span>
+                </span>
+              </a>
+            </div>
+
+            <div style="margin-top: 16px; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--rule); border-radius: 4px;">
+              <div style="font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; color: var(--accent); text-transform: uppercase; margin-bottom: 8px;">Navigation Tips · 导航提示</div>
+              <ul style="font-size: 13px; line-height: 1.7; color: var(--fg-dim); margin: 0; padding-left: 20px;">
+                <li><strong>打车 / Taxi & Ride-hailing</strong>：搜索 "<span style="color: var(--accent);">Blackmoon·黑月</span>" 或 "<span style="color: var(--accent);">Ravens·乌鸦餐厅</span>"</li>
+                <li><strong>中国大陆用户</strong>：推荐使用高德地图或腾讯地图获取最准确的导航</li>
+                <li><strong>Mainland China</strong>: Use Gaode or Tencent Maps for most accurate navigation</li>
+                <li><strong>Apple Maps 用户</strong>：需搜索拼音 "<span style="color: var(--accent);">Heiyue</span>" (黑月) · iOS/macOS users search "Heiyue"</li>
+                <li><strong>地铁 / Subway</strong>：什刹海/鼓楼大街站 (8号线) 步行约10分钟 · Shichahai/Gulou Dajie Station (Line 8), 10 min walk</li>
+              </ul>
+            </div>
+
+            <div class="hours" aria-label="Opening hours">
+              <div class="hours-row" style="color:var(--accent)"><span class="day">Coffee · Daily</span><span>10:00 — 18:00</span></div>
+              <div class="hours-row"><span class="day">Bar · Mon</span><span>Closed</span></div>
+              <div class="hours-row"><span class="day">Bar · Tue — Thu</span><span>17:30 — 01:00</span></div>
+              <div class="hours-row today"><span class="day">Bar · Fri — Sat · Today</span><span>17:30 — 02:00</span></div>
+              <div class="hours-row"><span class="day">Bar · Sun</span><span>16:00 — 00:00</span></div>
+            </div>
+          </address>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec" id="contact" data-screen-label="Contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-num">07 / 07</div>
+          <h2 class="sec-title" id="contact-title">
+            Stay in <span class="ital">Touch</span>.
+            <span class="cn mono">联系方式</span>
+          </h2>
+        </div>
+
+        <!-- Reservations callout -->
+        <aside class="reserve-band" aria-label="Reservations">
+          <div class="left">
+            <span class="label">Reservations &middot; 预订</span>
+            <span class="title">For tables &amp; booking and inquiry, please use <span class="ital">WeChat or phone</span>.</span>
+            <span class="meta">预约请添加微信 (RavensDomain) 或致电 +86 18611741214 · 私人包场请提前 72 小时</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:+8618611741214">
+              +86 18611741214 <span class="arr">↗</span>
+            </a>
+            <a class="btn btn-ghost" href="https://www.dianping.com/shop/GaG2HftvNr6IAEis?responseCode=ee3a5df8f48a45e291e0276216d9ff77&requestCode=caa88a5bf154413e9a79b2b54577eddd" target="_blank" rel="noopener">
+              Ravens · 大众点评 <span class="arr">↗</span>
+            </a>
+          </div>
+        </aside>
+
+        <div class="contact-grid">
+          <!-- Instagram -->
+          <div class="contact-card wechat-card" id="ig-card" tabindex="0" role="button" aria-expanded="false" aria-controls="ig-qr">
+            <div class="contact-icon" aria-hidden="true">IG</div>
+            <h3 class="contact-title">Instagram</h3>
+            <span class="contact-handle">@blackmoon.beijing</span>
+            <p class="contact-body">
+              Sets, dig of the week, and upcoming guest selectors. The fastest way to know what's spinning tonight.
+            </p>
+            <div class="qr-wrap" id="ig-qr">
+              <img class="qr-img" src="assets/qrcodes/instagram.png" alt="Instagram QR code">
+              <span class="qr-caption">Scan to follow on Instagram</span>
+            </div>
+            <div class="contact-action">
+              <a class="btn btn-ghost" href="https://www.instagram.com/blackmoon.beijing/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Follow ↗</a>
+            </div>
+          </div>
+
+          <!-- WeChat (QR reveal) -->
+          <div class="contact-card wechat-card" id="wechat-card" tabindex="0" role="button" aria-expanded="false" aria-controls="wechat-qr">
+            <div class="contact-icon" aria-hidden="true">微</div>
+            <h3 class="contact-title">WeChat &middot; 微信</h3>
+            <span class="contact-handle">个人号 · ruhaox</span>
+            <p class="contact-body">
+              个人微信 — 商务合作、活动、私人包场、酒水咨询。<br/>
+              Personal WeChat for reservations, private bookings, and business inquiries.
+            </p>
+            <div class="qr-wrap" id="wechat-qr">
+              <img class="qr-img" src="assets/qrcodes/personal_wechat.png" alt="WeChat personal QR code">
+              <span class="qr-caption">扫码添加 — Scan with WeChat</span>
+            </div>
+            <div class="contact-action">
+              <button class="btn btn-ghost" id="wechat-toggle" type="button">
+                <span class="wechat-label">Reveal QR · 显示二维码</span> <span class="arr">↓</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Xiaohongshu -->
+          <div class="contact-card wechat-card" id="xhs-card" tabindex="0" role="button" aria-expanded="false" aria-controls="xhs-qr">
+            <div class="contact-icon" aria-hidden="true" style="color:#ff2742;border-color:#ff2742">小</div>
+            <h3 class="contact-title">小红书 &middot; Xiaohongshu</h3>
+            <span class="contact-handle">@黑月Blackmoon</span>
+            <p class="contact-body">
+              空间、唱片、活动现场 — 视觉笔记每周更新。<br/>
+              Space, records, event photos — visual notes updated weekly.
+            </p>
+            <div class="qr-wrap" id="xhs-qr">
+              <img class="qr-img" src="assets/qrcodes/xiaohongshu.png" alt="Xiaohongshu QR code">
+              <span class="qr-caption">扫码关注 — Scan to follow</span>
+            </div>
+            <div class="contact-action">
+              <a class="btn btn-ghost" href="https://www.xiaohongshu.com/user/profile/blackmoon" target="_blank" rel="noopener" onclick="event.stopPropagation()">关注 ↗</a>
+            </div>
+          </div>
+
+          <!-- WeChat Official Account (公众号) -->
+          <div class="contact-card wechat-card" id="oa-card" tabindex="0" role="button" aria-expanded="false" aria-controls="oa-qr">
+            <div class="contact-icon" aria-hidden="true">公</div>
+            <h3 class="contact-title">公众号 &middot; Official</h3>
+            <span class="contact-handle">微信公众号 · Blackmoon Records</span>
+            <p class="contact-body">
+              公众号文章 — 嘉宾DJ预告、菜单更新、月度选片。<br/>
+              Long-form posts: Roots culture and music related content, guest DJ lineups, menu updates, and more.
+            </p>
+            <div class="qr-wrap" id="oa-qr">
+              <img class="qr-img" src="assets/qrcodes/wechat_official_account.png" alt="WeChat Official Account QR code">
+              <span class="qr-caption">扫码关注 — Scan with WeChat to follow</span>
+            </div>
+            <div class="contact-action">
+              <button class="btn btn-ghost" id="oa-toggle" type="button">
+                <span class="oa-label">Reveal QR · 显示二维码</span> <span class="arr">↓</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─── Manifesto ──────────────────────────────────────── -->
+    <section class="quote" data-screen-label="Manifesto" style="padding: 100px 0;">
+      <div class="wrap" style="max-width: 800px;">
+        <button id="manifesto-toggle" style="width: 100%; background: transparent; border: 1px solid var(--rule); padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease; border-radius: 4px;"
+                onmouseover="this.style.borderColor='var(--accent)'"
+                onmouseout="this.style.borderColor='var(--rule)'"
+                onclick="
+                  const content = document.getElementById('manifesto-content');
+                  const arrow = document.getElementById('manifesto-arrow');
+                  const isExpanded = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+                  if (isExpanded) {
+                    content.style.maxHeight = '0px';
+                    content.style.opacity = '0';
+                    arrow.style.transform = 'rotate(0deg)';
+                  } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    content.style.opacity = '1';
+                    arrow.style.transform = 'rotate(180deg)';
+                  }
+                ">
+          <div style="text-align: left;">
+            <div style="font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Manifesto · 宣言</div>
+            <div style="font-family: var(--f-display); font-size: clamp(16px, 2vw, 20px); color: var(--fg); font-weight: 300;">On Music, Ritual, and Friction</div>
+          </div>
+          <span id="manifesto-arrow" style="font-size: 24px; color: var(--accent); transition: transform 0.3s ease; transform: rotate(0deg);">↓</span>
+        </button>
+
+        <div id="manifesto-content" style="max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.5s ease, opacity 0.5s ease;">
+          <div style="font-family: var(--f-display); font-size: clamp(18px, 2.2vw, 24px); line-height: 1.8; color: var(--fg); font-weight: 300; text-align: left; max-width: 680px; margin: 32px auto 0;">
+            <p style="margin: 0 0 1.4em 0;">We are not audiophiles.</p>
+
+            <p style="margin: 0 0 1.4em 0;">We are not obsessed with vinyl as a mere medium,<br/>
+            nor do we chase the nostalgic warmth of analog sound.</p>
+
+            <p style="margin: 0 0 1.4em 0;">Our devotion belongs to the <span style="color: var(--accent); font-style: italic;">music itself</span>—<br/>
+            and the profound histories, text, and cultures woven behind it.</p>
+
+            <p style="margin: 0 0 1.4em 0; padding-top: 1em; border-top: 1px solid var(--rule-soft);">Yet, spinning a record—<br/>
+            a tangible artifact traveling through time—<br/>
+            unmistakably infuses a space with an inexplicable magic.</p>
+
+            <p style="margin: 0 0 1.4em 0;">It creates a beautiful <span style="color: var(--accent); font-style: italic;">crease in time</span>,<br/>
+            bringing the air of a bygone era into the present moment.</p>
+
+            <p style="margin: 0 0 1.4em 0;">At this precise coordinates, the act of playing music<br/>
+            transcends utility, and enters the realm of <span style="color: var(--accent); font-style: italic;">poetry and ritual</span>.</p>
+
+            <p style="margin: 0 0 1.4em 0; padding-top: 1em; border-top: 1px solid var(--rule-soft);">In a world of weightless, frictionless streaming,<br/>
+            we choose <span style="color: var(--accent); font-style: italic;">friction</span>.</p>
+
+            <p style="margin: 0 0 1.4em 0;">We choose the conscious weight of a slower pace.</p>
+
+            <p style="margin: 0 0 1.4em 0;">We do not worship the equipment; we honor the story.<br/>
+            We do not possess the technology; we inhabit the ritual.</p>
+
+            <p class="quote-attr" style="margin-top: 48px;">— Blackmoon · 黑月 · 2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Cat easter egg ──────────────────────────────────────── -->
+    <aside class="cat-egg" aria-label="Postscript" data-screen-label="Postscript">
+      <div class="cat-egg-img" aria-hidden="true"></div>
+      <div class="cat-egg-caption">
+        <div class="left">
+          <span class="eyebrow mono">P.S. &middot; The Resident</span>
+          <h3>The cat <span class="ital">stays</span>.</h3>
+        </div>
+        <div class="right">
+          Closing time, every night,<br/>
+          the cat sits up here<br/>
+          to count the last guests out.
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- ─── Footer ─────────────────────────────────────────────── -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <span class="brand-mark lg" aria-hidden="true"></span>
+          Blackmoon
+          <span class="brand-cn" style="color:var(--fg-faint)">黑月</span>
+        </div>
+        <div class="foot-meta">
+          33⅓ Beiluoguxiang · Dongcheng · Beijing<br/>
+          Tue — Sun · 17:30 — Late
+        </div>
+        <div class="foot-meta" style="text-align:right">
+          Instagram · WeChat · 公众号 · 小红书<br/>
+          1994ep@gmail.com · +86 18611741214
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Blackmoon Listening Bar</span>
+        <span>京 ICP 备 XXXXXXXX 号</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── Tweaks panel mount ─────────────────────────────────── -->
+  <div id="tweaks-root"></div>
+
+  <!-- ─── Interactive bits (vanilla) ─────────────────────────── -->
+  <script>
+    (function(){
+      // Generic QR-reveal — works for any .wechat-card with a toggle button inside
+      var cards = document.querySelectorAll('.wechat-card');
+      cards.forEach(function(card){
+        var btn = card.querySelector('button[type="button"]');
+        var lbl = btn && btn.querySelector('.wechat-label, .oa-label');
+        function toggle(){
+          var on = !card.classList.contains('revealed');
+          card.classList.toggle('revealed', on);
+          card.setAttribute('aria-expanded', String(on));
+          if (lbl) lbl.textContent = on ? 'Hide QR · 隐藏二维码' : 'Reveal QR · 显示二维码';
+        }
+        if (btn) btn.addEventListener('click', function(e){ e.stopPropagation(); toggle(); });
+        card.addEventListener('mouseenter', function(){ if (!card.classList.contains('revealed')) toggle(); });
+        card.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); } });
+      });
+    })();
+  </script>
+
+  <script src="image-slot.js"></script>
+
+  <!-- React + Babel for Tweaks panel only -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="tweaks-app.jsx"></script>
+
+</body>
+</html>

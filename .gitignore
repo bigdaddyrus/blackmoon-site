@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Image slot state
+.image-slots.state.json
+
+# Development files
+.claude/
+
+# Temporary files
+*.tmp
+*.log
