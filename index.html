@@ -303,7 +303,6 @@
     .gal-slot.hero{grid-row:span 2;aspect-ratio:4/5}
     .gal-slot.sm{aspect-ratio:5/4}
     @media (max-width:720px){ .gal-slot.hero{grid-row:auto;aspect-ratio:4/5} }
-    .gal-slot image-slot{width:100%;height:100%;display:block}
     .gal-slot img{width:100%;height:100%;display:block;object-fit:cover}
     .gal-cap{position:absolute;left:14px;bottom:12px;font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);background:rgba(10,10,10,0.7);padding:5px 9px;border:1px solid var(--rule-soft);pointer-events:none;z-index:2}
 
@@ -348,7 +347,7 @@
     @media (max-width:720px){ .lp{flex:0 0 170px} }
     .lp-sleeve{aspect-ratio:1;background:var(--bg-2);border:1px solid var(--rule);position:relative;overflow:hidden;transition:transform .25s ease, border-color .25s ease}
     .lp-sleeve:hover{transform:translateY(-3px);border-color:var(--accent)}
-    .lp-sleeve image-slot,.lp-sleeve img{width:100%;height:100%;display:block;object-fit:cover}
+    .lp-sleeve img{width:100%;height:100%;display:block;object-fit:cover}
     .lp-sleeve::after{content:"";position:absolute;left:-4%;top:50%;width:18%;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#0a0a0a 0 1.5px,#1a1a1a 1.5px 2.5px);transform:translateY(-50%);box-shadow:inset 0 0 0 2px #0a0a0a, 0 0 0 1px rgba(200,152,96,0.25);pointer-events:none;opacity:0.85}
     .lp-info{display:flex;flex-direction:column;gap:4px;padding:0 2px}
     .lp-artist{font-family:var(--f-display);font-size:16px;color:var(--fg);font-weight:400;line-height:1.2;letter-spacing:-0.005em}
@@ -387,7 +386,6 @@
     .person{display:flex;flex-direction:column;gap:18px}
     .person-portrait{aspect-ratio:3/4;background:var(--bg-2);border:1px solid var(--rule);overflow:hidden;position:relative;transition:border-color .3s}
     .person:hover .person-portrait{border-color:var(--accent)}
-    .person-portrait image-slot{width:100%;height:100%;display:block}
     .person-info{display:flex;flex-direction:column;gap:6px}
     .person-name{font-family:var(--f-display);font-size:22px;color:var(--fg);font-weight:400;line-height:1.15;letter-spacing:-0.005em}
     .person-name .cn{color:var(--fg-dim);font-size:0.7em;margin-left:4px;font-weight:300}
@@ -835,23 +833,23 @@
 
         <div class="gal-wide">
           <div class="gal-slot w-hero">
-            <image-slot id="space-hero" shape="rect" placeholder="Room · wide / hero"></image-slot>
+            <img src="assets/pics/3.JPG" alt="Blackmoon listening room interior with vinyl wall Beijing hutong" loading="lazy">
             <span class="gal-cap">Listening Room</span>
           </div>
           <div class="gal-slot">
-            <image-slot id="space-1" shape="rect" placeholder="Vinyl wall"></image-slot>
+            <img src="assets/pics/4.JPG" alt="Vinyl wall collection at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">The Hallway</span>
           </div>
           <div class="gal-slot">
-            <image-slot id="space-2" shape="rect" placeholder="Booth / DJ corner"></image-slot>
+            <img src="assets/pics/5.JPG" alt="DJ booth and turntable setup at Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">The booth</span>
           </div>
           <div class="gal-slot">
-            <image-slot id="space-3" shape="rect" placeholder="Bar detail"></image-slot>
+            <img src="assets/pics/6.jpg" alt="Bar detail and vinyl collection Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Vinyl wall</span>
           </div>
           <div class="gal-slot">
-            <image-slot id="space-4" shape="rect" placeholder="Courtyard / entrance"></image-slot>
+            <img src="assets/pics/1.JPG" alt="Hutong courtyard entrance to Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Hutong Quietness</span>
           </div>
         </div>
@@ -900,15 +898,15 @@
 
         <div class="gal-grid">
           <div class="gal-slot hero">
-            <image-slot id="drink-hero" shape="rect" placeholder="Signature pour · portrait"></image-slot>
+            <img src="assets/pics/2.png" alt="Signature cocktail pour at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Cocktails</span>
           </div>
           <div class="gal-slot sm">
-            <image-slot id="drink-1" shape="rect" placeholder="Back-bar detail"></image-slot>
+            <img src="assets/pics/6.jpg" alt="Back bar bottles selection at Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Bottles</span>
           </div>
           <div class="gal-slot sm">
-            <image-slot id="drink-2" shape="rect" placeholder="Bottle / glass detail"></image-slot>
+            <img src="assets/pics/3.JPG" alt="Craft beer and glassware at Blackmoon Listening Bar" loading="lazy">
             <span class="gal-cap">Craft Beers</span>
           </div>
           <div class="gal-slot sm">
@@ -1037,15 +1035,15 @@
 
         <div class="gal-grid">
           <div class="gal-slot sm">
-            <image-slot id="food-1" shape="rect" placeholder="Plate · detail"></image-slot>
+            <img src="assets/pics/4.JPG" alt="Food plate detail at Ravens kitchen Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Plate</span>
           </div>
           <div class="gal-slot hero" style="grid-column:2;grid-row:1 / span 2">
-            <image-slot id="food-hero" shape="rect" placeholder="Signature plate · portrait"></image-slot>
+            <img src="assets/pics/5.JPG" alt="Signature dish by Ravens at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Signature</span>
           </div>
           <div class="gal-slot sm" style="grid-column:1">
-            <image-slot id="food-2" shape="rect" placeholder="Kitchen / fire detail"></image-slot>
+            <img src="assets/pics/6.jpg" alt="Kitchen fire and cooking at Ravens Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">The fire</span>
           </div>
         </div>
@@ -1151,15 +1149,15 @@
 
         <div class="gal-grid">
           <div class="gal-slot hero">
-            <image-slot id="coffee-hero" shape="rect" placeholder="Pour-over · portrait"></image-slot>
+            <img src="assets/pics/1.JPG" alt="Pour-over coffee preparation at 古耳 Coffee Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Signature pour</span>
           </div>
           <div class="gal-slot sm">
-            <image-slot id="coffee-1" shape="rect" placeholder="Espresso bar detail"></image-slot>
+            <img src="assets/pics/3.JPG" alt="Espresso bar and coffee equipment at Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Pour-over</span>
           </div>
           <div class="gal-slot sm">
-            <image-slot id="coffee-2" shape="rect" placeholder="Bean / cup detail"></image-slot>
+            <img src="assets/pics/4.JPG" alt="Coffee beans and latte at 古耳 Coffee Blackmoon" loading="lazy">
             <span class="gal-cap">Latte</span>
           </div>
         </div>
@@ -1589,14 +1587,6 @@
     })();
   </script>
 
-  <script src="image-slot.js"></script>
-
-  <!-- React + Babel for Tweaks panel only -->
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-  <script type="text/babel" src="tweaks-panel.jsx"></script>
-  <script type="text/babel" src="tweaks-app.jsx"></script>
 
 </body>
 </html>
