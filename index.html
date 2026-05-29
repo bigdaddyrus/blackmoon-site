@@ -4,6 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- ─── Favicon ─────────────────────────────────────────────── -->
+  <link rel="icon" type="image/svg+xml" href="assets/logos/bmlogo-white.svg" />
+
   <!-- ─── SEO META ────────────────────────────────────────────── -->
   <title>Blackmoon | Vinyl Listening Bar in Beijing</title>
   <meta name="description" content="Blackmoon — Beijing's vinyl listening bar in the hutongs. Cocktails, craft beer, dinner by Ravens, and specialty coffee. Jazz, soul, hip-hop on wax." />
@@ -39,7 +42,7 @@
     "servesCuisine": ["Bar", "Cocktails", "Western"],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "No. 33⅓ Beiluoguxiang",
+      "streetAddress": "No. 66 Beiluoguxiang",
       "addressLocality": "Dongcheng District",
       "addressRegion": "Beijing",
       "postalCode": "100009",
@@ -152,11 +155,11 @@
 
     /* ─── Hero ─── */
     .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;padding-bottom:64px;position:relative;overflow:hidden}
-    .hero-media{position:absolute;inset:0;z-index:0;background-image:url('assets/hero.jpg');background-size:cover;background-position:center;filter:brightness(0.78) saturate(1.05)}
+    .hero-media{position:absolute;inset:0;z-index:0;background-image:url('assets/hero.jpg');background-size:cover;background-position:center;filter:brightness(0.78) saturate(1.05);pointer-events:none}
     .hero-media::after{content:"";position:absolute;inset:0;background:
       radial-gradient(ellipse 70% 55% at 50% 45%, transparent 0%, rgba(10,10,10,0.55) 65%, var(--bg) 100%),
       linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.15) 25%, rgba(10,10,10,0.25) 55%, var(--bg) 100%),
-      linear-gradient(90deg, rgba(10,10,10,0.45) 0%, transparent 35%, transparent 65%, rgba(10,10,10,0.45) 100%)}
+      linear-gradient(90deg, rgba(10,10,10,0.45) 0%, transparent 35%, transparent 65%, rgba(10,10,10,0.45) 100%);pointer-events:none}
     .hero-placeholder{position:absolute;inset:0;display:grid;place-items:center;
       background:
         radial-gradient(circle at 65% 50%, oklch(0.25 0.01 60) 0%, oklch(0.16 0.008 60) 35%, var(--bg) 70%),
@@ -283,6 +286,10 @@
     .quote-text{font-family:var(--f-display);font-size:clamp(28px,3.6vw,46px);font-weight:300;font-style:italic;line-height:1.35;max-width:20ch;margin:0 auto;color:var(--fg)}
     .quote-attr{margin-top:32px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--fg-faint)}
 
+    /* Manifesto collapse — visible to crawlers, hidden visually until toggled */
+    .manifesto-collapsed{max-height:0;overflow:hidden;opacity:0;transition:max-height .5s ease, opacity .5s ease}
+    .manifesto-expanded{max-height:none;overflow:visible;opacity:1;transition:max-height .5s ease, opacity .5s ease}
+
     /* ─── Footer ─── */
     footer{border-top:1px solid var(--rule);padding:48px 0 32px}
     .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
@@ -408,8 +415,8 @@
     .cat-egg-caption{position:relative;z-index:2;width:100%;padding:0 var(--pad) 56px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
     .cat-egg-caption .left{display:flex;flex-direction:column;gap:8px}
     .cat-egg-caption .eyebrow{color:var(--accent)}
-    .cat-egg-caption h3{font-family:var(--f-display);font-size:clamp(36px,5vw,68px);font-weight:300;color:var(--fg);line-height:1.05;letter-spacing:-0.01em}
-    .cat-egg-caption h3 .ital{font-style:italic;color:var(--accent)}
+    .cat-egg-caption h2{font-family:var(--f-display);font-size:clamp(36px,5vw,68px);font-weight:300;color:var(--fg);line-height:1.05;letter-spacing:-0.01em}
+    .cat-egg-caption h2 .ital{font-style:italic;color:var(--accent)}
     .cat-egg-caption .right{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-dim);text-align:right;max-width:30ch;line-height:1.7}
 
     /* Coffee hours band — daytime program */
@@ -589,11 +596,11 @@
         <li><a href="#location">Find Us</a></li>
       </ul>
       <div class="nav-right">
-        <!-- <div class="lang-toggle">
+        <div class="lang-toggle">
           <a href="/" class="lang-link active">EN</a>
           <span class="lang-sep">/</span>
           <a href="/zh/" class="lang-link">中文</a>
-        </div> -->
+        </div>
         <a class="nav-cta" href="#contact">Reserve · 预订 →</a>
       </div>
     </div>
@@ -841,7 +848,7 @@
             A restored <span class="accent">siheyuan courtyard</span> behind a grey hutong door &mdash; brick, tungsten, vinyl, and very little else.
           </p>
           <div class="gallery-body">
-            <p>Twenty-five seats across the main listening room and a  lounge. A vinyl wall stretching the full length behind the bar, and a single warm-glow filament behind the booth.</p>
+            <p>Fourty seats across the main listening room and dinning lounge. A vinyl wall stretching the full length behind the bar, and a single warm-glow filament behind the booth.</p>
           </div>
         </div>
 
@@ -871,10 +878,10 @@
         <div class="space-meta">
           <div>
             <span class="space-stat-label">Capacity</span>
-            <span class="space-stat-val">42 <span class="ital">seats</span></span>
+            <span class="space-stat-val">40 <span class="ital">seats</span></span>
           </div>
           <div>
-            <span class="space-stat-label">Built</span>
+            <span class="space-stat-label">Established</span>
             <span class="space-stat-val">c. <span class="ital">2024</span></span>
           </div>
           <div>
@@ -882,8 +889,8 @@
             <span class="space-stat-val">1,000+<span class="ital"> records</span></span>
           </div>
           <div>
-            <span class="space-stat-label">Dress</span>
-            <span class="space-stat-val"><span class="ital">Easy</span></span>
+            <span class="space-stat-label">Dresscode</span>
+            <span class="space-stat-val"><span class="ital">Casual</span></span>
           </div>
         </div>
       </div>
@@ -912,7 +919,7 @@
 
         <div class="gal-grid">
           <div class="gal-slot hero">
-            <img src="assets/pics/drinks/1.png" alt="Signature cocktail pour at Blackmoon Listening Bar Beijing" loading="lazy">
+            <img src="assets/pics/drinks/1.jpg" alt="Signature cocktail pour at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Cocktails</span>
           </div>
           <div class="gal-slot sm">
@@ -920,7 +927,7 @@
             <span class="gal-cap">Cocktails</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/drinks/3.png" alt="Craft beer and glassware at Blackmoon Listening Bar" loading="lazy">
+            <img src="assets/pics/drinks/3.jpg" alt="Craft beer and glassware at Blackmoon Listening Bar" loading="lazy">
             <span class="gal-cap">Craft Beers</span>
           </div>
           <div class="gal-slot sm">
@@ -947,13 +954,6 @@
               <span class="menu-desc">Kyrö gin, Bigallet China, Aperal. "Hello darkness my old friend."</span>
             </div>
             <span class="menu-price">¥ 75</span>
-          </div>
-          <div class="menu-row">
-            <div>
-              <span class="menu-name">Rye <span class="ital">Old Fashioned</span></span>
-              <span class="menu-desc">Bulleit rye, cube sugar or cacao liqueur, aromatic bitters. Cinnamon smoke optional.</span>
-            </div>
-            <span class="menu-price">¥ 80</span>
           </div>
           <div class="menu-row">
             <div>
@@ -999,7 +999,7 @@
           </div>
           <div class="menu-row">
             <div>
-              <span class="menu-name">Draft <span class="ital">Beer</span></span>
+              <span class="menu-name">Draft <span class="ital">Beers</span></span>
               <span class="menu-desc">8 taps rotating &mdash; Asahi lager, hazy IPA, witbier, fruit sour ale, cider &amp; more.</span>
             </div>
             <span class="menu-price">¥ 38 — 68</span>
@@ -1097,13 +1097,6 @@
               <span class="menu-desc">Moondarra cream cheese, prosciutto, salami, arugula, caramelised pecan, olive.</span>
             </div>
             <span class="menu-price">¥ 128</span>
-          </div>
-          <div class="menu-row">
-            <div>
-              <span class="menu-name">Garden <span class="ital">Salad</span> <span class="cn">田园沙拉</span></span>
-              <span class="menu-desc">Mixed greens, cherry tomato, cucumber, avocado, feta cheese, balsamic dressing. Vegetarian.</span>
-            </div>
-            <span class="menu-price">¥ 55</span>
           </div>
           <div class="menu-row">
             <div>
@@ -1242,7 +1235,7 @@
               scrolling="no"
               marginheight="0"
               marginwidth="0"
-              src="https://apis.map.qq.com/tools/poimarker?type=0&marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷33又1/3号&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=blackmoon&zoom=14"
+              src="https://apis.map.qq.com/tools/poimarker?type=0&marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷66号&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=blackmoon&zoom=14"
               style="border: 0; position: absolute; inset: 0; filter: grayscale(0.2) brightness(0.75) contrast(1.1); pointer-events: none; user-select: none;">
             </iframe>
             
@@ -1259,7 +1252,7 @@
             </div>
 
             <!-- Overlay info with click action -->
-            <a href="https://apis.map.qq.com/uri/v1/marker?marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷33又1/3号"
+            <a href="https://apis.map.qq.com/uri/v1/marker?marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷66号"
                target="_blank"
                rel="noopener"
                class="map-overlay"
@@ -1284,7 +1277,7 @@
 
             <div class="addr-block" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
               <span class="addr-label">Address · English</span>
-              <span class="addr-line"><span itemprop="streetAddress">No. 66 N Luogu Ln</span>,<br/><span itemprop="addressLocality">Dongcheng District</span>, <span itemprop="addressRegion">Beijing</span></span>
+              <span class="addr-line"><span itemprop="streetAddress">No. 66 Beiluoguxiang</span>,<br/><span itemprop="addressLocality">Dongcheng District</span>, <span itemprop="addressRegion">Beijing</span></span>
               <meta itemprop="postalCode" content="100009" />
               <meta itemprop="addressCountry" content="CN" />
               <span class="addr-meta">Nearest subway: Shichahai, Guloudajie (Line 8) · 10 min walk</span>
@@ -1310,7 +1303,7 @@
                   <span class="arr">↗</span>
                 </span>
               </a>
-              <a class="btn btn-ghost" href="https://apis.map.qq.com/uri/v1/marker?marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷33又1/3号" target="_blank" rel="noopener" title="Open in Tencent Maps (腾讯地图) - Alternative for mainland China">
+              <a class="btn btn-ghost" href="https://apis.map.qq.com/uri/v1/marker?marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷66号" target="_blank" rel="noopener" title="Open in Tencent Maps (腾讯地图) - Alternative for mainland China">
                 <span style="display: flex; align-items: center; gap: 8px;">
                   <span>腾讯地图 · Tencent Maps</span>
                   <span class="arr">↗</span>
@@ -1485,15 +1478,15 @@
                 onclick="
                   const content = document.getElementById('manifesto-content');
                   const arrow = document.getElementById('manifesto-arrow');
-                  const isExpanded = content.style.maxHeight && content.style.maxHeight !== '0px';
+                  const isExpanded = content.classList.contains('manifesto-expanded');
 
                   if (isExpanded) {
-                    content.style.maxHeight = '0px';
-                    content.style.opacity = '0';
+                    content.classList.remove('manifesto-expanded');
+                    content.classList.add('manifesto-collapsed');
                     arrow.style.transform = 'rotate(0deg)';
                   } else {
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                    content.style.opacity = '1';
+                    content.classList.remove('manifesto-collapsed');
+                    content.classList.add('manifesto-expanded');
                     arrow.style.transform = 'rotate(180deg)';
                   }
                 ">
@@ -1504,7 +1497,7 @@
           <span id="manifesto-arrow" style="font-size: 24px; color: var(--accent); transition: transform 0.3s ease; transform: rotate(0deg);">↓</span>
         </button>
 
-        <div id="manifesto-content" style="max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.5s ease, opacity 0.5s ease;">
+        <div id="manifesto-content" class="manifesto-collapsed">
           <div style="font-family: var(--f-display); font-size: clamp(18px, 2.2vw, 24px); line-height: 1.8; color: var(--fg); font-weight: 300; text-align: left; max-width: 680px; margin: 32px auto 0;">
             <p style="margin: 0 0 1.4em 0;">We are not audiophiles.</p>
 
@@ -1532,7 +1525,7 @@
             <p style="margin: 0 0 1.4em 0;">We do not worship the equipment; we honor the story.<br/>
             We do not possess the technology; we inhabit the ritual.</p>
 
-            <p class="quote-attr" style="margin-top: 48px;">— Blackmoon · 黑月 · 2025</p>
+            <p class="quote-attr" style="margin-top: 48px;">— Blackmoon · 黑月 · 2026</p>
           </div>
         </div>
       </div>
@@ -1566,7 +1559,7 @@
           <span class="brand-cn" style="color:var(--fg-faint)">黑月</span>
         </div>
         <div class="foot-meta">
-          33⅓ Beiluoguxiang · Dongcheng · Beijing<br/>
+          66 Beiluoguxiang · Dongcheng · Beijing<br/>
           Tue — Sun · 17:30 — Late
         </div>
         <div class="foot-meta" style="text-align:right">

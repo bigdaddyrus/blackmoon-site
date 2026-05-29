@@ -1,1784 +1,609 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hans">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ─── SEO META ────────────────────────────────────────────── -->
   <title>黑月 | 北京胡同黑胶听音酒吧</title>
   <meta name="description" content="黑月 — 北京胡同里的黑胶听音酒吧。鸡尾酒、精酿啤酒、乌鸦晚餐与古耳精品咖啡。Jazz、Soul、Hip-hop，纯黑胶播放。" />
-
-  <!-- Open Graph Meta Tags -->
+  <link rel="canonical" href="https://blackmoonbeijing.com/zh/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://blackmoonbeijing.com/zh/" />
   <meta property="og:title" content="黑月 | 北京胡同黑胶听音酒吧" />
-  <meta property="og:description" content="黑月 — 北京胡同里的黑胶听音酒吧。鸡尾酒、精酿啤酒、乌鸦晚餐与古耳精品咖啡。" />
-  <meta property="og:image" content="https://blackmoonbeijing.com/assets/og-image.png" />
+  <meta property="og:description" content="黑月 — 北京胡同里的黑胶听音酒吧。鸡尾酒、精酿啤酒、乌鸦晚餐与古耳精品咖啡。Jazz、Soul、Hip-hop，纯黑胶播放。" />
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:locale:alternate" content="en" />
-
-  <!-- Canonical and hreflang -->
-  <link rel="canonical" href="https://blackmoonbeijing.com/zh/" />
   <link rel="alternate" hreflang="en" href="https://blackmoonbeijing.com/" />
   <link rel="alternate" hreflang="zh-Hans" href="https://blackmoonbeijing.com/zh/" />
+  <link rel="alternate" hreflang="x-default" href="https://blackmoonbeijing.com/" />
 
-  <!-- JSON-LD -->
+  <!-- ─── Geo-Meta Tags ──────────────────────────────────────── -->
+  <meta name="geo.region" content="CN-11" />
+  <meta name="geo.placename" content="Beijing" />
+  <meta name="geo.position" content="39.9420;116.4030" />
+  <meta name="ICBM" content="39.9420, 116.4030" />
+
+  <!-- ─── JSON-LD: LocalBusiness / Bar ────────────────────────── -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Blackmoon Listening Bar",
-      "alternateName": "黑月听音酒吧",
-      "url": "https://blackmoonbeijing.com",
-      "telephone": "+86-010-8326-2733",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "北锣鼓巷33号",
-        "addressLocality": "北京",
-        "addressRegion": "东城区",
-        "postalCode": "100009",
-        "addressCountry": "CN"
-      },
-      "image": "https://blackmoonbeijing.com/assets/hero.jpg",
-      "description": "黑月听音酒吧 — 北京胡同里的黑胶听音酒吧",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "17:30",
-        "closes": "23:30"
-      }
-    }
+  {
+    "@context": "https://schema.org",
+    "@type": ["BarOrPub", "Restaurant"],
+    "name": "黑月 Blackmoon Listening Bar",
+    "description": "北京胡同里的黑胶听音酒吧。Hi-Fi模拟信号音响系统；Hip-hop、Soul/Funk、Jazz和City Pop为核心选片；精酿啤酒与特调鸡尾酒。",
+    "url": "https://blackmoonbeijing.com/zh/",
+    "image": "https://blackmoonbeijing.com/og.jpg",
+    "telephone": "+86-186-1174-1214",
+    "priceRange": "$",
+    "menu": "https://blackmoonbeijing.com/zh/#drinks",
+    "servesCuisine": ["Bar", "Cocktails", "Western"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "北锣鼓巷66号",
+      "addressLocality": "东城区",
+      "addressRegion": "北京",
+      "postalCode": "100009",
+      "addressCountry": "CN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.9420",
+      "longitude": "116.4030"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "name": "咖啡 (古耳)", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "name": "酒吧", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "17:30", "closes": "01:00" },
+      { "@type": "OpeningHoursSpecification", "name": "酒吧", "dayOfWeek": ["Friday","Saturday"], "opens": "17:30", "closes": "02:00" },
+      { "@type": "OpeningHoursSpecification", "name": "酒吧", "dayOfWeek": ["Sunday"], "opens": "16:00", "closes": "00:00" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/blackmoon.beijing/",
+      "https://www.xiaohongshu.com/user/profile/blackmoon"
+    ]
+  }
   </script>
+
+  <!-- ─── ANALYTICS placeholder (Plausible) ───────────────────── -->
+  <!-- <script defer data-domain="blackmoonbeijing.com" src="https://plausible.io/js/script.js"></script> -->
+
+  <!-- ─── Fonts ──────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@300;500&display=swap" rel="stylesheet" />
 
   <style>
-    :root {
-      --f-serif: "Crimson Text", serif;
-      --f-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-        Arial, sans-serif;
-      --f-mono: "IBM Plex Mono", monospace;
-      --f-body: var(--f-sans);
-      --f-cn: "STHeiti", "SimHei", "黑体", sans-serif;
-      --fg: #000;
-      --fg-soft: #4a4a4a;
-      --bg: #faf9f5;
-      --rule: #e8e8e8;
-      --rule-soft: #f2f2f2;
-      --accent: #d32c00;
-      --transition: 0.2s ease;
+    :root{
+      --bg:          #0a0a0a;
+      --bg-2:        #121212;
+      --bg-3:        #161616;
+      --fg:          #ece8e1;       /* warm off-white */
+      --fg-dim:      #9a948a;
+      --fg-faint:    #5a544c;
+      --rule:        #232220;
+      --rule-soft:   #1a1917;
+      --accent:      #c89860;       /* tungsten amber */
+      --accent-2:    #8a5a2b;
+
+      --f-display: 'Cormorant Garamond', 'Noto Serif SC', ui-serif, Georgia, serif;
+      --f-body:    'DM Sans', ui-sans-serif, system-ui, sans-serif;
+      --f-mono:    'JetBrains Mono', ui-monospace, monospace;
+      --f-cn:      'Noto Serif SC', 'Cormorant Garamond', serif;
+
+      --max: 1240px;
+      --pad: clamp(20px, 4vw, 56px);
+    }
+
+    /* Subtle film-grain overlay — vinyl/analog texture */
+    body::before{
+      content:"";position:fixed;inset:0;z-index:1000;pointer-events:none;
+      opacity:0.06;mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.92  0 0 0 0 0.85  0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      background-size:200px 200px;
+    }
+    /* Vignette to deepen the room corners */
+    body::after{
+      content:"";position:fixed;inset:0;z-index:999;pointer-events:none;
+      background:radial-gradient(ellipse 90% 70% at 50% 50%, transparent 40%, rgba(0,0,0,0.55) 100%);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-weight:300;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+    body{font-family:var(--f-cn),var(--f-body);line-height:1.7}
+    html{overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img,svg{display:block;max-width:100%}
+    ::selection{background:var(--accent);color:var(--bg)}
+    html{scroll-behavior:smooth}
+
+    /* ─── Typography utilities ─── */
+    .display{font-family:var(--f-display);font-weight:300;letter-spacing:-0.01em;line-height:1.02}
+    .mono{font-family:var(--f-mono);font-size:11px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--fg-dim)}
+    .cn{font-family:var(--f-cn);font-weight:300}
+    .eyebrow{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-faint)}
+
+    /* ─── Layout ─── */
+    .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+    section{position:relative;border-top:1px solid var(--rule)}
+    section:first-of-type{border-top:0}
+
+    /* ─── Top nav ─── */
+    .nav{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);background:rgba(10,10,10,0.82);border-bottom:1px solid var(--rule-soft)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+    /* Logo mark — SVG as mask so it inherits currentColor */
+    .brand-mark{width:30px;height:30px;display:inline-block;flex-shrink:0;
+      background-color:var(--fg);
+      -webkit-mask:url('../assets/blackmoon-logo.svg') center / contain no-repeat;
+              mask:url('../assets/blackmoon-logo.svg') center / contain no-repeat;
+      filter:drop-shadow(0 0 14px rgba(200,152,96,0.22))}
+    .brand-mark.lg{width:54px;height:54px}
+    .brand{display:flex;align-items:center;gap:12px;font-family:var(--f-display);font-size:18px;letter-spacing:0.01em}
+    .brand-cn{font-family:var(--f-cn);color:var(--fg-dim);font-size:14px;margin-left:2px}
+    .nav ul{list-style:none;display:flex;gap:28px;align-items:center}
+    .nav ul a{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-dim);transition:color .2s}
+    .nav ul a:hover{color:var(--fg)}
+    .nav-cta{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--rule);border-radius:999px;transition:all .2s}
+    .nav-cta:hover{border-color:var(--accent);color:var(--accent)}
+    .nav-right{display:flex;align-items:center;gap:8px}
+    .lang-toggle{display:flex;align-items:center;gap:6px;margin-right:16px}
+    .lang-link{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.14em;color:var(--fg-faint);transition:color .2s}
+    .lang-link:hover{color:var(--fg)}
+    .lang-link.active{color:var(--fg);font-weight:500}
+    .lang-sep{color:var(--rule);font-size:10px}
+    @media (max-width: 720px){ .nav ul{display:none} }
+
+    /* ─── Hero ─── */
+    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;padding-bottom:64px;position:relative;overflow:hidden}
+    .hero-media{position:absolute;inset:0;z-index:0;background-image:url('../assets/hero.jpg');background-size:cover;background-position:center;filter:brightness(0.78) saturate(1.05);pointer-events:none}
+    .hero-media::after{content:"";position:absolute;inset:0;background:
+      radial-gradient(ellipse 70% 55% at 50% 45%, transparent 0%, rgba(10,10,10,0.55) 65%, var(--bg) 100%),
+      linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.15) 25%, rgba(10,10,10,0.25) 55%, var(--bg) 100%),
+      linear-gradient(90deg, rgba(10,10,10,0.45) 0%, transparent 35%, transparent 65%, rgba(10,10,10,0.45) 100%);pointer-events:none}
+    .hero-placeholder{position:absolute;inset:0;display:grid;place-items:center;
+      background:
+        radial-gradient(circle at 65% 50%, oklch(0.25 0.01 60) 0%, oklch(0.16 0.008 60) 35%, var(--bg) 70%),
+        repeating-linear-gradient(45deg, transparent 0 22px, color-mix(in oklch,var(--fg-faint) 6%,transparent) 22px 23px)}
+    .record{position:absolute;right:-8%;top:50%;transform:translateY(-50%);width:min(78vh,860px);aspect-ratio:1;border-radius:50%;
+      background:
+        radial-gradient(circle at center, oklch(0.32 0.02 30) 0 14%, oklch(0.13 0.006 60) 14.1% 15.5%, var(--accent) 15.6% 16.2%, oklch(0.13 0.006 60) 16.3% 18%, oklch(0.16 0 0) 18.1% 100%),
+        repeating-radial-gradient(circle at center, color-mix(in oklch,var(--fg-faint) 0%,transparent) 0 1.5px, color-mix(in oklch,var(--fg-faint) 14%,transparent) 1.5px 2px);
+      box-shadow:0 60px 120px -20px oklch(0 0 0 / 0.7), inset 0 0 60px oklch(0 0 0 / 0.6);
+      opacity:0.55;animation:spin 28s linear infinite}
+    @keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+    .hero-content{position:relative;z-index:2}
+    .hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:36px}
+    .hero-eyebrow .bar{width:48px;height:1px;background:var(--accent)}
+    .hero-title{font-size:clamp(64px, 12vw, 168px);font-weight:300;margin-bottom:18px}
+    .hero-title .ital{font-style:italic;color:var(--accent)}
+    .hero-subtitle{font-family:var(--f-display);font-size:clamp(20px,2.6vw,30px);font-weight:300;color:var(--fg-dim);max-width:620px;line-height:1.35;margin-bottom:48px;font-style:italic}
+    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;font-family:var(--f-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;border:1px solid var(--rule);transition:all .25s ease;color:var(--fg)}
+    .btn .arr{transition:transform .25s ease}
+    .btn:hover .arr{transform:translateX(4px)}
+    .btn-primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+    .btn-primary:hover{background:#d9a868;border-color:#d9a868}
+    .btn-ghost{background:transparent;color:var(--fg);border-color:var(--rule)}
+    .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+    .nav-cta{border-radius:0 !important}
+
+    .hero-foot{position:absolute;left:var(--pad);right:var(--pad);bottom:24px;display:flex;justify-content:space-between;align-items:flex-end;z-index:2;gap:24px;flex-wrap:wrap}
+    .hero-foot .col{display:flex;flex-direction:column;gap:6px}
+    .hero-foot .val{font-family:var(--f-display);font-size:18px;color:var(--fg)}
+
+    /* ─── Section headers ─── */
+    .sec{padding:120px 0 120px}
+    .sec-head{display:grid;grid-template-columns:120px 1fr;gap:48px;margin-bottom:72px;align-items:start}
+    @media (max-width:720px){ .sec-head{grid-template-columns:1fr;gap:16px} .sec{padding:80px 0} }
+    .sec-num{font-family:var(--f-mono);font-size:11px;letter-spacing:0.2em;color:var(--fg-faint);padding-top:14px}
+    .sec-title{font-family:var(--f-display);font-size:clamp(44px,6vw,80px);font-weight:300;letter-spacing:-0.01em;line-height:1.02}
+    .sec-title .ital{font-style:italic;color:var(--accent)}
+    .sec-title .cn{display:block;font-size:0.42em;color:var(--fg-faint);margin-top:14px;letter-spacing:0.04em}
+
+    /* ─── Sound section ─── */
+    .sound-grid{display:grid;grid-template-columns:120px 1fr 1fr;gap:48px}
+    @media (max-width:880px){ .sound-grid{grid-template-columns:1fr;gap:36px} }
+    .sound-lede{font-family:var(--f-display);font-size:clamp(22px,2.4vw,28px);line-height:1.4;color:var(--fg);font-weight:300}
+    .sound-lede .accent{color:var(--accent);font-style:italic}
+    .sound-body p{color:var(--fg-dim);margin-bottom:18px;max-width:46ch}
+    .core{margin-top:48px;border-top:1px solid var(--rule);padding-top:32px;display:grid;grid-template-columns:120px 1fr;gap:48px;align-items:start}
+    @media (max-width:880px){ .core{grid-template-columns:1fr;gap:18px} }
+    .core-label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-faint)}
+    .core-line{font-family:var(--f-display);font-style:italic;font-size:clamp(20px,2vw,24px);line-height:1.5;color:var(--fg);font-weight:300;max-width:48ch}
+    .core-line .accent{color:var(--accent);font-style:normal;font-weight:400}
+
+    .genres{display:flex;gap:8px;flex-wrap:wrap;margin-top:36px}
+    .genre{padding:9px 14px;border:1px solid var(--rule);font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim)}
+    .genre.on{color:var(--accent);border-color:var(--accent)}
+
+    /* ─── Marquee divider ─── */
+    .marquee{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);overflow:hidden;white-space:nowrap;padding:22px 0;display:flex;gap:48px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+    .marquee-track{display:inline-flex;gap:48px;animation:slide 40s linear infinite;font-family:var(--f-display);font-size:clamp(28px,4vw,44px);font-style:italic;color:var(--fg-dim);white-space:nowrap}
+    .marquee-track span{display:inline-flex;align-items:center;gap:48px}
+    .marquee-track .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+    @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ─── Location ─── */
+    .loc-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:stretch}
+    @media (max-width:880px){ .loc-grid{grid-template-columns:1fr;gap:36px} }
+    .map-card{position:relative;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--rule);background:var(--bg-2);transition:transform .35s ease, border-color .35s ease}
+    .map-card:hover{border-color:var(--accent)}
+    .map-svg{position:absolute;inset:0;width:100%;height:100%}
+    .map-pin{position:absolute;left:54%;top:50%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:6px}
+    .map-pin-dot{width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px color-mix(in oklch,var(--accent) 24%,transparent),0 0 24px var(--accent);animation:pulse 2.4s ease-in-out infinite}
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 6px color-mix(in oklch,var(--accent) 24%,transparent),0 0 24px var(--accent)}50%{box-shadow:0 0 0 14px color-mix(in oklch,var(--accent) 6%,transparent),0 0 28px var(--accent)}}
+    .map-pin-label{font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg);background:rgba(10,10,10,0.85);padding:4px 8px;border:1px solid var(--rule)}
+    .map-overlay{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;align-items:flex-end;pointer-events:none}
+    .map-overlay:hover{border-color:var(--accent)}
+    .map-coord{font-family:var(--f-mono);font-size:10px;letter-spacing:0.12em;color:var(--fg-dim);background:rgba(10,10,10,0.75);padding:4px 8px;border:1px solid var(--rule-soft)}
+
+    .addr{display:flex;flex-direction:column;gap:28px;font-style:normal}
+    .addr-block{display:flex;flex-direction:column;gap:8px}
+    .addr-label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-faint)}
+    .addr-line{font-family:var(--f-display);font-size:23px;line-height:1.45;color:var(--fg);font-weight:300}
+    .addr-line.cn{font-family:var(--f-cn);font-size:21px}
+    .addr-meta{font-family:var(--f-mono);font-size:11px;color:var(--fg-dim);letter-spacing:0.06em}
+    .map-ctas{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+    .map-ctas .btn{width:100%;justify-content:space-between}
+
+    .hours{margin-top:8px;border-top:1px solid var(--rule);padding-top:24px}
+    .hours-row{display:grid;grid-template-columns:1fr auto;padding:10px 0;border-bottom:1px solid color-mix(in oklch,var(--rule) 50%,transparent);font-family:var(--f-mono);font-size:11px;letter-spacing:0.1em;color:var(--fg-dim)}
+    .hours-row:last-child{border-bottom:0}
+    .hours-row.today{color:var(--accent)}
+    .hours-row .day{text-transform:uppercase;letter-spacing:0.16em}
+
+    /* ─── Contact (Stay in Touch) ─── */
+    .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    @media (max-width:720px){ .contact-grid{grid-template-columns:1fr} }
+    .contact-card{border:1px solid var(--rule);padding:32px;display:flex;flex-direction:column;gap:14px;background:var(--bg-2);transition:border-color .3s, background .3s}
+    .contact-card:hover{border-color:var(--accent);background:var(--bg-3)}
+    .contact-icon{width:38px;height:38px;border-radius:50%;border:1px solid var(--rule);display:grid;place-items:center;color:var(--accent);font-family:var(--f-mono);font-size:12px}
+    .contact-title{font-family:var(--f-display);font-size:28px;color:var(--fg);font-weight:400}
+    .contact-handle{font-family:var(--f-mono);font-size:11px;color:var(--fg-dim);letter-spacing:0.1em}
+    .contact-body{color:var(--fg-dim);max-width:42ch;font-size:14.5px}
+    .contact-action{margin-top:auto}
+
+    /* WeChat reveal */
+    .wechat-card{position:relative}
+    .qr-wrap{display:flex;align-items:flex-start;gap:20px;margin-top:8px}
+    .qr-placeholder{width:124px;height:124px;background:#fafaf7;display:grid;place-items:center;flex-shrink:0;border:1px solid var(--rule);position:relative;overflow:hidden;
+      opacity:0;transform:scale(0.94) translateY(8px);transition:opacity .35s ease, transform .35s ease;pointer-events:none}
+    .wechat-card.revealed .qr-placeholder{opacity:1;transform:scale(1) translateY(0)}
+    .qr-img{width:124px;height:124px;object-fit:contain;flex-shrink:0;opacity:0;transform:scale(.92) translateY(6px);transition:opacity .5s ease,transform .5s ease}
+    .wechat-card.revealed .qr-img{opacity:1;transform:scale(1) translateY(0)}
+    .qr-placeholder::before{content:"";position:absolute;inset:8px;
+      background:
+        linear-gradient(#0a0a0a,#0a0a0a) 0 0/22% 22% no-repeat,
+        linear-gradient(#0a0a0a,#0a0a0a) 78% 0/22% 22% no-repeat,
+        linear-gradient(#0a0a0a,#0a0a0a) 0 78%/22% 22% no-repeat,
+        repeating-conic-gradient(#0a0a0a 0 25%, transparent 0 50%) 0 0/12% 12%}
+    .qr-placeholder::after{content:"placeholder";position:absolute;bottom:6px;left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:8px;letter-spacing:0.12em;color:#999;text-transform:uppercase;background:#fafaf7;padding-top:2px}
+    .qr-caption{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--fg-faint);max-width:18ch;line-height:1.6;opacity:0;transition:opacity .4s ease .1s}
+    .wechat-card.revealed .qr-caption{opacity:1}
+
+    /* ─── Press / Quote strip ─── */
+    .quote{padding:120px 0;border-top:1px solid var(--rule);text-align:center}
+    .quote-text{font-family:var(--f-display);font-size:clamp(28px,3.6vw,46px);font-weight:300;font-style:italic;line-height:1.35;max-width:20ch;margin:0 auto;color:var(--fg)}
+    .quote-attr{margin-top:32px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--fg-faint)}
+
+    /* Manifesto collapse — visible to crawlers, hidden visually until toggled */
+    .manifesto-collapsed{max-height:0;overflow:hidden;opacity:0;transition:max-height .5s ease, opacity .5s ease}
+    .manifesto-expanded{max-height:none;overflow:visible;opacity:1;transition:max-height .5s ease, opacity .5s ease}
+
+    /* ─── Footer ─── */
+    footer{border-top:1px solid var(--rule);padding:48px 0 32px}
+    .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+    .foot-brand{font-family:var(--f-display);font-size:22px;display:flex;align-items:center;gap:10px}
+    .foot-meta{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.14em;color:var(--fg-faint);text-transform:uppercase}
+    .foot-bottom{margin-top:40px;display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:10.5px;color:var(--fg-faint);letter-spacing:0.1em;flex-wrap:wrap;gap:10px}
+
+    /* ─── Section number marker mode (toggleable) ─── */
+    [data-numbers="off"] .sec-num{display:none}
+    [data-numbers="off"] .sec-head{grid-template-columns:1fr}
+    [data-numbers="off"] .sound-grid{grid-template-columns:1fr 1fr}
+    @media (max-width:880px){ [data-numbers="off"] .sound-grid{grid-template-columns:1fr} }
+
+    /* ─── Gallery sections (Drinks / Food / Space) ─── */
+    .gallery-intro{display:grid;grid-template-columns:120px 1fr 1fr;gap:48px;margin-bottom:56px}
+    @media (max-width:880px){ .gallery-intro{grid-template-columns:1fr;gap:24px} }
+    .gallery-lede{font-family:var(--f-display);font-size:clamp(22px,2.4vw,28px);line-height:1.45;color:var(--fg);font-weight:300}
+    .gallery-lede .accent{color:var(--accent);font-style:italic}
+    .gallery-body p{color:var(--fg-dim);max-width:44ch;font-size:14.5px}
+
+    .gal-grid{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:repeat(2,auto);gap:16px}
+    @media (max-width:720px){ .gal-grid{grid-template-columns:1fr} }
+    .gal-slot{position:relative;background:var(--bg-2);border:1px solid var(--rule);overflow:hidden}
+    .gal-slot.hero{grid-row:span 2;aspect-ratio:4/5}
+    .gal-slot.sm{aspect-ratio:5/4}
+    @media (max-width:720px){ .gal-slot.hero{grid-row:auto;aspect-ratio:4/5} }
+    .gal-slot img{width:100%;height:100%;display:block;object-fit:cover}
+    .gal-cap{position:absolute;left:14px;bottom:12px;font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-dim);background:rgba(10,10,10,0.7);padding:5px 9px;border:1px solid var(--rule-soft);pointer-events:none;z-index:2}
+
+    .gal-wide{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:16px;aspect-ratio:16/8}
+    @media (max-width:880px){ .gal-wide{grid-template-columns:1fr 1fr;aspect-ratio:auto} }
+    .gal-wide .w-hero{grid-row:1 / span 2}
+    .gal-wide .gal-slot{aspect-ratio:auto}
+    @media (max-width:880px){ .gal-wide .w-hero{grid-row:span 1} .gal-wide .gal-slot{aspect-ratio:5/4} }
+
+    .menu{margin-top:20px;border-top:1px solid var(--rule);padding-top:24px}
+    .menu-row{display:grid;grid-template-columns:1fr auto;gap:16px;padding:18px 0;border-bottom:1px solid var(--rule-soft);align-items:baseline}
+    .menu-row:last-child{border-bottom:0}
+    .menu-name{font-family:var(--f-display);font-size:22px;color:var(--fg);font-weight:300}
+    .menu-name .ital{font-style:italic;color:var(--accent);font-weight:300}
+    .menu-desc{display:block;font-family:var(--f-body);font-size:13px;color:var(--fg-dim);margin-top:5px;letter-spacing:0.01em;font-weight:300;max-width:46ch}
+    .menu-price{font-family:var(--f-mono);font-size:12px;color:var(--accent);letter-spacing:0.08em;white-space:nowrap}
+
+    .space-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;border-top:1px solid var(--rule);padding-top:28px}
+    @media (max-width:720px){ .space-meta{grid-template-columns:repeat(2,1fr)} }
+    .space-stat-label{font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-faint);display:block;margin-bottom:6px}
+    .space-stat-val{font-family:var(--f-display);font-size:24px;color:var(--fg);font-weight:300;letter-spacing:-0.01em}
+    .space-stat-val .ital{font-style:italic;color:var(--accent)}
+
+    /* ─── Vinyl scrollable gallery (Core Curation) ─── */
+    .vinyl-wrap{margin-top:48px}
+    .vinyl-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px;gap:24px;flex-wrap:wrap}
+    .vinyl-head .label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-faint)}
+    .vinyl-head .hint{font-family:var(--f-mono);font-size:10px;letter-spacing:0.14em;color:var(--fg-faint);text-transform:uppercase}
+    .vinyl-head .hint::before{content:"← → ";color:var(--accent);margin-right:6px}
+    .vinyl-rail{
+      display:flex;gap:18px;overflow-x:auto;overflow-y:hidden;
+      padding:4px 0 22px;
+      scroll-snap-type:x mandatory;
+      scrollbar-width:thin;scrollbar-color:var(--rule) transparent;
+      -webkit-overflow-scrolling:touch;
+    }
+    .vinyl-rail::-webkit-scrollbar{height:6px}
+    .vinyl-rail::-webkit-scrollbar-track{background:transparent}
+    .vinyl-rail::-webkit-scrollbar-thumb{background:var(--rule);border-radius:3px}
+    .vinyl-rail::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+    .lp{flex:0 0 220px;scroll-snap-align:start;display:flex;flex-direction:column;gap:14px}
+    @media (max-width:720px){ .lp{flex:0 0 170px} }
+    .lp-sleeve{aspect-ratio:1;background:var(--bg-2);border:1px solid var(--rule);position:relative;overflow:hidden;transition:transform .25s ease, border-color .25s ease}
+    .lp-sleeve:hover{transform:translateY(-3px);border-color:var(--accent)}
+    .lp-sleeve img{width:100%;height:100%;display:block;object-fit:cover}
+    .lp-sleeve::after{content:"";position:absolute;left:-4%;top:50%;width:18%;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#0a0a0a 0 1.5px,#1a1a1a 1.5px 2.5px);transform:translateY(-50%);box-shadow:inset 0 0 0 2px #0a0a0a, 0 0 0 1px rgba(200,152,96,0.25);pointer-events:none;opacity:0.85}
+    .lp-info{display:flex;flex-direction:column;gap:4px;padding:0 2px}
+    .lp-artist{font-family:var(--f-display);font-size:16px;color:var(--fg);font-weight:400;line-height:1.2;letter-spacing:-0.005em}
+    .lp-album{font-family:var(--f-display);font-style:italic;font-size:14px;color:var(--fg-dim);line-height:1.3}
+    .lp-meta{display:flex;gap:10px;margin-top:4px;font-family:var(--f-mono);font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--fg-faint)}
+    .lp-meta .dot{color:var(--rule)}
+    .lp-meta .genre-tag{color:var(--accent)}
+
+    /* Mini-program QR card at the end of the vinyl rail */
+    .lp-qr{flex:0 0 260px;scroll-snap-align:start;display:flex;flex-direction:column;gap:14px;padding:18px;border:1px dashed var(--accent);background:linear-gradient(180deg,rgba(200,152,96,0.04),transparent)}
+    @media (max-width:720px){ .lp-qr{flex:0 0 220px} }
+    .lp-qr-head{display:flex;align-items:center;gap:8px}
+    .lp-qr-head .pip{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+    .lp-qr-head span{font-family:var(--f-mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent)}
+    .lp-qr-title{font-family:var(--f-display);font-size:22px;color:var(--fg);font-weight:300;line-height:1.15;letter-spacing:-0.005em;margin-top:2px}
+    .lp-qr-title .ital{font-style:italic;color:var(--accent)}
+    .lp-qr-sub{font-family:var(--f-cn);font-size:12px;color:var(--fg-dim);letter-spacing:0.04em}
+    .lp-qr-slot{aspect-ratio:1;background:#fafaf7;border:1px solid var(--rule);display:grid;place-items:center;position:relative;overflow:hidden;margin-top:4px}
+    .lp-qr-slot::before{content:"";position:absolute;inset:14px;
+      background:
+        linear-gradient(#0a0a0a,#0a0a0a) 0 0/22% 22% no-repeat,
+        linear-gradient(#0a0a0a,#0a0a0a) 78% 0/22% 22% no-repeat,
+        linear-gradient(#0a0a0a,#0a0a0a) 0 78%/22% 22% no-repeat,
+        repeating-conic-gradient(#0a0a0a 0 25%, transparent 0 50%) 0 0/13% 13%}
+    .lp-qr-slot::after{content:"微信小程序 · mini-program";position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:8.5px;letter-spacing:0.14em;color:#666;text-transform:uppercase;background:#fafaf7;padding:3px 0}
+    .lp-qr-slot:has(img)::before,.lp-qr-slot:has(img)::after{display:none}
+    .lp-qr-foot{font-family:var(--f-mono);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-faint);margin-top:2px}
+
+    /* ─── Ravens hours band (Plate) ─── */
+    /* (uses .coffee-hours class shape but with different label color rules — styles handled inline where needed) */
+
+    /* ─── People section ─── */
+    .people-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    @media (max-width:880px){ .people-grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:540px){ .people-grid{grid-template-columns:1fr} }
+    .person{display:flex;flex-direction:column;gap:18px}
+    .person-portrait{aspect-ratio:3/4;background:var(--bg-2);border:1px solid var(--rule);overflow:hidden;position:relative;transition:border-color .3s}
+    .person:hover .person-portrait{border-color:var(--accent)}
+    .person-info{display:flex;flex-direction:column;gap:6px}
+    .person-name{font-family:var(--f-display);font-size:22px;color:var(--fg);font-weight:400;line-height:1.15;letter-spacing:-0.005em}
+    .person-name .cn{color:var(--fg-dim);font-size:0.7em;margin-left:4px;font-weight:300}
+    .person-role{font-family:var(--f-mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent)}
+    .person-bio{font-family:var(--f-body);font-size:13px;line-height:1.55;color:var(--fg-dim);margin-top:4px;font-weight:300;max-width:30ch}
+
+    /* ─── Cat easter egg (bottom backdrop) ─── */
+    .cat-egg{position:relative;height:64vh;min-height:480px;border-top:1px solid var(--rule);overflow:hidden;display:flex;align-items:flex-end}
+    .cat-egg-img{position:absolute;inset:0;background-image:url('../assets/cat.jpg');background-size:cover;background-position:center;filter:brightness(0.55) saturate(1.05);transform:scale(1.02)}
+    .cat-egg::before{content:"";position:absolute;inset:0;background:
+      linear-gradient(180deg, var(--bg) 0%, rgba(10,10,10,0.4) 18%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.45) 92%, var(--bg) 100%),
+      radial-gradient(ellipse 60% 50% at 50% 60%, transparent 0%, rgba(10,10,10,0.55) 80%);
+      z-index:1;pointer-events:none}
+    .cat-egg-caption{position:relative;z-index:2;width:100%;padding:0 var(--pad) 56px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+    .cat-egg-caption .left{display:flex;flex-direction:column;gap:8px}
+    .cat-egg-caption .eyebrow{color:var(--accent)}
+    .cat-egg-caption h2{font-family:var(--f-display);font-size:clamp(36px,5vw,68px);font-weight:300;color:var(--fg);line-height:1.05;letter-spacing:-0.01em}
+    .cat-egg-caption h2 .ital{font-style:italic;color:var(--accent)}
+    .cat-egg-caption .right{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-dim);text-align:right;max-width:30ch;line-height:1.7}
+
+    /* Coffee hours band — daytime program */
+    .coffee-hours{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:48px 0 56px;padding:32px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);align-items:start}
+    @media (max-width:720px){ .coffee-hours{grid-template-columns:1fr;gap:24px} }
+    .ch-block{display:flex;flex-direction:column;gap:8px}
+    .ch-right{text-align:right;align-items:flex-end}
+    @media (max-width:720px){ .ch-right{text-align:left;align-items:flex-start} }
+    .ch-label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--fg-faint)}
+    .ch-val{font-family:var(--f-display);font-size:clamp(28px,3.4vw,42px);color:var(--fg);font-weight:300;letter-spacing:-0.01em;line-height:1.1}
+    .ch-val .ital{font-style:italic;color:var(--accent)}
+    .ch-meta{font-family:var(--f-cn);font-size:13px;color:var(--fg-dim);letter-spacing:0.04em}
+
+    /* Reservations callout band */
+    .reserve-band{margin-bottom:36px;padding:28px 32px;border:1px solid var(--accent);background:linear-gradient(180deg,rgba(200,152,96,0.06),transparent);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+    .reserve-band .left{display:flex;flex-direction:column;gap:6px}
+    .reserve-band .label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent)}
+    .reserve-band .title{font-family:var(--f-display);font-size:clamp(22px,2.4vw,28px);font-weight:300;color:var(--fg);letter-spacing:-0.01em}
+    .reserve-band .title .ital{font-style:italic;color:var(--accent)}
+    .reserve-band .meta{font-family:var(--f-cn);font-size:13px;color:var(--fg-dim);margin-top:2px}
+    .reserve-band .actions{display:flex;gap:10px;flex-wrap:wrap}
+
+    /* ─── Mobile Responsive ─── */
+
+    /* Small tablets & large phones */
+    @media (max-width:600px){
+      :root{--pad:16px}
+
+      /* Nav */
+      .nav-inner{height:52px}
+      .nav-cta{display:none}
+      .brand{font-size:16px;gap:8px}
+      .brand-cn{font-size:12px}
+      .brand-mark{width:24px;height:24px}
+
+      /* Hero */
+      .hero{min-height:85vh;padding-top:80px;padding-bottom:40px}
+      .hero-eyebrow{margin-bottom:20px}
+      .hero-subtitle{font-size:18px;margin-bottom:32px;max-width:100%}
+      .hero-ctas{flex-direction:column;gap:10px}
+      .hero-ctas .btn{width:100%;justify-content:center}
+      .hero-foot{position:relative;left:auto;right:auto;bottom:auto;flex-direction:column;align-items:flex-start;gap:16px;margin-top:36px;padding-left:var(--pad);padding-right:var(--pad)}
+      .hero-foot .col{text-align:left !important}
+      .record{display:none}
+
+      /* Sections */
+      .sec{padding:56px 0}
+      .sec-head{margin-bottom:40px;gap:10px}
+      .sec-title{font-size:clamp(36px,10vw,52px)}
+
+      /* Sound grid — collapse the empty first column */
+      .sound-grid{grid-template-columns:1fr !important;gap:28px}
+      .sound-lede{font-size:20px}
+
+      /* Core curation */
+      .core{grid-template-columns:1fr !important;gap:14px;margin-top:32px;padding-top:24px}
+      .genres{gap:6px;margin-top:24px}
+      .genre{padding:7px 10px;font-size:9.5px}
+
+      /* Gallery intros — collapse the empty first column */
+      .gallery-intro{grid-template-columns:1fr !important;gap:18px;margin-bottom:36px}
+      .gallery-lede{font-size:20px}
+
+      /* Gallery grids */
+      .gal-grid{gap:10px}
+      .gal-wide{grid-template-columns:1fr !important;aspect-ratio:auto !important}
+      .gal-wide .gal-slot{aspect-ratio:4/3 !important}
+      .gal-wide .w-hero{grid-row:span 1 !important;aspect-ratio:4/3 !important}
+      .gal-cap{font-size:9px;left:8px;bottom:8px;padding:4px 7px}
+
+      /* Space meta stats */
+      .space-meta{grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;padding-top:20px}
+      .space-stat-val{font-size:20px}
+
+      /* Vinyl rail */
+      .vinyl-wrap{margin-top:32px}
+      .lp{flex:0 0 155px !important}
+      .lp-artist{font-size:14px}
+      .lp-album{font-size:12px}
+      .lp-qr{flex:0 0 200px !important;padding:14px}
+      .lp-qr-title{font-size:18px}
+
+      /* Menu */
+      .menu-row{gap:10px}
+      .menu-name{font-size:18px}
+      .menu-desc{font-size:12px}
+
+      /* Coffee hours band */
+      .coffee-hours{grid-template-columns:1fr !important;gap:18px;margin:32px 0 40px;padding:24px 0}
+      .ch-val{font-size:clamp(24px,6vw,32px)}
+      .ch-right{text-align:left !important;align-items:flex-start !important}
+
+      /* People */
+      .people-grid{grid-template-columns:1fr !important;gap:32px}
+      .person-portrait{aspect-ratio:4/5}
+      .person-bio{max-width:100%}
+
+      /* Location */
+      .loc-grid{gap:28px !important}
+      .map-card{aspect-ratio:3/2 !important;max-height:240px !important}
+      .addr-line{font-size:19px}
+      .addr-line.cn{font-size:17px}
+      .addr{gap:20px}
+      .map-overlay{left:8px;right:8px;bottom:8px}
+      .hours{margin-top:4px;padding-top:16px}
+      .hours-row{padding:8px 0;font-size:10px}
+
+      /* Contact */
+      .contact-grid{gap:16px}
+      .contact-card{padding:20px}
+      .contact-title{font-size:22px}
+      .contact-body{font-size:13px}
+      .qr-wrap{flex-direction:column;gap:12px}
+      .qr-placeholder{width:100px;height:100px}
+      .qr-img{width:100px;height:100px}
+
+      /* Reserve band */
+      .reserve-band{padding:20px 16px;flex-direction:column;align-items:flex-start;gap:18px}
+      .reserve-band .title{font-size:20px}
+      .reserve-band .meta{font-size:12px}
+      .reserve-band .actions{width:100%}
+      .reserve-band .actions .btn{flex:1;justify-content:center;text-align:center}
+
+      /* Press quote */
+      .quote{padding:64px 0}
+      .quote-text{font-size:clamp(22px,6vw,32px);max-width:100%}
+
+      /* Cat easter egg */
+      .cat-egg{height:50vh;min-height:360px}
+      .cat-egg-caption{flex-direction:column;align-items:flex-start;gap:16px;padding-bottom:32px}
+      .cat-egg-caption .right{text-align:left;font-size:10px}
+
+      /* Footer */
+      .foot-grid{flex-direction:column;gap:20px}
+      .foot-meta{text-align:left !important}
+      .foot-bottom{flex-direction:column;gap:6px}
+
+      /* Buttons — larger touch targets */
+      .btn{padding:14px 18px;font-size:10.5px}
+
+      /* Marquee */
+      .marquee{padding:16px 0}
+      .marquee-track{font-size:clamp(22px,5vw,32px);gap:32px}
+      .marquee-track span{gap:32px}
+    }
+
+    /* Extra small phones (≤380px) */
+    @media (max-width:380px){
+      :root{--pad:12px}
+      .hero-title{font-size:clamp(48px,14vw,64px)}
+      .sec-title{font-size:clamp(30px,9vw,44px)}
+      .contact-card{padding:16px}
+      .btn{padding:12px 14px;font-size:10px}
+      .reserve-band .actions{flex-direction:column}
+      .reserve-band .actions .btn{width:100%}
+      .map-card{max-height:200px !important}
     }
 
-    @font-face {
-      font-family: "Crimson Text";
-      src: url("https://fonts.gstatic.com/s/crimsontext/v14/wlpzgwHVLKVZrYbw0lZNQDo.woff2")
-        format("woff2");
-    }
-
-    @font-face {
-      font-family: "IBM Plex Mono";
-      src: url("https://fonts.gstatic.com/s/ibmplexmono/v20/jizERExUqGDA6xMmrQP_rA.woff2")
-        format("woff2");
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg);
-      color: var(--fg);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    body {
-      font-family: var(--f-cn), var(--f-body);
-      line-height: 1.7;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Typography */
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: 0;
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0;
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: color var(--transition);
-    }
-
-    a:hover {
-      color: var(--accent);
-    }
-
-    button {
-      font-family: inherit;
-      border: none;
-      background: none;
-      cursor: pointer;
-      padding: 0;
-      color: inherit;
-    }
-
-    /* Utilities */
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .display {
-      font-family: var(--f-serif);
-      font-size: 3rem;
-      line-height: 1.15;
-      font-weight: 400;
-    }
-
-    .display-sm {
-      font-family: var(--f-serif);
-      font-size: 2.2rem;
-      line-height: 1.2;
-      font-weight: 400;
-    }
-
-    .display-xs {
-      font-family: var(--f-serif);
-      font-size: 1.6rem;
-      line-height: 1.3;
-      font-weight: 400;
-    }
-
-    .mono {
-      font-family: var(--f-mono);
-      font-size: 0.7em;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--fg-soft);
-    }
-
-    .cn.mono {
-      font-family: var(--f-cn);
-      font-size: 0.75em;
-      letter-spacing: 0.05em;
-    }
-
-    .ital {
-      font-style: italic;
-    }
-
-    .accent {
-      color: var(--accent);
-    }
-
-    .arr {
-      display: inline-block;
-      margin-left: 0.4em;
-    }
-
-    .dot {
-      display: inline-block;
-      width: 4px;
-      height: 4px;
-      background: currentColor;
-      border-radius: 50%;
-      margin: 0 1em;
-      vertical-align: 0.1em;
-    }
-
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-      background: rgba(250, 249, 245, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--rule);
-      z-index: 1000;
-    }
-
-    .nav-logo {
-      font-size: 1.2em;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .brand-mark {
-      width: 32px;
-      height: 32px;
-      background: var(--fg);
-      -webkit-mask: url('../assets/blackmoon-logo.svg') center / contain no-repeat;
-      mask: url('../assets/blackmoon-logo.svg') center / contain no-repeat;
-    }
-
-    .nav-menu {
-      display: flex;
-      gap: 40px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-    }
-
-    .nav-menu a {
-      font-size: 0.95em;
-      color: var(--fg-soft);
-      transition: color var(--transition);
-    }
-
-    .nav-menu a:hover {
-      color: var(--fg);
-    }
-
-    .nav-lang {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      margin-left: 20px;
-    }
-
-    .nav-lang button {
-      font-size: 0.85em;
-      color: var(--fg-soft);
-      transition: color var(--transition);
-    }
-
-    .nav-lang button.active {
-      color: var(--fg);
-      font-weight: 500;
-    }
-
-    .nav-cta {
-      padding: 10px 18px;
-      border: 1px solid var(--rule);
-      border-radius: 24px;
-      font-size: 0.85em;
-      color: var(--fg);
-      transition: all var(--transition);
-    }
-
-    .nav-cta:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* Hero Section */
-    .hero {
-      margin-top: 70px;
-      padding: 100px 20px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-media {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('../assets/hero.jpg') center / cover no-repeat;
-      opacity: 0.15;
-      z-index: -1;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--f-mono);
-      font-size: 0.7em;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--fg-soft);
-      margin-bottom: 30px;
-    }
-
-    .hero-title {
-      margin-bottom: 40px;
-      max-width: 900px;
-    }
-
-    .hero-subtitle {
-      max-width: 600px;
-      font-size: 1.1em;
-      line-height: 1.8;
-      margin-bottom: 50px;
-      color: var(--fg-soft);
-    }
-
-    .hero-ctas {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 80px;
-    }
-
-    .cta-primary,
-    .cta-secondary {
-      padding: 14px 32px;
-      font-size: 0.95em;
-      border-radius: 28px;
-      font-family: inherit;
-      transition: all var(--transition);
-      cursor: pointer;
-    }
-
-    .cta-primary {
-      background: var(--fg);
-      color: var(--bg);
-      border: 1px solid var(--fg);
-    }
-
-    .cta-primary:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .cta-secondary {
-      background: transparent;
-      color: var(--fg);
-      border: 1px solid var(--fg);
-    }
-
-    .cta-secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .hero-foot {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85em;
-      color: var(--fg-soft);
-    }
-
-    .hero-foot-meta {
-      font-family: var(--f-mono);
-      font-size: 0.75em;
-      letter-spacing: 0.05em;
-    }
-
-    /* Marquee */
-    .marquee-container {
-      overflow: hidden;
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .marquee {
-      display: flex;
-      animation: marquee 20s linear infinite;
-      white-space: nowrap;
-      padding: 12px 0;
-      font-family: var(--f-mono);
-      font-size: 0.8em;
-      letter-spacing: 0.05em;
-      color: var(--fg-soft);
-    }
-
-    .marquee:nth-child(2) {
-      animation-delay: -10s;
-    }
-
-    @keyframes marquee {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
-    /* Sections */
-    section {
-      padding: 100px 20px;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    section.dark {
-      background: #f5f4f0;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: baseline;
-      gap: 20px;
-      margin-bottom: 50px;
-    }
-
-    .section-title {
-      font-family: var(--f-serif);
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-
-    .section-title-number {
-      font-family: var(--f-mono);
-      font-size: 0.7em;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--fg-soft);
-      white-space: nowrap;
-    }
-
-    .section-lede {
-      font-size: 1.05em;
-      line-height: 1.8;
-      margin-bottom: 30px;
-      max-width: 700px;
-    }
-
-    .section-body {
-      max-width: 700px;
-      color: var(--fg-soft);
-      margin-bottom: 40px;
-    }
-
-    .section-body p {
-      margin-bottom: 1.2em;
-    }
-
-    /* Sound Section */
-    .sound-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 60px;
-    }
-
-    .sound-column {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .sound-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .sound-list li {
-      margin-bottom: 20px;
-      font-size: 0.95em;
-    }
-
-    .sound-list .label {
-      font-family: var(--f-mono);
-      font-size: 0.7em;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--fg-soft);
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .sound-lede {
-      font-size: 1.05em;
-      line-height: 1.8;
-    }
-
-    .sound-carousel {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      margin: 40px -20px 0 -20px;
-      padding: 0 20px 20px 20px;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .sound-carousel::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    .sound-carousel::-webkit-scrollbar-thumb {
-      background: var(--rule);
-      border-radius: 3px;
-    }
-
-    .carousel-item {
-      flex-shrink: 0;
-      width: 280px;
-      aspect-ratio: 1;
-      background: #eee;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .carousel-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .sound-hint {
-      font-family: var(--f-mono);
-      font-size: 0.7em;
-      letter-spacing: 0.05em;
-      color: var(--fg-soft);
-      margin-top: 12px;
-    }
-
-    .qr-card {
-      border: 1px solid var(--rule);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .qr-card-image {
-      width: 120px;
-      height: 120px;
-      background: #eee;
-      margin: 0 auto 16px;
-      border-radius: 8px;
-    }
-
-    .qr-card-title {
-      font-size: 1em;
-      margin-bottom: 8px;
-      line-height: 1.5;
-    }
-
-    .qr-card-sub {
-      font-size: 0.85em;
-      color: var(--fg-soft);
-      margin-bottom: 12px;
-    }
-
-    .qr-card-foot {
-      font-size: 0.8em;
-      color: var(--fg-soft);
-      border-top: 1px solid var(--rule);
-      padding-top: 12px;
-      margin-top: 12px;
-    }
-
-    /* Space Section */
-    .space-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      margin: 60px 0;
-    }
-
-    .space-image {
-      aspect-ratio: 4/3;
-      background: #eee;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .space-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .space-image-caption {
-      font-size: 0.85em;
-      color: var(--fg-soft);
-      margin-top: 8px;
-    }
-
-    .space-meta {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin: 60px 0;
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      padding: 30px;
-    }
-
-    .space-meta-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .space-meta-label {
-      font-family: var(--f-mono);
-      font-size: 0.7em;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--fg-soft);
-      min-width: fit-content;
-    }
-
-    .space-meta-value {
-      text-align: right;
-      font-size: 0.95em;
-    }
-
-    /* Drinks Section */
-    .drink-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      margin: 60px 0;
-    }
-
-    .drink-image {
-      aspect-ratio: 1;
-      background: #eee;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .drink-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .drink-image-caption {
-      font-size: 0.85em;
-      color: var(--fg-soft);
-      margin-top: 8px;
-    }
-
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin: 40px 0;
-    }
-
-    .menu-item {
-      border-bottom: 1px solid var(--rule);
-      padding: 20px 0;
-    }
-
-    .menu-item:last-child {
-      border-bottom: none;
-    }
-
-    .menu-name {
-      font-weight: 500;
-      font-size: 0.95em;
-      margin-bottom: 4px;
-    }
-
-    .menu-price {
-      font-size: 0.85em;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    .menu-desc {
-      font-size: 0.85em;
-      color: var(--fg-soft);
-      line-height: 1.6;
-    }
-
-    /* Food Section */
-    .raven-box {
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      padding: 20px;
-      margin: 40px 0;
-      background: white;
-    }
-
-    .raven-box-title {
-      font-weight: 500;
-      margin-bottom: 8px;
-      font-size: 0.95em;
-    }
-
-    .raven-box-meta {
-      font-size: 0.85em;
-      color: var(--fg-soft);
-    }
-
-    .service-band {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      padding: 20px;
-      margin: 40px 0;
-    }
-
-    .service-label {
-      font-family: var(--f-mono);
-      font-size: 0.7em;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--fg-soft);
-    }
-
-    .service-value {
-      font-weight: 500;
-      font-size: 0.95em;
-    }
-
-    .service-meta {
-      font-size: 0.75em;
-      color: var(--fg-soft);
-      margin-top: 4px;
-    }
-
-    .food-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin: 60px 0;
-    }
-
-    .food-image {
-      aspect-ratio: 1;
-      background: #eee;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .food-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .food-image-caption {
-      font-size: 0.85em;
-      color: var(--fg-soft);
-      margin-top: 8px;
-    }
-
-    /* Coffee Section */
-    .coffee-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin: 60px 0;
-    }
-
-    .coffee-image {
-      aspect-ratio: 1;
-      background: #eee;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .coffee-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .coffee-image-caption {
-      font-size: 0.85em;
-      color: var(--fg-soft);
-      margin-top: 8px;
-    }
-
-    /* Location Section */
-    .location-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      margin: 60px 0;
-    }
-
-    .location-map {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: #eee;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .location-map iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .location-info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .location-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 16px;
-    }
-
-    .location-row:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .location-label {
-      font-family: var(--f-mono);
-      font-size: 0.7em;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--fg-soft);
-      white-space: nowrap;
-    }
-
-    .location-value {
-      text-align: right;
-      font-size: 0.95em;
-    }
-
-    .location-value-meta {
-      font-size: 0.8em;
-      color: var(--fg-soft);
-      margin-top: 4px;
-    }
-
-    /* Contact Section */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin: 40px 0;
-    }
-
-    .contact-card {
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .contact-label {
-      font-family: var(--f-mono);
-      font-size: 0.7em;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--fg-soft);
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .contact-value {
-      font-size: 1em;
-      margin-bottom: 8px;
-      word-break: break-word;
-    }
-
-    .contact-meta {
-      font-size: 0.8em;
-      color: var(--fg-soft);
-    }
-
-    /* Reserve Band */
-    .reserve-band {
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      padding: 30px;
-      margin: 40px 0;
-      text-align: center;
-    }
-
-    .reserve-title {
-      font-size: 0.95em;
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-
-    .reserve-meta {
-      font-size: 0.8em;
-      color: var(--fg-soft);
-    }
-
-    /* Manifesto */
-    .manifesto {
-      background: white;
-      border: 1px solid var(--rule);
-      border-radius: 12px;
-      padding: 40px;
-      margin: 60px 0;
-    }
-
-    .manifesto-toggle {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      padding: 20px;
-      background: var(--bg);
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    .manifesto-toggle-title {
-      font-size: 1em;
-      font-weight: 500;
-    }
-
-    .manifesto-toggle-icon {
-      font-size: 1.2em;
-      transition: transform var(--transition);
-    }
-
-    .manifesto-toggle.open .manifesto-toggle-icon {
-      transform: rotate(180deg);
-    }
-
-    .manifesto-content {
-      display: none;
-      max-height: 0;
-      overflow: hidden;
-      transition: all var(--transition);
-    }
-
-    .manifesto-content.open {
-      display: block;
-      max-height: none;
-    }
-
-    .manifesto-content p {
-      margin-bottom: 1.4em;
-    }
-
-    .quote-attr {
-      font-style: italic;
-      color: var(--fg-soft);
-      font-size: 0.9em;
-    }
-
-    /* Cat Easter Egg */
-    .cat-section {
-      background: white;
-      border-radius: 12px;
-      padding: 40px;
-      margin: 60px 0;
-    }
-
-    .cat-head {
-      display: flex;
-      align-items: baseline;
-      gap: 20px;
-      margin-bottom: 30px;
-    }
-
-    .cat-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .cat-image {
-      aspect-ratio: 1;
-      background: #eee;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .cat-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .cat-text {
-      font-size: 1.1em;
-      line-height: 1.8;
-    }
-
-    .cat-egg-img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 200px;
-      height: 200px;
-      background: url('../assets/cat.jpg') center / cover no-repeat;
-      border-radius: 8px;
-      display: none;
-    }
-
-    /* Footer */
-    footer {
-      background: var(--fg);
-      color: var(--bg);
-      padding: 40px 20px;
-      border-top: 1px solid var(--rule);
-    }
-
-    .foot-content {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 30px;
-    }
-
-    .foot-meta {
-      font-size: 0.9em;
-      line-height: 1.8;
-    }
-
-    .foot-meta p {
-      margin-bottom: 0;
-    }
-
-    .foot-bottom {
-      max-width: 1400px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 0.8em;
-      color: rgba(250, 249, 245, 0.7);
-      border-top: 1px solid rgba(250, 249, 245, 0.2);
-      padding-top: 20px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-menu {
-        gap: 20px;
-      }
-
-      .display {
-        font-size: 2rem;
-      }
-
-      .display-sm {
-        font-size: 1.6rem;
-      }
-
-      .display-xs {
-        font-size: 1.2rem;
-      }
-
-      .hero-ctas {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .cta-primary,
-      .cta-secondary {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      .sound-grid,
-      .drink-grid,
-      .space-grid,
-      .menu-grid,
-      .contact-grid,
-      .location-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .food-grid,
-      .coffee-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .space-meta {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .space-meta-item {
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .space-meta-value {
-        text-align: left;
-      }
-
-      .foot-content {
-        grid-template-columns: 1fr;
-      }
-
-      .cat-content {
-        grid-template-columns: 1fr;
-      }
-
-      .section-head {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-    }
   </style>
 </head>
-
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-logo">
-      <div class="brand-mark"></div>
-      <span>Blackmoon</span>
-    </div>
+<!-- BODY_PART_A -->
+<!-- BODY_PART_B -->
+<!-- BODY_PART_C -->
 
-    <ul class="nav-menu">
-      <li><a href="#sound">声音</a></li>
-      <li><a href="#space">环境</a></li>
-      <li><a href="#drinks">饮品</a></li>
-      <li><a href="#food">小菜</a></li>
-      <li><a href="#coffee">咖啡</a></li>
-      <li><a href="#location">位置</a></li>
-    </ul>
+  <!-- ─── Tweaks panel mount ─────────────────────────────────── -->
+  <div id="tweaks-root"></div>
 
-    <div style="display: flex; align-items: center; gap: 20px;">
-      <div class="nav-lang">
-        <a href="/">EN</a>
-        <a href="/zh/" class="active">中文</a>
-      </div>
-      <button class="nav-cta">预订 · Reserve <span class="arr">→</span></button>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-media"></div>
-
-    <div class="hero-eyebrow">Now playing</div>
-
-    <h1 class="display hero-title" id="hero-title">
-      Blackmoon<br />
-      <span class="ital">听音酒吧</span>
-    </h1>
-
-    <p class="hero-subtitle">
-      <span class="accent">黑月</span> · <span class="accent">乌鸦</span> · <span class="accent">古耳</span> — 藏于北京胡同深处的音乐、餐饮与咖啡三位一体。日间古耳烘焙，入夜乌鸦供餐，以及黑月专属的黑胶听音室。
-    </p>
-
-    <div class="hero-ctas">
-      <button class="cta-secondary">找到我们 <span class="arr">→</span></button>
-      <button class="cta-primary">立即预订 <span class="arr">→</span></button>
-    </div>
-
-    <div class="hero-foot">
-      <div>正在播放</div>
-      <div class="hero-foot-meta">J Dilla · Shook Ones, Pt. II</div>
-    </div>
-  </section>
-
-  <!-- Marquee -->
-  <div class="marquee-container">
-    <div class="marquee">
-      纯黑胶播放<span class="dot"></span>Hip-Hop · Soul / Funk · Jazz · City Pop<span class="dot"></span>胡同 Hi-Fi<span class="dot"></span>根源音乐<span class="dot"></span>33⅓ rpm<span class="dot"></span>北锣鼓巷<span class="dot"></span>
-    </div>
-    <div class="marquee">
-      纯黑胶播放<span class="dot"></span>Hip-Hop · Soul / Funk · Jazz · City Pop<span class="dot"></span>胡同 Hi-Fi<span class="dot"></span>根源音乐<span class="dot"></span>33⅓ rpm<span class="dot"></span>北锣鼓巷<span class="dot"></span>
-    </div>
-  </div>
-
-  <!-- Sound Section -->
-  <section id="sound" class="dark">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title"><span class="ital">声音</span>.</h2>
-        <span class="section-title-number cn mono">Sound</span>
-      </div>
-
-      <p class="section-lede sound-lede">
-        <span class="accent">根源音乐与实体唱片文化的庇护所</span> — 这是一个围绕黑胶唱片打造的空间，每一次落针都经过精心挑选，每一首曲目都完整播放。
-      </p>
-
-      <div class="section-body">
-        <p>隐藏在黑色胡同门后，这个房间专为低音量聆听而调校：精心搭建的模拟信号路径，在200年历史的四合院砖墙上做的声学处理，以及从纽约、加州和东京十年淘片积累下来的纯黑胶轮播。</p>
-        <p>早点来，享受安静的曲目和慢饮；周末深夜，留给深度挖掘音乐的选片人。</p>
-      </div>
-
-      <div class="sound-grid">
-        <div class="sound-column">
-          <div>
-            <span class="label">核心收藏</span>
-            <p style="font-size: 0.95em; line-height: 1.8;">Hip-hop. Soul / Funk. Jazz. <span class="accent">City Pop.</span> — 呈现经典Beat Tapes和地下压盘那充满灵魂、带着灰尘质感的温暖。</p>
-          </div>
-        </div>
-        <div class="sound-column">
-          <div>
-            <span class="label">精选黑胶 · 墙上唱片</span>
-            <div class="carousel-item" style="width: 100%; height: 200px; margin-bottom: 12px;">
-              <img src="../assets/vinyl-wall.jpg" alt="Vinyl wall" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="sound-hint">左右滑动浏览</div>
-
-      <div class="qr-card">
-        <div class="qr-card-image"></div>
-        <div class="qr-card-title">查看<span class="ital">完整</span>收藏</div>
-        <div class="qr-card-sub">微信扫码查看完整目录</div>
-        <div class="qr-card-foot">1,000+ 张唱片 · 每周更新</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Space Section -->
-  <section id="space">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title"><span class="ital">环境</span>.</h2>
-        <span class="section-title-number cn mono">Space</span>
-      </div>
-
-      <p class="section-lede">一座藏在灰色胡同门后的修缮<span class="accent">四合院</span> — 砖木、钨丝灯暖光、黑胶，除此之外别无他物。</p>
-
-      <div class="section-body">
-        <p>主听音室和休息区共设有25个座位。吧台后方是一整面贯穿空间的黑胶唱片墙，DJ台后只亮着一盏散发暖光的灯丝灯。</p>
-      </div>
-
-      <div class="space-grid">
-        <div>
-          <div class="space-image">
-            <img src="../assets/space-listening-room.jpg" alt="Listening Room" />
-          </div>
-          <div class="space-image-caption">听音室</div>
-        </div>
-        <div>
-          <div class="space-image">
-            <img src="../assets/space-hallway.jpg" alt="The Hallway" />
-          </div>
-          <div class="space-image-caption">走廊</div>
-        </div>
-        <div>
-          <div class="space-image">
-            <img src="../assets/space-booth.jpg" alt="The booth" />
-          </div>
-          <div class="space-image-caption">DJ台</div>
-        </div>
-        <div>
-          <div class="space-image">
-            <img src="../assets/space-vinyl-wall.jpg" alt="Vinyl wall" />
-          </div>
-          <div class="space-image-caption">唱片墙</div>
-        </div>
-      </div>
-
-      <div class="space-meta">
-        <div class="space-meta-item">
-          <span class="space-meta-label">容量</span>
-          <div class="space-meta-value">42 <span class="ital">座</span></div>
-        </div>
-        <div class="space-meta-item">
-          <span class="space-meta-label">建成</span>
-          <div class="space-meta-value">1800s</div>
-        </div>
-        <div class="space-meta-item">
-          <span class="space-meta-label">唱片收藏</span>
-          <div class="space-meta-value">1,000+<span class="ital"> 张</span></div>
-        </div>
-        <div class="space-meta-item">
-          <span class="space-meta-label">着装</span>
-          <div class="space-meta-value"><span class="ital">随意</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Drinks Section -->
-  <section id="drinks" class="dark">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title"><span class="ital">饮品</span>.</h2>
-        <span class="section-title-number cn mono">Pour</span>
-      </div>
-
-      <p class="section-lede">
-        <span class="accent">慢节奏、以烈酒为基底的</span>鸡尾酒 — 酸酒、内格罗尼的变体，以及充满故事的特调，外加八款精酿生啤。我们的酒水是为了契合这个空间的节奏，而非为了迎合喧嚣。
-      </p>
-
-      <div class="section-body">
-        <p>精简的吧台，没有花哨的菜单。波本、黑麦、金酒和朗姆酒调制35+款随季节轮换的招牌特调。生啤 ¥38起，鸡尾酒 ¥65起。</p>
-      </div>
-
-      <div class="drink-grid">
-        <div>
-          <div class="drink-image">
-            <img src="../assets/drinks-cocktails.jpg" alt="Cocktails" />
-          </div>
-          <div class="drink-image-caption">鸡尾酒</div>
-        </div>
-        <div>
-          <div class="drink-image">
-            <img src="../assets/drinks-bottles.jpg" alt="Bottles" />
-          </div>
-          <div class="drink-image-caption">酒瓶</div>
-        </div>
-        <div>
-          <div class="drink-image">
-            <img src="../assets/drinks-beers.jpg" alt="Craft Beers" />
-          </div>
-          <div class="drink-image-caption">精酿啤酒</div>
-        </div>
-        <div>
-          <div class="drink-image">
-            <img src="../assets/drinks-atmosphere.jpg" alt="Atmosphere" />
-          </div>
-          <div class="drink-image-caption">氛围</div>
-        </div>
-      </div>
-
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="menu-name">Whiskey Sour</div>
-          <div class="menu-price">¥65</div>
-          <div class="menu-desc">Classic & Simple</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Negroni</div>
-          <div class="menu-price">¥75</div>
-          <div class="menu-desc">Campari · Gin · Vermouth</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Old Fashioned</div>
-          <div class="menu-price">¥75</div>
-          <div class="menu-desc">Bourbon · Bitters · Orange</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Daiquiri</div>
-          <div class="menu-price">¥65</div>
-          <div class="menu-desc">Rum · Lime · Sugar</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Aperol Spritz</div>
-          <div class="menu-price">¥55</div>
-          <div class="menu-desc">Aperol · Prosecco · Soda</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">House Special</div>
-          <div class="menu-price">¥75</div>
-          <div class="menu-desc">Seasonal Selection</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Food Section -->
-  <section id="food">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title"><span class="ital">小菜</span>.</h2>
-        <span class="section-title-number cn mono">Plate</span>
-      </div>
-
-      <p class="section-lede">真正的<span class="accent">厨房</span>，不是小吃菜单 — 慢炖、明火收尾，每道菜都是为了配一杯慢酒和一面完整的唱片而摆盘。</p>
-
-      <div class="section-body">
-        <p>晚餐仅限夜间供应，由我们的驻场厨房合作伙伴 <strong style="color:var(--fg);font-weight:400">乌鸦 · Ravens</strong> 出品。经典舒适西餐，带着一点火候与耐心：12小时油封、一层层铺就的千层面、炭火上的排骨。</p>
-      </div>
-
-      <div class="raven-box">
-        <div class="raven-box-title">安定门西餐口味榜第一名</div>
-        <div class="raven-box-meta">Ranked #1 on Andingmen Western Restaurant Guide</div>
-      </div>
-
-      <div class="raven-box">
-        <div class="raven-box-meta">2017年开业 · Established 2017 <span style="color: var(--rule);">/</span> 1300+ 评价 · 大众点评 4.8 评分</div>
-      </div>
-
-      <div class="service-band">
-        <div>
-          <div class="service-label">晚餐时间 · Dinner service</div>
-          <div class="service-value">每日 <span class="ital">17:30 — 22:00</span></div>
-          <div class="service-meta">Daily 5:30 PM to 10 PM</div>
-        </div>
-        <div>
-          <div class="service-label">厨房 · Kitchen</div>
-          <div class="service-value"><span class="ital">乌鸦</span> 出品</div>
-          <div class="service-meta">Ravens · 驻场合作</div>
-        </div>
-      </div>
-
-      <div class="food-grid">
-        <div>
-          <div class="food-image">
-            <img src="../assets/food-plate.jpg" alt="Plate" />
-          </div>
-          <div class="food-image-caption">菜品</div>
-        </div>
-        <div>
-          <div class="food-image">
-            <img src="../assets/food-signature.jpg" alt="Signature" />
-          </div>
-          <div class="food-image-caption">招牌</div>
-        </div>
-        <div>
-          <div class="food-image">
-            <img src="../assets/food-fire.jpg" alt="The fire" />
-          </div>
-          <div class="food-image-caption">炭火</div>
-        </div>
-      </div>
-
-      <div class="menu-grid" style="grid-template-columns: 1fr;">
-        <div class="menu-item">
-          <div class="menu-name">Duck Confit <span style="font-weight: normal; color: var(--fg-soft);">· 鸭腿油封</span></div>
-          <div class="menu-price">¥128</div>
-          <div class="menu-desc">12小时慢炖鸭腿，烤洋葱、胡萝卜、土豆泥、杏子照烧。</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Balsamic Rib-eye <span style="font-weight: normal; color: var(--fg-soft);">· 香醋肋眼</span></div>
-          <div class="menu-price">¥188</div>
-          <div class="menu-desc">谷饲肋眼牛排，芦笋，薯条，香醋酱汁。</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Honey-Glazed Pork Ribs <span style="font-weight: normal; color: var(--fg-soft);">· 蜜汁猪排</span></div>
-          <div class="menu-price">¥98</div>
-          <div class="menu-desc">腌制排骨，炸胡萝卜，抱子甘蓝，自制BBQ酱，帕尔马干酪。</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Alibi Beef Burger <span style="font-weight: normal; color: var(--fg-soft);">· 不在场证明牛肉堡</span></div>
-          <div class="menu-price">¥98</div>
-          <div class="menu-desc">班尼迪克蛋，生菜，洋葱，酸黄瓜，切达芝士，甜辣蛋黄酱。</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Meat & Cheese Platter <span style="font-weight: normal; color: var(--fg-soft);">· 肉芝拼盘</span></div>
-          <div class="menu-price">¥128</div>
-          <div class="menu-desc">奶油芝士、意式火腿、萨拉米、芝麻菜、焦糖核桃、橄榄。</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Garden Salad <span style="font-weight: normal; color: var(--fg-soft);">· 田园沙拉</span></div>
-          <div class="menu-price">¥68</div>
-          <div class="menu-desc">混合蔬菜，樱桃番茄，黄瓜，牛油果，羊奶芝士，香醋酱。素食。</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Roasted Vegetable Salad <span style="font-weight: normal; color: var(--fg-soft);">· 烤蔬菜沙拉</span></div>
-          <div class="menu-price">¥78</div>
-          <div class="menu-desc">烤甜菜根、南瓜、西葫芦、藜麦、蜜渍核桃、山羊芝士、蜂蜜芥末。素食。</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Nachos & Snacks <span style="font-weight: normal; color: var(--fg-soft);">· 小食</span></div>
-          <div class="menu-price">¥48</div>
-          <div class="menu-desc">牛肉酱玉米片配莎莎酱，薯角，枫糖培根等。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Coffee Section -->
-  <section id="coffee" class="dark">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title"><span class="ital">咖啡</span>.</h2>
-        <span class="section-title-number cn mono">Day</span>
-      </div>
-
-      <p class="section-lede">夜幕降临之前，这个空间化身<span class="accent">日间咖啡馆</span> — 安静、充满光线的日间档，由 <span class="accent">古耳</span> 运营。</p>
-
-      <div class="section-body">
-        <p>精品单一产地意式浓缩、慢速手冲，以及少量季节特调。招牌手冲按杯出品，咖啡豆按袋零售，同一套音响系统在午后播放着轻柔的曲目。</p>
-        <p style="margin-top:14px"><span class="mono" style="color:var(--accent);font-size:11px;letter-spacing:0.16em">入驻合作 · In Residency</span></p>
-      </div>
-
-      <div class="service-band">
-        <div>
-          <div class="service-label">营业时间 · Hours</div>
-          <div class="service-value">每日 <span class="ital">10:00 — 18:00</span></div>
-          <div class="service-meta">Daily 10 AM to 6 PM</div>
-        </div>
-        <div>
-          <div class="service-label">咖啡品牌 · Roaster</div>
-          <div class="service-value"><span class="ital">古耳</span> 出品</div>
-          <div class="service-meta">Gǔ Ěr Coffee · 入驻合作</div>
-        </div>
-      </div>
-
-      <div class="coffee-grid">
-        <div>
-          <div class="coffee-image">
-            <img src="../assets/coffee-pour.jpg" alt="Signature pour" />
-          </div>
-          <div class="coffee-image-caption">招牌手冲</div>
-        </div>
-        <div>
-          <div class="coffee-image">
-            <img src="../assets/coffee-pour-over.jpg" alt="Pour-over" />
-          </div>
-          <div class="coffee-image-caption">手冲</div>
-        </div>
-        <div>
-          <div class="coffee-image">
-            <img src="../assets/coffee-latte.jpg" alt="Latte" />
-          </div>
-          <div class="coffee-image-caption">拿铁</div>
-        </div>
-      </div>
-
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="menu-name">Espresso</div>
-          <div class="menu-price">¥28</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Americano</div>
-          <div class="menu-price">¥35</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Cappuccino</div>
-          <div class="menu-price">¥42</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Latte</div>
-          <div class="menu-price">¥42</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Pour Over</div>
-          <div class="menu-price">¥38</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-name">Seasonal Special</div>
-          <div class="menu-price">¥48</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Location Section -->
-  <section id="location">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">找到<span class="ital">我们</span>.</h2>
-        <span class="section-title-number cn mono">Find Us</span>
-      </div>
-
-      <div class="location-grid">
-        <div class="location-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.9647889473605!2d116.40649!3d39.93668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f052e58d0c0001%3A0x1234567890abcdef!2sBlackmoon%20Listening%20Bar!5e0!3m2!1sen!2scn!4v1234567890" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <div class="location-info">
-          <div class="location-row">
-            <span class="location-label">店名 · Venue Name</span>
-            <div class="location-value">Blackmoon Listening Bar</div>
-          </div>
-          <div class="location-row">
-            <span class="location-label">地址 · 中文</span>
-            <div class="location-value">北京市东城区北锣鼓巷33号</div>
-          </div>
-          <div class="location-row">
-            <span class="location-label">英文地址 · English</span>
-            <div class="location-value">33 Beiluo Drum Lane, Dongcheng District, Beijing 100009, China</div>
-          </div>
-          <div class="location-row">
-            <span class="location-label">导航工具 · Navigate with</span>
-            <div class="location-value">Amap · Google Maps</div>
-          </div>
-          <div class="location-row">
-            <span class="location-label">导航提示 · Navigation Tips</span>
-            <div class="location-value">Entrance is unmarked, look for black door on Hutong</div>
-          </div>
-          <div class="location-row">
-            <span class="location-label">营业时间 · Hours</span>
-            <div class="location-value">周二至周日 · 17:30 — 深夜 <br><span class="location-value-meta">Tue–Sun 5:30 PM – Late</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="dark">
-    <div class="container">
-      <div class="section-head">
-        <h2 class="section-title">保持<span class="ital">联系</span>.</h2>
-        <span class="section-title-number cn mono">Stay in Touch</span>
-      </div>
-
-      <div class="reserve-band">
-        <div class="reserve-title">预订 · Reservations</div>
-        <div class="reserve-meta">订座与咨询请使用 <span class="ital">微信或电话</span>。Walk-ins welcome, reservations recommended on weekends.</div>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <label class="contact-label">微信 · WeChat</label>
-          <div class="contact-value">BlackmoonBJ</div>
-          <div class="contact-meta">Messages & voice calls</div>
-        </div>
-        <div class="contact-card">
-          <label class="contact-label">电话 · Phone</label>
-          <div class="contact-value">+86 010 8326 2733</div>
-          <div class="contact-meta">Tue–Sun, 5:30 PM – 10 PM</div>
-        </div>
-        <div class="contact-card">
-          <label class="contact-label">电邮 · Email</label>
-          <div class="contact-value">hello@blackmoonbeijing.com</div>
-          <div class="contact-meta">General inquiries</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Manifesto -->
-  <section>
-    <div class="container">
-      <div class="manifesto">
-        <div class="manifesto-label" style="font-family: var(--f-mono); font-size: 0.7em; letter-spacing: 0.16em; text-transform: uppercase; color: var(--fg-soft); margin-bottom: 20px; display: block;">宣言 · Manifesto</div>
-
-        <div class="manifesto-toggle" onclick="toggleManifesto()">
-          <div class="manifesto-toggle-title">关于音乐、仪式与摩擦</div>
-          <div class="manifesto-toggle-icon">▼</div>
-        </div>
-
-        <div class="manifesto-content" id="manifesto-content">
-          <p style="margin: 0 0 1.4em 0;">我们不是发烧友。</p>
-
-          <p style="margin: 0 0 1.4em 0;">我们不痴迷于黑胶这一介质本身，<br/>
-          也不追逐模拟音频那种怀旧的温暖。</p>
-
-          <p style="margin: 0 0 1.4em 0;">我们真正在意的是<span style="color: var(--accent); font-style: italic;">音乐本身</span>——<br/>
-          以及编织在其背后的深厚历史、文本与文化。</p>
-
-          <p style="margin: 0 0 1.4em 0; padding-top: 1em; border-top: 1px solid var(--rule-soft);">然而，播放一张唱片——<br/>
-          一件穿越时空的实体造物——<br/>
-          确实为空间注入了一种难以言喻的魔力。</p>
-
-          <p style="margin: 0 0 1.4em 0;">它创造了一条美丽的<span style="color: var(--accent); font-style: italic;">时间折痕</span>，<br/>
-          将逝去时代的空气带入此刻当下。</p>
-
-          <p style="margin: 0 0 1.4em 0;">在这个精确的坐标点，播放音乐这一行为<br/>
-          超越了实用功能，进入了<span style="color: var(--accent); font-style: italic;">诗意与仪式</span>的领域。</p>
-
-          <p style="margin: 0 0 1.4em 0; padding-top: 1em; border-top: 1px solid var(--rule-soft);">在一个失重的、无摩擦的流媒体世界里，<br/>
-          我们选择<span style="color: var(--accent); font-style: italic;">摩擦</span>。</p>
-
-          <p style="margin: 0 0 1.4em 0;">我们选择更缓慢节奏的自觉重量。</p>
-
-          <p style="margin: 0 0 1.4em 0;">我们不崇拜器材；我们敬重故事。<br/>
-          我们不占有技术；我们栖居于仪式。</p>
-
-          <p class="quote-attr" style="margin-top: 48px;">— 黑月 · Blackmoon · 2025</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Cat Easter Egg -->
-  <section>
-    <div class="container">
-      <div class="cat-section">
-        <div class="cat-head">
-          <h2 class="section-title" style="margin: 0;">猫<span class="ital">留下了</span>。</h2>
-          <span class="section-title-number cn mono">P.S. · 驻场居民</span>
-        </div>
-
-        <div class="cat-content">
-          <div class="cat-image">
-            <img src="../assets/cat.jpg" alt="Resident cat" />
-          </div>
-          <div class="cat-text">
-            每晚打烊时分，<br/>
-            这只猫坐在这里<br/>
-            目送最后的客人离开。
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="foot-content">
-      <div class="foot-meta">
-        <p>北锣鼓巷 33⅓ · 东城区 · 北京<br/>周二至周日 · 17:30 — 深夜</p>
-      </div>
-      <div class="foot-meta">
-        <p>hello@blackmoonbeijing.com<br/>+86 010 8326 2733</p>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      © 2026 黑月听音酒吧 Blackmoon · 京ICP备XXXXXXXX号
-    </div>
-  </footer>
-
+  <!-- ─── Interactive bits (vanilla) ─────────────────────────── -->
   <script>
-    // Navigation active state based on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-          current = section.getAttribute('id');
+    (function(){
+      // Generic QR-reveal — works for any .wechat-card with a toggle button inside
+      var cards = document.querySelectorAll('.wechat-card');
+      cards.forEach(function(card){
+        var btn = card.querySelector('button[type="button"]');
+        var lbl = btn && btn.querySelector('.wechat-label, .oa-label');
+        function toggle(){
+          var on = !card.classList.contains('revealed');
+          card.classList.toggle('revealed', on);
+          card.setAttribute('aria-expanded', String(on));
+          if (lbl) lbl.textContent = on ? '隐藏二维码 · Hide QR' : '显示二维码 · Reveal QR';
         }
+        if (btn) btn.addEventListener('click', function(e){ e.stopPropagation(); toggle(); });
+        card.addEventListener('mouseenter', function(){ if (!card.classList.contains('revealed')) toggle(); });
+        card.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); } });
       });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-          link.classList.add('active');
-        }
-      });
-    });
-
-    // Hero CTA buttons
-    const heroCTAs = document.querySelectorAll('.hero-ctas button');
-    heroCTAs[0].addEventListener('click', () => {
-      document.getElementById('location').scrollIntoView({ behavior: 'smooth' });
-    });
-    heroCTAs[1].addEventListener('click', () => {
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Nav CTA button
-    const navCTA = document.querySelector('.nav-cta');
-    navCTA.addEventListener('click', () => {
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Manifesto toggle
-    function toggleManifesto() {
-      const toggle = document.querySelector('.manifesto-toggle');
-      const content = document.getElementById('manifesto-content');
-      toggle.classList.toggle('open');
-      content.classList.toggle('open');
-    }
-
-    // Initialize
-    document.addEventListener('DOMContentLoaded', () => {
-      // Set initial scroll state
-      window.dispatchEvent(new Event('scroll'));
-    });
+    })();
   </script>
-</body>
 
+
+</body>
 </html>
