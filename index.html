@@ -7,16 +7,16 @@
   <!-- ─── SEO META ────────────────────────────────────────────── -->
   <title>Blackmoon | Vinyl Listening Bar in Beijing</title>
   <meta name="description" content="Blackmoon — Beijing's vinyl listening bar in the hutongs. Cocktails, craft beer, dinner by Ravens, and specialty coffee. Jazz, soul, hip-hop on wax." />
-  <link rel="canonical" href="https://blackmoon.bar/" />
+  <link rel="canonical" href="https://blackmoonbeijing.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://blackmoon.bar/" />
+  <meta property="og:url" content="https://blackmoonbeijing.com/" />
   <meta property="og:title" content="Blackmoon | Vinyl Listening Bar in Beijing" />
   <meta property="og:description" content="Vinyl listening bar, cocktails, dinner &amp; specialty coffee in a Beijing hutong courtyard. Jazz, soul, hip-hop on wax." />
   <meta property="og:locale" content="en" />
   <meta property="og:locale:alternate" content="zh_CN" />
-  <link rel="alternate" hreflang="en" href="https://blackmoon.bar/" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://blackmoon.bar/zh/" />
-  <link rel="alternate" hreflang="x-default" href="https://blackmoon.bar/" />
+  <link rel="alternate" hreflang="en" href="https://blackmoonbeijing.com/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://blackmoonbeijing.com/zh/" />
+  <link rel="alternate" hreflang="x-default" href="https://blackmoonbeijing.com/" />
 
   <!-- ─── Geo-Meta Tags ──────────────────────────────────────── -->
   <meta name="geo.region" content="CN-11" />
@@ -31,11 +31,11 @@
     "@type": ["BarOrPub", "Restaurant"],
     "name": "Blackmoon Listening Bar 黑月",
     "description": "Vinyl listening bar and sanctuary for roots music in Beijing's Beiluoguxiang hutongs. Hi-fi analog sound; a core curation of Hip-hop, Soul/Funk, Jazz and City Pop; craft beers and signature pours.",
-    "url": "https://blackmoon.bar/",
-    "image": "https://blackmoon.bar/og.jpg",
+    "url": "https://blackmoonbeijing.com/",
+    "image": "https://blackmoonbeijing.com/og.jpg",
     "telephone": "+86-186-1174-1214",
     "priceRange": "$",
-    "menu": "https://blackmoon.bar/#drinks",
+    "menu": "https://blackmoonbeijing.com/#drinks",
     "servesCuisine": ["Bar", "Cocktails", "Western"],
     "address": {
       "@type": "PostalAddress",
@@ -64,7 +64,7 @@
   </script>
 
   <!-- ─── ANALYTICS placeholder (Plausible) ───────────────────── -->
-  <!-- <script defer data-domain="blackmoon.bar" src="https://plausible.io/js/script.js"></script> -->
+  <!-- <script defer data-domain="blackmoonbeijing.com" src="https://plausible.io/js/script.js"></script> -->
 
   <!-- ─── Fonts ──────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -142,6 +142,12 @@
     .nav ul a:hover{color:var(--fg)}
     .nav-cta{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--rule);border-radius:999px;transition:all .2s}
     .nav-cta:hover{border-color:var(--accent);color:var(--accent)}
+    .nav-right{display:flex;align-items:center;gap:8px}
+    .lang-toggle{display:flex;align-items:center;gap:6px;margin-right:16px}
+    .lang-link{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.14em;color:var(--fg-faint);transition:color .2s}
+    .lang-link:hover{color:var(--fg)}
+    .lang-link.active{color:var(--fg);font-weight:500}
+    .lang-sep{color:var(--rule);font-size:10px}
     @media (max-width: 720px){ .nav ul{display:none} }
 
     /* ─── Hero ─── */
@@ -582,7 +588,14 @@
         <li><a href="#coffee">Day</a></li>
         <li><a href="#location">Find Us</a></li>
       </ul>
-      <a class="nav-cta" href="#contact">Reserve · 预订 →</a>
+      <div class="nav-right">
+        <!-- <div class="lang-toggle">
+          <a href="/" class="lang-link active">EN</a>
+          <span class="lang-sep">/</span>
+          <a href="/zh/" class="lang-link">中文</a>
+        </div> -->
+        <a class="nav-cta" href="#contact">Reserve · 预订 →</a>
+      </div>
     </div>
   </header>
 
@@ -609,8 +622,8 @@
           <a class="btn btn-primary" href="#location">
             Find Us <span class="arr">→</span>
           </a>
-          <a class="btn btn-ghost" href="#contact">
-            Reserve Now <span class="arr">→</span>
+          <a class="btn btn-ghost" href="https://www.instagram.com/blackmoon.beijing/" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+            Follow Us <span class="arr">→</span>
           </a>
         </div>
       </div>
@@ -833,23 +846,23 @@
 
         <div class="gal-wide">
           <div class="gal-slot w-hero">
-            <img src="assets/pics/3.JPG" alt="Blackmoon listening room interior with vinyl wall Beijing hutong" loading="lazy">
+            <img src="assets/pics/space/1.JPG" alt="Blackmoon listening room interior with vinyl wall Beijing hutong" loading="lazy">
             <span class="gal-cap">Listening Room</span>
           </div>
           <div class="gal-slot">
-            <img src="assets/pics/4.JPG" alt="Vinyl wall collection at Blackmoon Listening Bar Beijing" loading="lazy">
+            <img src="assets/pics/space/2.JPG" alt="Vinyl wall collection at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">The Hallway</span>
           </div>
           <div class="gal-slot">
-            <img src="assets/pics/5.JPG" alt="DJ booth and turntable setup at Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/space/3.JPG" alt="DJ booth and turntable setup at Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">The booth</span>
           </div>
           <div class="gal-slot">
-            <img src="assets/pics/6.jpg" alt="Bar detail and vinyl collection Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/space/5.JPG" alt="Bar detail and vinyl collection Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Vinyl wall</span>
           </div>
           <div class="gal-slot">
-            <img src="assets/pics/1.JPG" alt="Hutong courtyard entrance to Blackmoon Listening Bar Beijing" loading="lazy">
+            <img src="assets/pics/space/6.JPG" alt="Hutong courtyard entrance to Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Hutong Quietness</span>
           </div>
         </div>
@@ -898,24 +911,24 @@
 
         <div class="gal-grid">
           <div class="gal-slot hero">
-            <img src="assets/pics/2.png" alt="Signature cocktail pour at Blackmoon Listening Bar Beijing" loading="lazy">
+            <img src="assets/pics/drinks/1.png" alt="Signature cocktail pour at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Cocktails</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/6.jpg" alt="Back bar bottles selection at Blackmoon Beijing" loading="lazy">
-            <span class="gal-cap">Bottles</span>
+            <img src="assets/pics/drinks/2.jpg" alt="Back bar bottles selection at Blackmoon Beijing" loading="lazy">
+            <span class="gal-cap">Cocktails</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/3.JPG" alt="Craft beer and glassware at Blackmoon Listening Bar" loading="lazy">
+            <img src="assets/pics/drinks/3.png" alt="Craft beer and glassware at Blackmoon Listening Bar" loading="lazy">
             <span class="gal-cap">Craft Beers</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/2.png" alt="Signature cocktail served at Blackmoon Listening Bar Beijing hutong" loading="lazy">
-            <span class="gal-cap">Cocktails</span>
+            <img src="assets/pics/drinks/7.jpg" alt="Signature cocktail served at Blackmoon Listening Bar Beijing hutong" loading="lazy">
+            <span class="gal-cap">Eason Chen Sour</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/1.JPG" alt="Bar atmosphere and vinyl setup at Blackmoon Listening Bar Beijing" loading="lazy">
-            <span class="gal-cap">Atmosphere</span>
+            <img src="assets/pics/drinks/8.JPG" alt="Classic cocktails bar atmosphere and vinyl setup at Blackmoon Listening Bar Beijing" loading="lazy">
+            <span class="gal-cap">Classics</span>
           </div>
         </div>
 
@@ -1035,15 +1048,15 @@
 
         <div class="gal-grid">
           <div class="gal-slot sm">
-            <img src="assets/pics/4.JPG" alt="Food plate detail at Ravens kitchen Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/food/1.JPG" alt="Food plate detail at Ravens kitchen Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Plate</span>
           </div>
           <div class="gal-slot hero" style="grid-column:2;grid-row:1 / span 2">
-            <img src="assets/pics/5.JPG" alt="Signature dish by Ravens at Blackmoon Listening Bar Beijing" loading="lazy">
+            <img src="assets/pics/food/2.JPG" alt="Signature dish by Ravens at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Signature</span>
           </div>
           <div class="gal-slot sm" style="grid-column:1">
-            <img src="assets/pics/6.jpg" alt="Kitchen fire and cooking at Ravens Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/food/3.webp" alt="Kitchen fire and cooking at Ravens Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">The fire</span>
           </div>
         </div>
@@ -1149,15 +1162,15 @@
 
         <div class="gal-grid">
           <div class="gal-slot hero">
-            <img src="assets/pics/1.JPG" alt="Pour-over coffee preparation at 古耳 Coffee Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/coffee/1.JPG" alt="Pour-over coffee preparation at 古耳 Coffee Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Signature pour</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/3.JPG" alt="Espresso bar and coffee equipment at Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/coffee/2.jpg" alt="Pour over Espresso bar and coffee equipment at Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Pour-over</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/4.JPG" alt="Coffee beans and latte at 古耳 Coffee Blackmoon" loading="lazy">
+            <img src="assets/pics/coffee/3.jpg" alt="Coffee beans and latte at 古耳 Coffee Blackmoon" loading="lazy">
             <span class="gal-cap">Latte</span>
           </div>
         </div>
@@ -1231,6 +1244,7 @@
               src="https://apis.map.qq.com/tools/poimarker?type=0&marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷33又1/3号&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=blackmoon&zoom=14"
               style="border: 0; position: absolute; inset: 0; filter: grayscale(0.2) brightness(0.75) contrast(1.1); pointer-events: none; user-select: none;">
             </iframe>
+            
 
             <!-- Styled label positioned above the map marker -->
             <div style="position: absolute; left: 50%; top: 42%; transform: translate(-50%, -100%); pointer-events: none; z-index: 10;">
@@ -1263,8 +1277,8 @@
             <meta itemprop="telephone" content="+86-186-1174-1214" />
             <div class="addr-block">
               <span class="addr-label">Venue Name · 店名</span>
-              <span class="addr-line" style="font-size: 1.1em; font-weight: 500; color: var(--accent);">Blackmoon·黑月</span>
-              <span class="addr-meta" style="font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.06em;">Heiyue · Listening Bar · 听音酒吧</span>
+              <span class="addr-line" style="font-size: 1.1em; font-weight: 500; color: var(--accent);">Blackmoon·黑月 & Ravens·乌鸦餐厅</span>
+              <span class="addr-meta" style="font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.06em;">Restaurant · Listening Bar · 餐厅 · 听音酒吧</span>
             </div>
 
             <div class="addr-block" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
@@ -1327,16 +1341,7 @@
               </a>
             </div> -->
 
-            <div style="margin-top: 16px; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--rule); border-radius: 4px;">
-              <div style="font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; color: var(--accent); text-transform: uppercase; margin-bottom: 8px;">Navigation Tips · 导航提示</div>
-              <ul style="font-size: 13px; line-height: 1.7; color: var(--fg-dim); margin: 0; padding-left: 20px;">
-                <li><strong>打车 / Taxi & Ride-hailing</strong>：搜索 "<span style="color: var(--accent);">Blackmoon·黑月</span>" 或 "<span style="color: var(--accent);">Ravens·乌鸦餐厅</span>"</li>
-                <li><strong>中国大陆用户</strong>：推荐使用高德地图或腾讯地图获取最准确的导航</li>
-                <li><strong>Mainland China</strong>: Use Gaode or Tencent Maps for most accurate navigation</li>
-                <li><strong>Apple Maps 用户</strong>：需搜索拼音 "<span style="color: var(--accent);">Heiyue</span>" (黑月) · iOS/macOS users search "Heiyue"</li>
-                <li><strong>地铁 / Subway</strong>：什刹海/鼓楼大街站 (8号线) 步行约10分钟 · Shichahai/Gulou Dajie Station (Line 8), 10 min walk</li>
-              </ul>
-            </div>
+           
 
             <div class="hours" aria-label="Opening hours">
               <div class="hours-row" style="color:var(--accent)"><span class="day">Coffee · Daily</span><span>10:00 — 18:00</span></div>
@@ -1346,6 +1351,18 @@
               <div class="hours-row"><span class="day">Bar · Sun</span><span>16:00 — 00:00</span></div>
             </div>
           </address>
+
+          <!-- Navigation Tips Card -->
+          <div style="grid-column: 1 / -1; margin-top: 16px; padding: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--rule); border-radius: 4px;">
+            <div style="font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; color: var(--accent); text-transform: uppercase; margin-bottom: 8px;">Navigation Tips · 导航提示</div>
+            <ul style="font-size: 13px; line-height: 1.7; color: var(--fg-dim); margin: 0; padding-left: 20px;">
+              <li><strong>打车 / Taxi & Ride-hailing</strong>：搜索 "<span style="color: var(--accent);">Blackmoon·黑月</span>" 或 "<span style="color: var(--accent);">Ravens·乌鸦餐厅</span>"</li>
+              <li><strong>中国大陆用户</strong>：推荐使用高德地图或腾讯地图获取最准确的导航</li>
+              <li><strong>Mainland China</strong>: Use Gaode or Tencent Maps for most accurate navigation</li>
+              <li><strong>Apple Maps 用户</strong>：需搜索拼音 "<span style="color: var(--accent);">Heiyue</span>" (黑月) · iOS/macOS users search "Heiyue"</li>
+              <li><strong>地铁 / Subway</strong>：什刹海/鼓楼大街站 (8号线) 步行约10分钟 · Shichahai/Gulou Dajie Station (Line 8), 10 min walk</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
