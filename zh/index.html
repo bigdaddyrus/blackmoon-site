@@ -6,12 +6,12 @@
 
   <!-- ─── SEO META ────────────────────────────────────────────── -->
   <title>黑月 | 北京胡同黑胶听音酒吧</title>
-  <meta name="description" content="黑月 — 北京胡同里的黑胶听音酒吧。鸡尾酒、精酿啤酒、乌鸦晚餐与古耳精品咖啡。Jazz、Soul、Hip-hop，纯黑胶播放。" />
+  <meta name="description" content="黑月 — 北京胡同里的黑胶听音酒吧。鸡尾酒、精酿啤酒、乌鸦晚餐与古耳精品咖啡，承接包场活动、外烩与盒饭团餐。" />
   <link rel="canonical" href="https://blackmoonbeijing.com/zh/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://blackmoonbeijing.com/zh/" />
   <meta property="og:title" content="黑月 | 北京胡同黑胶听音酒吧" />
-  <meta property="og:description" content="黑月 — 北京胡同里的黑胶听音酒吧。鸡尾酒、精酿啤酒、乌鸦晚餐与古耳精品咖啡。Jazz、Soul、Hip-hop，纯黑胶播放。" />
+  <meta property="og:description" content="黑月 — 北京胡同里的黑胶听音酒吧。鸡尾酒、精酿啤酒、乌鸦晚餐与古耳精品咖啡，承接包场活动、外烩与盒饭团餐。" />
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:locale:alternate" content="en" />
   <link rel="alternate" hreflang="en" href="https://blackmoonbeijing.com/" />
@@ -573,6 +573,95 @@
       .map-card{max-height:200px !important}
     }
 
+
+    /* ─── Events, catering & terms (brochure content) ─── */
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);margin-bottom:72px}
+    @media (max-width:880px){ .svc-grid{grid-template-columns:1fr 1fr} }
+    @media (max-width:560px){ .svc-grid{grid-template-columns:1fr} }
+    .svc{padding:28px 28px 28px 0;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:8px}
+    .svc + .svc{padding-left:28px;border-left:1px solid var(--rule)}
+    .svc:nth-child(3n+1){padding-left:0;border-left:0}
+    @media (max-width:880px){ .svc,.svc + .svc{padding:24px 20px 24px 0;border-left:0} .svc:nth-child(even){padding-left:20px;border-left:1px solid var(--rule)} }
+    @media (max-width:560px){ .svc:nth-child(even){padding-left:0;border-left:0} }
+    .svc-num{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;color:var(--accent)}
+    .svc-title{font-family:var(--f-display);font-size:24px;font-weight:400;color:var(--fg);line-height:1.2}
+    .svc-title .cn{display:block;font-size:15px;color:var(--fg-dim);margin-top:4px}
+    .svc p{color:var(--fg-dim);font-size:14px;max-width:38ch}
+
+    .block-label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin:72px 0 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .block-label span:last-child{color:var(--fg-faint);text-transform:none;letter-spacing:0.06em}
+
+    .ptable-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .ptable{width:100%;border-collapse:collapse;min-width:640px}
+    .ptable th{font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--fg-faint);font-weight:400;text-align:right;padding:0 0 14px 12px;white-space:nowrap}
+    .ptable th:first-child{text-align:left;padding-left:0}
+    .ptable td{border-top:1px solid var(--rule);padding:18px 0 18px 12px;text-align:right;font-family:var(--f-display);font-size:22px;color:var(--fg);white-space:nowrap}
+    .ptable td:first-child{text-align:left;padding-left:0;white-space:normal;font-size:20px}
+    .ptable td:first-child small{display:block;font-family:var(--f-body);font-size:12.5px;color:var(--fg-dim);margin-top:4px}
+    .ptable td.peak{color:var(--accent)}
+    .fine{font-size:12.5px;color:var(--fg-faint);margin-top:14px;max-width:90ch;line-height:1.65}
+    .offpeak{margin-top:28px;padding:20px 24px;border-left:2px solid var(--accent);background:linear-gradient(90deg,rgba(200,152,96,0.06),transparent);font-size:14.5px;color:var(--fg-dim)}
+    .offpeak b{color:var(--accent);font-weight:400}
+
+    .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:880px){ .pkg-grid{grid-template-columns:1fr} }
+    .pkg{border:1px solid var(--rule);background:var(--bg-2);padding:28px;display:flex;flex-direction:column;gap:10px;transition:border-color .3s}
+    .pkg:hover{border-color:var(--accent)}
+    .pkg-name{font-family:var(--f-display);font-size:26px;font-weight:400;color:var(--fg);line-height:1.15}
+    .pkg-name .ital{font-style:italic;color:var(--accent);font-size:0.8em;display:block}
+    .pkg-price{font-family:var(--f-display);font-size:44px;font-weight:300;color:var(--fg);line-height:1}
+    .pkg-price small{font-family:var(--f-mono);font-size:11px;letter-spacing:0.12em;color:var(--fg-faint);margin-left:6px}
+    .pkg ul{list-style:none;color:var(--fg-dim);font-size:14px;display:flex;flex-direction:column;gap:6px;margin-top:6px}
+    .pkg li::before{content:"— ";color:var(--accent)}
+
+    .addon-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}
+    @media (max-width:720px){ .addon-grid{grid-template-columns:1fr} }
+    .addon-grid .menu-row{padding:14px 0}
+    .addon-grid .menu-name{font-size:18px}
+
+    .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:880px){ .bento{grid-template-columns:1fr 1fr} }
+    @media (max-width:560px){ .bento{grid-template-columns:1fr} }
+    .bx{border:1px solid var(--rule);padding:22px;display:flex;flex-direction:column;gap:6px;background:var(--bg-2)}
+    .bx-top{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--f-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent)}
+    .bx-top b{font-family:var(--f-display);font-size:26px;font-weight:300;color:var(--fg);letter-spacing:0;text-transform:none}
+    .bx-name{font-family:var(--f-display);font-size:21px;color:var(--fg);font-weight:400}
+    .bx-name .cn{font-size:15px;color:var(--fg-dim);margin-left:6px}
+    .bx p{font-size:13px;color:var(--fg-dim)}
+    .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:28px;border-top:1px solid var(--rule);padding-top:24px}
+    @media (max-width:720px){ .facts{grid-template-columns:1fr 1fr} }
+
+    .terms-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}
+    @media (max-width:720px){ .terms-grid{grid-template-columns:1fr} }
+    .term{border-top:1px solid var(--rule);padding:20px 0}
+    .term h3{font-family:var(--f-display);font-size:21px;font-weight:400;color:var(--fg)}
+    .term h3 .cn{font-size:15px;color:var(--fg-dim);margin-left:8px}
+    .term p{font-size:14px;color:var(--fg-dim);margin-top:6px;max-width:52ch}
+    .week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:12px}
+    .week div{padding:12px 4px;text-align:center;font-family:var(--f-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border:1px solid var(--rule);color:var(--fg-dim);line-height:1.6}
+    .week .busy{border-color:var(--accent-2);color:var(--fg)}
+    .week .peak{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+    .week .closed{border-style:dashed;color:var(--fg-faint)}
+    .card-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    @media (max-width:720px){ .card-row{grid-template-columns:1fr 1fr} }
+    .card-row div{border:1px solid var(--rule);padding:18px;background:linear-gradient(160deg,var(--bg-3),var(--bg))}
+    .card-row b{display:block;font-family:var(--f-display);font-size:26px;font-weight:300;color:var(--fg)}
+    .card-row span{font-family:var(--f-mono);font-size:10px;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase}
+
+    .dl-band{margin-top:72px;padding:32px;border:1px solid var(--accent);background:linear-gradient(180deg,rgba(200,152,96,0.07),transparent);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+    .dl-band .t{font-family:var(--f-display);font-size:clamp(22px,2.6vw,30px);font-weight:300;color:var(--fg)}
+    .dl-band .t .ital{font-style:italic;color:var(--accent)}
+    .dl-band .m{font-family:var(--f-mono);font-size:10.5px;letter-spacing:0.14em;color:var(--fg-faint);text-transform:uppercase;margin-top:6px}
+    .dl-band .actions{display:flex;gap:10px;flex-wrap:wrap}
+    @media (max-width:600px){
+      .svc-grid{margin-bottom:48px}
+      .block-label{margin:48px 0 16px}
+      .pkg{padding:22px}
+      .pkg-price{font-size:36px}
+      .dl-band{padding:20px 16px;flex-direction:column;align-items:flex-start}
+      .dl-band .actions,.dl-band .actions .btn{width:100%;justify-content:center}
+      .week div{font-size:9px;padding:10px 2px}
+    }
   </style>
 </head>
 <body>
@@ -590,6 +679,7 @@
         <li><a href="#drinks">饮品</a></li>
         <li><a href="#food">正餐</a></li>
         <li><a href="#coffee">咖啡</a></li>
+        <li><a href="#events">包场</a></li>
         <li><a href="#location">位置</a></li>
       </ul>
       <div class="nav-right">
@@ -620,14 +710,17 @@
           <span class="ital">Listening Bar.</span>
         </h1>
 
-        <p class="hero-subtitle"><span class="accent">黑月</span> · <span class="accent">乌鸦</span> · <span class="accent">古耳</span> — 听音、餐食与咖啡的三位一体，藏在北京胡同深处。黑胶酒吧、厨房与烘焙工坊，同一座四合院屋檐下。</p>
+        <p class="hero-subtitle"><span class="accent">黑月</span> · <span class="accent">乌鸦</span> · <span class="accent">古耳</span> — 听音、餐食与咖啡的三位一体，藏在北京胡同深处。黑胶酒吧、厨房与咖啡，同一屋檐下——也为你的夜晚办一场活动。</p>
 
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#location">
             找到我们 <span class="arr">→</span>
           </a>
-          <a class="btn btn-ghost" href="https://www.instagram.com/blackmoon.beijing/" target="_blank" rel="noopener" onclick="event.stopPropagation()">
-            关注我们 <span class="arr">→</span>
+          <a class="btn btn-ghost" href="#events">
+            包场与外烩 <span class="arr">→</span>
+          </a>
+          <a class="btn btn-ghost" href="/assets/downloads/blackmoon-ravens-brochure.pdf" download="黑月乌鸦合作手册-Blackmoon-Ravens.pdf">
+            合作手册 PDF <span class="arr">↓</span>
           </a>
         </div>
       </div>
@@ -659,7 +752,7 @@
     <section class="sec" id="sound" data-screen-label="The Sound" aria-labelledby="sound-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">01 / 07</div>
+          <div class="sec-num">01 / 09</div>
           <h2 class="sec-title" id="sound-title">
             The <span class="ital">Sound</span>.
             <span class="cn mono">声音</span>
@@ -674,7 +767,7 @@
             </p>
           </div>
           <div class="sound-body">
-            <p>推开胡同里那扇黑色的门，这个房间为低音量聆听而调校：精心搭建的模拟信号通路，横跨两百年四合院砖墙的声学处理，以及十年间在中国、纽约、加州和东京淘碟所积累的纯黑胶轮播。</p>
+            <p>推开胡同里那扇黑色的门，这个房间为低音量聆听而调校：精心搭建的模拟信号通路，砖墙间的声学处理，以及十年间在中国、纽约、加州和东京淘碟所积累的纯黑胶轮播。</p>
             <p>
               早来享受安静的选曲和一杯慢饮，周末留下来，陪选碟人一起深入夜晚。
             </p>
@@ -831,7 +924,7 @@
     <section class="sec" id="space" data-screen-label="Space" aria-labelledby="space-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">02 / 07</div>
+          <div class="sec-num">02 / 09</div>
           <h2 class="sec-title" id="space-title">
             The <span class="ital">Space</span>.
             <span class="cn mono">环境</span>
@@ -841,7 +934,7 @@
         <div class="gallery-intro">
           <div></div>
           <p class="gallery-lede">
-            一座修复的<span class="accent">四合院</span>，藏在黑色的胡同门后 — 深色的砖墙、木梁、钨丝灯、黑胶，仅此而已。
+            聆听室与餐厅，藏在<span class="accent">黑色的胡同门</span>后 — 深色的砖墙、木梁、钨丝灯、黑胶，仅此而已。
           </p>
           <div class="gallery-body">
             <p>主听音室与用餐区共四十个座位。吧台后方整面墙的黑胶唱片墙，卡座上方一盏温暖的灯丝灯。</p>
@@ -896,7 +989,7 @@
     <section class="sec" id="drinks" data-screen-label="Drinks" aria-labelledby="drinks-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">03 / 07</div>
+          <div class="sec-num">03 / 09</div>
           <h2 class="sec-title" id="drinks-title">
             The <span class="ital">Pour</span>.
             <span class="cn mono">饮品</span>
@@ -1008,7 +1101,7 @@
     <section class="sec" id="food" data-screen-label="Food" aria-labelledby="food-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">04 / 07</div>
+          <div class="sec-num">04 / 09</div>
           <h2 class="sec-title" id="food-title">
             The <span class="ital">Plate</span>.
             <span class="cn mono">小菜</span>
@@ -1116,7 +1209,7 @@
     <section class="sec" id="coffee" data-screen-label="Coffee" aria-labelledby="coffee-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">05 / 07</div>
+          <div class="sec-num">05 / 09</div>
           <h2 class="sec-title" id="coffee-title">
             The <span class="ital">Day</span>.
             <span class="cn mono">咖啡</span>
@@ -1211,10 +1304,172 @@
         </div>
       </div>
     </section>
+
+    <section class="sec" id="events" data-screen-label="Events" aria-labelledby="events-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-num">06 / 09</div>
+          <h2 class="sec-title" id="events-title">
+            包场与<span class="ital">活动</span>
+            <span class="cn mono">Host a Night</span>
+          </h2>
+        </div>
+
+        <div class="gallery-intro">
+          <div></div>
+          <p class="gallery-lede">
+            从一张桌，到一整晚 —— <span class="accent">聆听室、黑胶墙、厨房与吧台</span>，为你的夜晚准备好。
+          </p>
+          <div class="gallery-body">
+            <p>生日、客户晚宴、新品发布、专辑聆听会、杀青宴。黑月选曲人按主题挑唱片，也可以带上你自己的 DJ；乌鸦掌勺，吧台出酒，其余交给我们。</p>
+          </div>
+        </div>
+
+        <div class="svc-grid">
+          <div class="svc"><span class="svc-num">01</span><h3 class="svc-title">包场 · 私人活动 <span class="cn">Private buyouts</span></h3><p>整店或半场预订：聆听室、餐厅与 DJ 台全部为你所用。</p></div>
+          <div class="svc"><span class="svc-num">02</span><h3 class="svc-title">品牌 · 商务活动 <span class="cn">Brand &amp; corporate</span></h3><p>新品发布、客户晚宴、团建之夜、媒体沙龙、聆听会，可定制音乐、菜单与特调。</p></div>
+          <div class="svc"><span class="svc-num">03</span><h3 class="svc-title">派对 · 音乐之夜 <span class="cn">Parties &amp; DJ nights</span></h3><p>选曲人按主题打碟，或带上你自己的 DJ / 乐队。</p></div>
+          <div class="svc"><span class="svc-num">04</span><h3 class="svc-title">餐饮外送 · 外烩 <span class="cn">Food catering</span></h3><p>乌鸦分享拼盘与家庭式宴席，送到办公室、展厅或片场。</p></div>
+          <div class="svc"><span class="svc-num">05</span><h3 class="svc-title">鸡尾酒 · 酒水 · 咖啡 <span class="cn">Cocktail &amp; coffee bar</span></h3><p>调酒师移动吧台、品牌定制特调，白天活动可加古耳手冲咖啡吧。</p></div>
+          <div class="svc"><span class="svc-num">06</span><h3 class="svc-title">盒饭 · 团餐 <span class="cn">Meal boxes</span></h3><p>乌鸦招牌菜按人分装，适合办公室、剧组与培训。</p></div>
+        </div>
+
+        <div class="gal-wide">
+          <div class="gal-slot w-hero"><img src="../assets/pics/events/crowd.jpg" alt="黑月满场的夜晚" loading="lazy"><span class="gal-cap">满场</span></div>
+          <div class="gal-slot"><img src="../assets/pics/events/ravens-dinner.jpg" alt="乌鸦长桌私宴" loading="lazy"><span class="gal-cap">私宴</span></div>
+          <div class="gal-slot"><img src="../assets/pics/events/djs-group.jpg" alt="黑月 DJ 台的客座选曲人" loading="lazy"><span class="gal-cap">客座选曲人</span></div>
+          <div class="gal-slot"><img src="../assets/pics/events/cocktails-lamp.jpg" alt="绿色台灯下的鸡尾酒" loading="lazy"><span class="gal-cap">吧台</span></div>
+          <div class="gal-slot"><img src="../assets/pics/events/lasagna.jpg" alt="乌鸦千层面" loading="lazy"><span class="gal-cap">乌鸦厨房</span></div>
+        </div>
+
+        <div class="block-label"><span>包场最低消费 · Minimum spend</span><span>可抵扣全部餐饮，不另收场地费</span></div>
+        <div class="ptable-wrap">
+          <table class="ptable">
+            <thead><tr><th>晚间场 · 18:00 — 23:00</th><th>周二至周四</th><th>周日</th><th>周五、周六</th><th>旺季 / 节日*</th></tr></thead>
+            <tbody>
+              <tr><td>整店包场<small>聆听室 + 餐厅 + DJ 台，最多 40 位入座</small></td><td>¥6,000</td><td>¥8,000</td><td>¥12,000</td><td class="peak">¥15,000 起</td></tr>
+              <tr><td>半场<small>独立区域，12 — 20 位</small></td><td>¥3,000</td><td>¥4,000</td><td>¥5,000</td><td class="peak">¥6,500 起</td></tr>
+              <tr><td>日间场地<small>10:00 — 17:00，拍摄 / 工作坊 / 发布会，与古耳协调，最少 3 小时</small></td><td>¥500/时</td><td>¥700/时</td><td>¥700/时</td><td class="peak">咨询</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine">* 旺季：12 月至次年 1 月中旬的周五、六，以及平安夜、圣诞、跨年、情人节、七夕和法定节假日前夜。最低消费可抵扣全部餐饮；未达部分按场地费补足。</p>
+        <div class="offpeak"><b>淡季礼遇 · Off-peak offer</b> —— 2 月、9 月整月，整店及半场包场最低消费 8 折（不与旺季价叠加，日间场地除外）；整店包场另赠一场选曲人黑胶 DJ set。</div>
+
+        <div class="block-label"><span>人均套餐 · Packages</span><span>15 位起，计入最低消费</span></div>
+        <div class="pkg-grid">
+          <div class="pkg"><h3 class="pkg-name">酒会 <span class="ital">Spin &amp; Sip</span></h3><div class="pkg-price">¥198<small>/ 位</small></div><ul><li>2 小时站立酒会</li><li>2 杯：特调 / 生啤 / 无酒精</li><li>乌鸦小食与分享拼盘</li></ul></div>
+          <div class="pkg"><h3 class="pkg-name">乌鸦晚宴 <span class="ital">Ravens Supper</span></h3><div class="pkg-price">¥298<small>/ 位</small></div><ul><li>家庭式三道菜</li><li>油封鸭腿、千层面等分享</li><li>迎宾特调 + 1 杯酒水</li></ul></div>
+          <div class="pkg"><h3 class="pkg-name">尽兴之夜 <span class="ital">Full Night</span></h3><div class="pkg-price">¥398<small>/ 位</small></div><ul><li>招牌宴：鸭腿、肉眼、蜂蜜肋排</li><li>迎宾特调 + 3 杯酒水</li><li>巴斯克芝士蛋糕</li></ul></div>
+        </div>
+
+        <div class="block-label"><span>加选 · Add-ons</span><span></span></div>
+        <div class="addon-grid menu" style="margin-top:0;padding-top:0;border-top:0">
+          <div class="menu-row"><div><span class="menu-name">选曲人黑胶 DJ set</span><span class="menu-desc">3 小时，按主题选片</span></div><span class="menu-price">¥ 1,500</span></div>
+          <div class="menu-row"><div><span class="menu-name">自带 DJ / 乐队</span><span class="menu-desc">17:00 前试音 · 22:00 后低于 80 分贝</span></div><span class="menu-price">免费</span></div>
+          <div class="menu-row"><div><span class="menu-name">专辑聆听会</span><span class="menu-desc">选片策划与主持</span></div><span class="menu-price">¥ 800</span></div>
+          <div class="menu-row"><div><span class="menu-name">品牌定制特调</span><span class="menu-desc">创作 + 命名 · 消费满 ¥10,000 免</span></div><span class="menu-price">¥ 800</span></div>
+          <div class="menu-row"><div><span class="menu-name">畅饮生啤 + 餐酒</span><span class="menu-desc">2 小时</span></div><span class="menu-price">+¥ 158 / 位</span></div>
+          <div class="menu-row"><div><span class="menu-name">延时</span><span class="menu-desc">每小时</span></div><span class="menu-price">¥ 800</span></div>
+          <div class="menu-row"><div><span class="menu-name">开瓶费</span><span class="menu-desc">葡萄酒 / 烈酒，每瓶 · 自带蛋糕免费</span></div><span class="menu-price">¥ 100 / 200</span></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec" id="catering" data-screen-label="Catering" aria-labelledby="catering-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-num">07 / 09</div>
+          <h2 class="sec-title" id="catering-title">
+            外烩与<span class="ital">盒饭</span>
+            <span class="cn mono">Catering · Meal boxes · Drinks</span>
+          </h2>
+        </div>
+
+        <div class="gallery-intro">
+          <div></div>
+          <p class="gallery-lede">
+            乌鸦的家常味和黑月的酒，<span class="accent">送到你身边</span> —— 展览开幕、办公室、片场与派对。
+          </p>
+          <div class="gallery-body">
+            <p>可按人数、预算与忌口（素食、无麸质等）定制菜单。鼓楼周边 5 公里内由我们自己配送。</p>
+          </div>
+        </div>
+
+        <div class="block-label"><span>外烩 · Off-site catering</span><span>15 位或 ¥2,000 起订 · 至少提前 5 天</span></div>
+        <div class="menu" style="margin-top:0;padding-top:0;border-top:0">
+          <div class="menu-row"><div><span class="menu-name">小食拼盘 <span class="ital">Snack platters</span></span><span class="menu-desc">肉类芝士、玉米片、薯角、烤蔬菜。</span></div><span class="menu-price">¥ 98 / 位</span></div>
+          <div class="menu-row"><div><span class="menu-name">乌鸦分享宴 <span class="ital">Sharing feast</span></span><span class="menu-desc">拼盘、油封鸭腿、千层面、沙拉。</span></div><span class="menu-price">¥ 168 / 位</span></div>
+          <div class="menu-row"><div><span class="menu-name">招牌宴 <span class="ital">Signature feast</span></span><span class="menu-desc">再加香脂醋肉眼、蜂蜜肋排与甜点。</span></div><span class="menu-price">¥ 238 / 位</span></div>
+        </div>
+        <p class="fine">5 公里内满 ¥3,000 免运费，其余 ¥100 — 300 · 现场服务员 ¥300 / 人（4 小时）· 餐具器皿 ¥200。</p>
+
+        <div class="block-label"><span>盒饭团餐 · Meal boxes</span><span>15 份起订 · 提前 2 天</span></div>
+        <div class="bento">
+          <div class="bx"><div class="bx-top"><span>A · 经典</span><b>¥68</b></div><span class="bx-name">千层面 <span class="cn">Lasagna</span></span><p>层层肉酱与芝士焗烤，配沙拉。</p></div>
+          <div class="bx"><div class="bx-top"><span>A · 经典</span><b>¥68</b></div><span class="bx-name">汉堡套餐 <span class="cn">Burger set</span></span><p>招牌牛肉汉堡 + 薯角。</p></div>
+          <div class="bx"><div class="bx-top"><span>A · 经典 · 素</span><b>¥68</b></div><span class="bx-name">烤蔬菜藜麦碗 <span class="cn">Veggie bowl</span></span><p>烤时蔬、藜麦、山羊芝士、蜂蜜芥末。</p></div>
+          <div class="bx"><div class="bx-top"><span>B · 招牌</span><b>¥98</b></div><span class="bx-name">油封鸭腿饭 <span class="cn">Duck confit</span></span><p>12 小时鸭腿、杏子照烧汁，土豆泥或米饭。</p></div>
+          <div class="bx"><div class="bx-top"><span>B · 招牌</span><b>¥98</b></div><span class="bx-name">蜂蜜烤肋排饭 <span class="cn">BBQ ribs</span></span><p>自制 BBQ 酱肋排、时蔬、米饭。</p></div>
+          <div class="bx"><div class="bx-top"><span>C · 臻选</span><b>¥138</b></div><span class="bx-name">香脂醋牛排饭 <span class="cn">Rib-eye</span></span><p>谷饲肉眼切片、芦笋、香脂醋汁。</p></div>
+        </div>
+        <div class="facts">
+          <div><span class="space-stat-label">午餐送达</span><span class="space-stat-val"><span class="ital">11:30 — 13:00</span></span></div>
+          <div><span class="space-stat-label">晚餐送达</span><span class="space-stat-val"><span class="ital">17:30 — 19:00</span></span></div>
+          <div><span class="space-stat-label">免运费</span><span class="space-stat-val">30 份<span class="ital">以上</span></span></div>
+          <div><span class="space-stat-label">团单优惠</span><span class="space-stat-val">9.5 / 9 <span class="ital">折</span></span></div>
+        </div>
+        <p class="fine">午餐限周二至周五。前一天 18:00 前确认数量。50 份以上 9.5 折、100 份以上 9 折。加购：汽水 ¥10 · 古耳咖啡 ¥25 · 巴斯克芝士蛋糕 ¥30。剧组与长期订餐可月结。</p>
+
+        <div class="block-label"><span>酒水与咖啡外烩 · Drinks &amp; coffee bar</span><span>至少提前 7 天预订</span></div>
+        <div class="menu" style="margin-top:0;padding-top:0;border-top:0">
+          <div class="menu-row"><div><span class="menu-name">移动吧台 <span class="ital">Mobile bar</span></span><span class="menu-desc">1 位调酒师、3 小时、50 位以内，含冰与杯具。加调酒师 ¥800 · 加时 ¥400 / 小时。</span></div><span class="menu-price">¥ 1,500</span></div>
+          <div class="menu-row"><div><span class="menu-name">酒水套餐 <span class="ital">Drink packages</span></span><span class="menu-desc">每位 2 杯 / 3 杯，特调、生啤、无酒精任选。或按杯：特调 ¥60 · 啤酒 ¥45，酒水最低 ¥3,000。</span></div><span class="menu-price">¥ 128 / 168</span></div>
+          <div class="menu-row"><div><span class="menu-name">古耳咖啡吧 <span class="ital">Coffee bar</span></span><span class="menu-desc">1 位咖啡师、3 小时、含 50 杯，加杯 ¥30。</span></div><span class="menu-price">¥ 1,500</span></div>
+        </div>
+
+        <div class="block-label"><span>预订须知 · Booking terms</span><span>价格为人民币，已含服务费 · 有效期至 2027 年 3 月 31 日</span></div>
+        <div class="week" aria-label="繁忙时段">
+          <div class="closed">周一<br>休息</div><div>周二<br>平日</div><div>周三<br>平日</div><div class="busy">周四<br>较忙</div><div class="peak">周五<br>高峰</div><div class="peak">周六<br>高峰</div><div class="busy">周日<br>较忙</div>
+        </div>
+        <p class="fine" style="margin-top:0;margin-bottom:16px">每晚 18:00 — 20:30 为晚餐高峰，21:00 后以酒为主；12 月至 1 月为旺季。周二、周三以及 2 月、9 月最适合包场。</p>
+        <div class="terms-grid">
+          <div class="term"><h3>定金 <span class="cn">Deposit</span></h3><p>确认日期需支付最低消费或报价的 50% 作为定金，余款活动当天结清。企业客户签约后可月结。</p></div>
+          <div class="term"><h3>取消与改期 <span class="cn">Cancellation</span></h3><p>提前 14 天以上：全额退还或免费改期；7 — 13 天：退还 50%；7 天内：定金不退，可在 3 个月内改期一次。</p></div>
+          <div class="term"><h3>人数确认 <span class="cn">Headcount</span></h3><p>活动前 72 小时确认最终人数，按确认人数与实际人数较高者结算。</p></div>
+          <div class="term"><h3>高峰时段订座 <span class="cn">Peak-hour groups</span></h3><p>周五、六 18:00 — 21:00，8 位以上的非包场订座需选择套餐，用餐时间 2 小时；12 位以上请预订半场。</p></div>
+          <div class="term"><h3>22:00 后安静时段 <span class="cn">Quiet hours</span></h3><p>22:00 起，场内音乐须低于 80 分贝（以店内分贝仪为准）；室外禁止大声喧哗，请勿在门口聚集或吸烟。场内禁用彩带、烟雾机与明火（蛋糕蜡烛除外）。</p></div>
+          <div class="term"><h3>外烩与盒饭取消 <span class="cn">Catering</span></h3><p>送达前 48 小时以上可免费取消；24 — 48 小时收取 50%；24 小时内全额收取。</p></div>
+          <div class="term"><h3>发票 <span class="cn">Fapiao</span></h3><p>可开具发票，如有调整以最终报价为准。</p></div>
+          <div class="term"><h3>损坏与物品 <span class="cn">Damage</span></h3><p>活动期间设备、唱片与器皿的损坏由主办方承担；自带物品请于活动结束后带走。</p></div>
+        </div>
+
+        <div class="block-label"><span>企业储值卡 · Member cards</span><span>黑月与乌鸦通用 · 赠送部分为酒水券，不可提现</span></div>
+        <div class="card-row">
+          <div><b>¥1,000</b><span>赠 ¥100</span></div>
+          <div><b>¥3,000</b><span>赠 ¥400</span></div>
+          <div><b>¥5,000</b><span>赠 ¥750</span></div>
+          <div><b>¥10,000+</b><span>企业定制 · 含包场权益</span></div>
+        </div>
+
+        <aside class="dl-band" aria-label="下载合作手册">
+          <div>
+            <div class="t">以上全部内容，都在这本<span class="ital">合作手册</span>里。</div>
+            <div class="m">包场 · 外烩 · 盒饭 · 条款 — 中英双语 PDF · 10 页 · 5 MB</div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="/assets/downloads/blackmoon-ravens-brochure.pdf" download="黑月乌鸦合作手册-Blackmoon-Ravens.pdf">下载 PDF <span class="arr">↓</span></a>
+            <a class="btn btn-ghost" href="#contact">微信咨询 <span class="arr">→</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
     <section class="sec" id="location" data-screen-label="Location" style="border-top:1px solid var(--rule)" aria-labelledby="loc-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">06 / 07</div>
+          <div class="sec-num">08 / 09</div>
           <h2 class="sec-title" id="loc-title">
             Find <span class="ital">Us</span>.
             <span class="cn mono">地点</span>
@@ -1314,10 +1569,10 @@
 
             <div class="hours" aria-label="营业时间">
               <div class="hours-row" style="color:var(--accent)"><span class="day">咖啡 · 每日</span><span>10:00 — 18:00</span></div>
-              <div class="hours-row"><span class="day">酒吧 · 周一</span><span>休息</span></div>
-              <div class="hours-row"><span class="day">酒吧 · 周二至周四</span><span>17:30 — 01:00</span></div>
-              <div class="hours-row today"><span class="day">酒吧 · 周五至周六</span><span>17:30 — 02:00</span></div>
-              <div class="hours-row"><span class="day">酒吧 · 周日</span><span>16:00 — 00:00</span></div>
+              <div class="hours-row" data-days="1"><span class="day">酒吧 · 周一</span><span>休息</span></div>
+              <div class="hours-row" data-days="2,3,4"><span class="day">酒吧 · 周二至周四</span><span>17:30 — 01:00</span></div>
+              <div class="hours-row" data-days="5,6"><span class="day">酒吧 · 周五至周六</span><span>17:30 — 02:00</span></div>
+              <div class="hours-row" data-days="0"><span class="day">酒吧 · 周日</span><span>16:00 — 00:00</span></div>
             </div>
           </address>
 
@@ -1339,7 +1594,7 @@
     <section class="sec" id="contact" data-screen-label="Contact" aria-labelledby="contact-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">07 / 07</div>
+          <div class="sec-num">09 / 09</div>
           <h2 class="sec-title" id="contact-title">
             Stay in <span class="ital">Touch</span>.
             <span class="cn mono">联系方式</span>
@@ -1350,8 +1605,8 @@
         <aside class="reserve-band" aria-label="预订">
           <div class="left">
             <span class="label">预订 · Reservations</span>
-            <span class="title">订座及咨询请通过<span class="ital">微信或电话</span>联系。</span>
-            <span class="meta">预约请添加微信 (RavensDomain) 或致电 +86 18611741214 · 私人包场请提前 72 小时</span>
+            <span class="title">订座、包场与外烩，请通过<span class="ital">微信或电话</span>联系。</span>
+            <span class="meta">订座请添加微信 RavensDomain · 包场、外烩与盒饭请添加微信 ruhaox · 或致电 +86 18611741214 · 包场请至少提前 72 小时</span>
           </div>
           <div class="actions">
             <a class="btn btn-primary" href="tel:+8618611741214">
@@ -1359,6 +1614,9 @@
             </a>
             <a class="btn btn-ghost" href="https://www.dianping.com/shop/GaG2HftvNr6IAEis?responseCode=ee3a5df8f48a45e291e0276216d9ff77&requestCode=caa88a5bf154413e9a79b2b54577eddd" target="_blank" rel="noopener">
               Ravens · 大众点评 <span class="arr">↗</span>
+            </a>
+            <a class="btn btn-ghost" href="/assets/downloads/blackmoon-ravens-brochure.pdf" download="黑月乌鸦合作手册-Blackmoon-Ravens.pdf">
+              合作手册 PDF <span class="arr">↓</span>
             </a>
           </div>
         </aside>
@@ -1535,7 +1793,8 @@
         </div>
         <div class="foot-meta" style="text-align:right">
           Instagram · 微信 · 公众号 · 小红书<br/>
-          1994ep@gmail.com · +86 18611741214
+          1994ep@gmail.com · +86 18611741214<br/>
+          <a href="/assets/downloads/blackmoon-ravens-brochure.pdf" download="黑月乌鸦合作手册-Blackmoon-Ravens.pdf" style="color:var(--accent)">包场与外烩合作手册（PDF）↓</a>
         </div>
       </div>
       <div class="foot-bottom">
@@ -1569,6 +1828,16 @@
     })();
   </script>
 
+
+  <script>
+    // Highlight today's opening-hours row (Beijing time)
+    (function(){
+      var d = new Date(new Date().toLocaleString('en-US', {timeZone: 'Asia/Shanghai'})).getDay();
+      document.querySelectorAll('.hours-row[data-days]').forEach(function(r){
+        if (r.getAttribute('data-days').split(',').indexOf(String(d)) > -1) r.classList.add('today');
+      });
+    })();
+  </script>
 
 </body>
 </html>
