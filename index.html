@@ -15,7 +15,16 @@
   <meta property="og:url" content="https://blackmoonbeijing.com/" />
   <meta property="og:title" content="Blackmoon | Vinyl Listening Bar in Beijing" />
   <meta property="og:description" content="Vinyl listening bar, cocktails, dinner &amp; specialty coffee in a Beijing hutong. Private events, catering &amp; meal boxes. Jazz, soul, hip-hop on wax." />
-  <meta property="og:locale" content="en" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Blackmoon 黑月" />
+  <meta property="og:image" content="https://blackmoonbeijing.com/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Blackmoon vinyl wall and DJ booth in a Beijing hutong" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blackmoon | Vinyl Listening Bar in Beijing" />
+  <meta name="twitter:image" content="https://blackmoonbeijing.com/og.jpg" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta property="og:locale:alternate" content="zh_CN" />
   <link rel="alternate" hreflang="en" href="https://blackmoonbeijing.com/" />
   <link rel="alternate" hreflang="zh-Hans" href="https://blackmoonbeijing.com/zh/" />
@@ -32,12 +41,13 @@
   {
     "@context": "https://schema.org",
     "@type": ["BarOrPub", "Restaurant"],
+    "@id": "https://blackmoonbeijing.com/#bar",
     "name": "Blackmoon Listening Bar 黑月",
     "description": "Vinyl listening bar and sanctuary for roots music in Beijing's Beiluoguxiang hutongs. Hi-fi analog sound; a core curation of Hip-hop, Soul/Funk, Jazz and City Pop; craft beers and signature pours.",
     "url": "https://blackmoonbeijing.com/",
     "image": "https://blackmoonbeijing.com/og.jpg",
     "telephone": "+86-186-1174-1214",
-    "priceRange": "$",
+    "priceRange": "¥¥",
     "menu": "https://blackmoonbeijing.com/#drinks",
     "servesCuisine": ["Bar", "Cocktails", "Western"],
     "address": {
@@ -55,9 +65,9 @@
     },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "name": "Coffee (by 古耳)", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "18:00" },
-      { "@type": "OpeningHoursSpecification", "name": "Bar", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "17:30", "closes": "01:00" },
-      { "@type": "OpeningHoursSpecification", "name": "Bar", "dayOfWeek": ["Friday","Saturday"], "opens": "17:30", "closes": "02:00" },
-      { "@type": "OpeningHoursSpecification", "name": "Bar", "dayOfWeek": ["Sunday"], "opens": "16:00", "closes": "00:00" }
+      { "@type": "OpeningHoursSpecification", "name": "Bar", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "18:00", "closes": "01:00" },
+      { "@type": "OpeningHoursSpecification", "name": "Bar", "dayOfWeek": ["Friday","Saturday"], "opens": "18:00", "closes": "01:30" },
+      { "@type": "OpeningHoursSpecification", "name": "Bar", "dayOfWeek": ["Sunday"], "opens": "18:00", "closes": "01:00" }
     ],
     "sameAs": [
       "https://www.instagram.com/blackmoon.beijing/",
@@ -66,13 +76,325 @@
   }
   </script>
 
-  <!-- ─── ANALYTICS placeholder (Plausible) ───────────────────── -->
-  <!-- <script defer data-domain="blackmoonbeijing.com" src="https://plausible.io/js/script.js"></script> -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://blackmoonbeijing.com/#website",
+        "url": "https://blackmoonbeijing.com/",
+        "name": "Blackmoon 黑月",
+        "inLanguage": [
+          "en",
+          "zh-Hans"
+        ],
+        "publisher": {
+          "@id": "https://blackmoonbeijing.com/#bar"
+        }
+      },
+      {
+        "@type": [
+          "BarOrPub",
+          "Restaurant"
+        ],
+        "@id": "https://blackmoonbeijing.com/#bar",
+        "alternateName": [
+          "黑月",
+          "Blackmoon Beijing",
+          "黑月听音酒吧",
+          "Blackmoon Listening Bar"
+        ],
+        "acceptsReservations": true,
+        "currenciesAccepted": "CNY",
+        "hasMap": "https://apis.map.qq.com/uri/v1/marker?marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷66号",
+        "maximumAttendeeCapacity": 40,
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Vinyl-only hi-fi listening room",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "DJ booth",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Private hire",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Cocktail bar",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Craft beer on draft",
+            "value": true
+          }
+        ],
+        "department": [
+          {
+            "@type": "Restaurant",
+            "name": "Ravens 乌鸦",
+            "servesCuisine": [
+              "Western",
+              "Comfort food"
+            ],
+            "foundingDate": "2017"
+          },
+          {
+            "@type": "CafeOrCoffeeShop",
+            "name": "古耳 Gǔ Ěr Coffee",
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "10:00",
+              "closes": "18:00"
+            }
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Private events & catering",
+          "url": "https://blackmoonbeijing.com/#events",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Full venue buyout (evening)",
+                "description": "Minimum spend on food & drinks, Tue–Thu 18:00–23:00. Sun ¥8,000, Fri–Sat ¥12,000, peak dates from ¥15,000. Up to 40 seated."
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": 6000,
+                "priceCurrency": "CNY"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Semi-private area (evening)",
+                "description": "Minimum spend for 12–20 guests, Tue–Thu. Sun ¥4,000, Fri–Sat ¥5,000."
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": 3000,
+                "priceCurrency": "CNY"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Event package: Spin & Sip",
+                "description": "2-hour reception, 2 drinks, Ravens snacks & platters. From 15 guests."
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": 198,
+                "priceCurrency": "CNY",
+                "unitText": "per guest"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Event package: Ravens Supper",
+                "description": "Family-style three courses with welcome cocktail + 1 drink. From 15 guests."
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": 298,
+                "priceCurrency": "CNY",
+                "unitText": "per guest"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Event package: Full Night",
+                "description": "Signature feast, welcome cocktail + 3 drinks, Basque cheesecake. From 15 guests."
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": 398,
+                "priceCurrency": "CNY",
+                "unitText": "per guest"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Off-site catering",
+                "description": "Ravens platters and sharing feasts delivered within 5 km of Gulou; ¥98 / ¥168 / ¥238 per guest. Min. 15 guests or ¥2,000."
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": 98,
+                "priceCurrency": "CNY",
+                "unitText": "per guest"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Meal boxes (盒饭)",
+                "description": "Ravens lunch and dinner boxes for offices and film crews; ¥68 / ¥98 / ¥138. Min. 15 boxes, 2 days' notice."
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": 68,
+                "priceCurrency": "CNY",
+                "unitText": "per box"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Mobile cocktail bar",
+                "description": "1 bartender, 3 hours, up to 50 guests."
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": 1500,
+                "priceCurrency": "CNY"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Gǔ Ěr coffee bar",
+                "description": "1 barista, 3 hours, 50 cups included."
+              },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": 1500,
+                "priceCurrency": "CNY"
+              }
+            }
+          ]
+        },
+        "subjectOf": {
+          "@type": "DigitalDocument",
+          "name": "Blackmoon & Ravens events & catering brochure",
+          "encodingFormat": "application/pdf",
+          "url": "https://blackmoonbeijing.com/assets/downloads/blackmoon-ravens-brochure.pdf",
+          "inLanguage": [
+            "en",
+            "zh-Hans"
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "en",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Blackmoon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Blackmoon (黑月) is a vinyl-only hi-fi listening bar on Beiluoguxiang in Beijing's Dongcheng hutongs. It shares one roof with Ravens (乌鸦), a kitchen serving dinner since 2017, and 古耳 Gǔ Ěr, a specialty coffee bar. The records are hip-hop, soul/funk, jazz and City Pop."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Blackmoon and when is it open?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. 66 Beiluoguxiang, Dongcheng District, Beijing (北京市东城区北锣鼓巷 66 号). Coffee is served daily 10:00–18:00. The bar opens Tue–Thu 18:00–01:00, Fri–Sat 18:00–01:30 and Sun 18:00–01:00, and is closed on Mondays."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I reserve a table?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Add WeChat RavensDomain or call +86 186 1174 1214. On Friday and Saturday evenings (18:00–21:00), groups of 8 or more take a set menu with a 2-hour table, and groups of 12 or more should book a semi-private area."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I book the whole bar for a private event?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A full evening buyout (18:00–23:00) is a minimum spend on food and drinks: ¥6,000 Tue–Thu, ¥8,000 Sun, ¥12,000 Fri–Sat and from ¥15,000 on peak dates, for up to 40 seated guests. A semi-private area for 12–20 guests starts at ¥3,000. In February and September, buyout minimums are 20% off."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much are event packages per person?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "From 15 guests: Spin & Sip ¥198 (2-hour reception, 2 drinks, snacks), Ravens Supper ¥298 (family-style three courses, 2 drinks) and Full Night ¥398 (signature feast, 4 drinks, dessert). Packages count toward the minimum spend."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I bring my own DJ or band?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, free of charge. Sound check is before 17:00, and from 22:00 music must stay below 80 dB on our in-house meter. Our own selectors can also play a 3-hour vinyl set for ¥1,500."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you do catering or meal boxes (盒饭)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Off-site catering is ¥98, ¥168 or ¥238 per guest (min. 15 guests or ¥2,000, 5 days' notice). Meal boxes are ¥68, ¥98 or ¥138 (min. 15 boxes, 2 days' notice), delivered within 5 km of Gulou for lunch (11:30–13:00, Tue–Fri) or dinner (17:30–19:00). We also run a mobile cocktail bar and a 古耳 coffee bar, ¥1,500 each."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do deposits and cancellations work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 50% deposit secures the date. Cancel 7+ days ahead for a full refund. Fapiao are available."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ─── ANALYTICS ──────────────────────────────────────────────
+       Paste the provider snippet(s) here once the account exists:
+       · Baidu Tongji (works in mainland China):
+           var _hmt=_hmt||[];(function(){var s=document.createElement("script");s.src="https://hm.baidu.com/hm.js?SITE_ID";document.head.appendChild(s)})();
+       · Umami Cloud (international, cookie-free):
+           <script defer src="https://cloud.umami.is/script.js" data-website-id="WEBSITE_ID"></script>
+       Conversion clicks are tracked by the track() helper at the end of <body>.
+  ──────────────────────────────────────────────────────────────── -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d06d15f5-08f2-4c68-95e5-508470fb8c60"></script>
 
   <!-- ─── Fonts ──────────────────────────────────────────────── -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@300;500&display=swap" rel="stylesheet" />
+  <link href="/assets/fonts/fonts.css" rel="stylesheet" />
 
   <style>
     :root{
@@ -155,7 +477,7 @@
 
     /* ─── Hero ─── */
     .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;padding-bottom:64px;position:relative;overflow:hidden}
-    .hero-media{position:absolute;inset:0;z-index:0;background-image:url('assets/hero.jpg');background-size:cover;background-position:center;filter:brightness(0.78) saturate(1.05);pointer-events:none}
+    .hero-media{position:absolute;inset:0;z-index:0;background-image:url('assets/hero.webp');background-size:cover;background-position:center;filter:brightness(0.78) saturate(1.05);pointer-events:none}
     .hero-media::after{content:"";position:absolute;inset:0;background:
       radial-gradient(ellipse 70% 55% at 50% 45%, transparent 0%, rgba(10,10,10,0.55) 65%, var(--bg) 100%),
       linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.15) 25%, rgba(10,10,10,0.25) 55%, var(--bg) 100%),
@@ -407,7 +729,7 @@
 
     /* ─── Cat easter egg (bottom backdrop) ─── */
     .cat-egg{position:relative;height:64vh;min-height:480px;border-top:1px solid var(--rule);overflow:hidden;display:flex;align-items:flex-end}
-    .cat-egg-img{position:absolute;inset:0;background-image:url('assets/cat.jpg');background-size:cover;background-position:center;filter:brightness(0.55) saturate(1.05);transform:scale(1.02)}
+    .cat-egg-img{position:absolute;inset:0;background-image:url('assets/cat.webp');background-size:cover;background-position:center;filter:brightness(0.55) saturate(1.05);transform:scale(1.02)}
     .cat-egg::before{content:"";position:absolute;inset:0;background:
       linear-gradient(180deg, var(--bg) 0%, rgba(10,10,10,0.4) 18%, rgba(10,10,10,0.15) 50%, rgba(10,10,10,0.45) 92%, var(--bg) 100%),
       radial-gradient(ellipse 60% 50% at 50% 60%, transparent 0%, rgba(10,10,10,0.55) 80%);
@@ -664,6 +986,16 @@
       .dl-band .actions,.dl-band .actions .btn{width:100%;justify-content:center}
       .week div{font-size:9px;padding:10px 2px}
     }
+
+    /* ─── FAQ ─── */
+    .faq{border-top:1px solid var(--rule)}
+    .faq details{border-bottom:1px solid var(--rule)}
+    .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:22px 0;font-family:var(--f-display);font-size:clamp(19px,2vw,24px);font-weight:400;color:var(--fg)}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";font-family:var(--f-mono);font-size:16px;color:var(--accent);transition:transform .2s}
+    .faq details[open] summary::after{transform:rotate(45deg)}
+    .faq summary:hover{color:var(--accent)}
+    .faq details p{color:var(--fg-dim);font-size:15px;line-height:1.75;max-width:72ch;padding:0 0 24px}
   </style>
 </head>
 <body>
@@ -737,7 +1069,7 @@
           <span class="eyebrow">39.9420° N · 116.4030° E</span>
           <span class="val mono" style="font-size:11px;letter-spacing:0.14em;line-height:1.6">
             TUE - SUN (MONDAY CLOSED)<br/>
-            BAR & RESTAURANT · 17:30 — LATE <br/>
+            BAR · 18:00 — LATE &nbsp;·&nbsp; KITCHEN · 18:00 — 22:00 <br/>
             COFFEE DAILY · 10:00 — 18:00
           </span>
         </div>
@@ -755,7 +1087,7 @@
     <section class="sec" id="sound" data-screen-label="The Sound" aria-labelledby="sound-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">01 / 09</div>
+          <div class="sec-num">01 / 10</div>
           <h2 class="sec-title" id="sound-title">
             The <span class="ital">Sound</span>.
             <span class="cn mono">声音</span>
@@ -802,7 +1134,7 @@
           </div>
           <div class="vinyl-rail" role="list">
             <article class="lp" role="listitem">
-              <div class="lp-sleeve"><img src="assets/covers/okcomputer.jpeg" alt="Radiohead OK Computer vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
+              <div class="lp-sleeve"><img src="assets/covers/okcomputer.webp" alt="Radiohead OK Computer vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
               <div class="lp-info">
                 <span class="lp-artist">Radiohead</span>
                 <span class="lp-album">OK Computer</span>
@@ -810,7 +1142,7 @@
               </div>
             </article>
             <article class="lp" role="listitem">
-              <div class="lp-sleeve"><img src="assets/covers/abbey road.jpg" alt="The Beatles Abbey Road vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
+              <div class="lp-sleeve"><img src="assets/covers/abbey road.webp" alt="The Beatles Abbey Road vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
               <div class="lp-info">
                 <span class="lp-artist">The Beatles</span>
                 <span class="lp-album">Abbey Road</span>
@@ -818,7 +1150,7 @@
               </div>
             </article>
             <article class="lp" role="listitem">
-              <div class="lp-sleeve"><img src="assets/covers/for you.jpg" alt="Tatsuro Yamashita For You vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
+              <div class="lp-sleeve"><img src="assets/covers/for you.webp" alt="Tatsuro Yamashita For You vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
               <div class="lp-info">
                 <span class="lp-artist">Tatsuro Yamashita</span>
                 <span class="lp-album">For You</span>
@@ -826,7 +1158,7 @@
               </div>
             </article>
             <article class="lp" role="listitem">
-              <div class="lp-sleeve"><img src="assets/covers/Madvillainy-1080.jpg" alt="Madvillain Madvillainy vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
+              <div class="lp-sleeve"><img src="assets/covers/Madvillainy-1080.webp" alt="Madvillain Madvillainy vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
               <div class="lp-info">
                 <span class="lp-artist">Madvillain</span>
                 <span class="lp-album">Madvillainy</span>
@@ -834,7 +1166,7 @@
               </div>
             </article>
             <article class="lp" role="listitem">
-              <div class="lp-sleeve"><img src="assets/covers/illmatic.jpeg" alt="Nas Illmatic vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
+              <div class="lp-sleeve"><img src="assets/covers/illmatic.webp" alt="Nas Illmatic vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
               <div class="lp-info">
                 <span class="lp-artist">Nas</span>
                 <span class="lp-album">Illmatic</span>
@@ -850,7 +1182,7 @@
               </div>
             </article>
             <article class="lp" role="listitem">
-              <div class="lp-sleeve"><img src="assets/covers/the dark side of the moonpng.png" alt="Pink Floyd The Dark Side of the Moon vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
+              <div class="lp-sleeve"><img src="assets/covers/the dark side of the moonpng.webp" alt="Pink Floyd The Dark Side of the Moon vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
               <div class="lp-info">
                 <span class="lp-artist">Pink Floyd</span>
                 <span class="lp-album">The Dark Side of the Moon</span>
@@ -858,7 +1190,7 @@
               </div>
             </article>
             <article class="lp" role="listitem">
-              <div class="lp-sleeve"><img src="assets/covers/mama's gun.jpeg" alt="Erykah Badu Mama's Gun vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
+              <div class="lp-sleeve"><img src="assets/covers/mama's gun.webp" alt="Erykah Badu Mama's Gun vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
               <div class="lp-info">
                 <span class="lp-artist">Erykah Badu</span>
                 <span class="lp-album">Mama&rsquo;s Gun</span>
@@ -891,7 +1223,7 @@
               </div>
             </article>
             <article class="lp" role="listitem">
-              <div class="lp-sleeve"><img src="assets/covers/innervisions.jpg" alt="Stevie Wonder Innervisions vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
+              <div class="lp-sleeve"><img src="assets/covers/innervisions.webp" alt="Stevie Wonder Innervisions vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
               <div class="lp-info">
                 <span class="lp-artist">Stevie Wonder</span>
                 <span class="lp-album">Innervisions</span>
@@ -899,7 +1231,7 @@
               </div>
             </article>
             <article class="lp" role="listitem">
-              <div class="lp-sleeve"><img src="assets/covers/kind of blue.jpg" alt="Miles Davis Kind of Blue vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
+              <div class="lp-sleeve"><img src="assets/covers/kind of blue.webp" alt="Miles Davis Kind of Blue vinyl record at Blackmoon Listening Bar Beijing" loading="lazy"></div>
               <div class="lp-info">
                 <span class="lp-artist">Miles Davis</span>
                 <span class="lp-album">Kind of Blue</span>
@@ -915,7 +1247,7 @@
               <div class="lp-qr-title">Check the <span class="ital">complete</span> collection</div>
               <span class="lp-qr-sub">Scan with WeChat to see what we have</span>
               <div class="lp-qr-slot" aria-label="WeChat mini-program QR placeholder">
-                <img src="assets/qrcodes/mini_program.png" alt="Blackmoon Listening Bar WeChat mini-program QR code" loading="lazy" style="width:100%;height:100%;object-fit:contain;position:relative;z-index:1">
+                <img src="assets/qrcodes/mini_program.webp" alt="Blackmoon Listening Bar WeChat mini-program QR code" loading="lazy" style="width:100%;height:100%;object-fit:contain;position:relative;z-index:1">
               </div>
               <span class="lp-qr-foot">1,000+ records &middot; updated weekly</span>
             </article>
@@ -928,7 +1260,7 @@
     <section class="sec" id="space" data-screen-label="Space" aria-labelledby="space-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">02 / 09</div>
+          <div class="sec-num">02 / 10</div>
           <h2 class="sec-title" id="space-title">
             The <span class="ital">Space</span>.
             <span class="cn mono">环境</span>
@@ -947,23 +1279,23 @@
 
         <div class="gal-wide">
           <div class="gal-slot w-hero">
-            <img src="assets/pics/space/1.JPG" alt="Blackmoon listening room interior with vinyl wall Beijing hutong" loading="lazy">
+            <img src="assets/pics/space/1.webp" alt="Blackmoon listening room interior with vinyl wall Beijing hutong" loading="lazy">
             <span class="gal-cap">Listening Room</span>
           </div>
           <div class="gal-slot">
-            <img src="assets/pics/space/2.JPG" alt="Vinyl wall collection at Blackmoon Listening Bar Beijing" loading="lazy">
+            <img src="assets/pics/space/2.webp" alt="Vinyl wall collection at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">The Hallway</span>
           </div>
           <div class="gal-slot">
-            <img src="assets/pics/space/3.JPG" alt="DJ booth and turntable setup at Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/space/3.webp" alt="DJ booth and turntable setup at Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">The booth</span>
           </div>
           <div class="gal-slot">
-            <img src="assets/pics/space/5.JPG" alt="Bar detail and vinyl collection Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/space/5.webp" alt="Bar detail and vinyl collection Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Vinyl wall</span>
           </div>
           <div class="gal-slot">
-            <img src="assets/pics/space/6.JPG" alt="Hutong entrance to Blackmoon Listening Bar Beijing" loading="lazy">
+            <img src="assets/pics/space/6.webp" alt="Hutong entrance to Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Hutong Quietness</span>
           </div>
         </div>
@@ -993,7 +1325,7 @@
     <section class="sec" id="drinks" data-screen-label="Drinks" aria-labelledby="drinks-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">03 / 09</div>
+          <div class="sec-num">03 / 10</div>
           <h2 class="sec-title" id="drinks-title">
             The <span class="ital">Pour</span>.
             <span class="cn mono">饮品</span>
@@ -1012,23 +1344,23 @@
 
         <div class="gal-grid">
           <div class="gal-slot hero">
-            <img src="assets/pics/drinks/1.jpg" alt="Signature cocktail pour at Blackmoon Listening Bar Beijing" loading="lazy">
+            <img src="assets/pics/drinks/1.webp" alt="Signature cocktail pour at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Cocktails</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/drinks/2.JPG" alt="Back bar bottles selection at Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/drinks/2.webp" alt="Back bar bottles selection at Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Cocktails</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/drinks/3.jpg" alt="Craft beer and glassware at Blackmoon Listening Bar" loading="lazy">
+            <img src="assets/pics/drinks/3.webp" alt="Craft beer and glassware at Blackmoon Listening Bar" loading="lazy">
             <span class="gal-cap">Craft Beers</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/drinks/7.JPG" alt="Signature cocktail served at Blackmoon Listening Bar Beijing hutong" loading="lazy">
+            <img src="assets/pics/drinks/7.webp" alt="Signature cocktail served at Blackmoon Listening Bar Beijing hutong" loading="lazy">
             <span class="gal-cap">Eason Chen Sour</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/drinks/8.JPG" alt="Classic cocktails bar atmosphere and vinyl setup at Blackmoon Listening Bar Beijing" loading="lazy">
+            <img src="assets/pics/drinks/8.webp" alt="Classic cocktails bar atmosphere and vinyl setup at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Classics</span>
           </div>
         </div>
@@ -1105,7 +1437,7 @@
     <section class="sec" id="food" data-screen-label="Food" aria-labelledby="food-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">04 / 09</div>
+          <div class="sec-num">04 / 10</div>
           <h2 class="sec-title" id="food-title">
             The <span class="ital">Plate</span>.
             <span class="cn mono">正餐</span>
@@ -1130,7 +1462,7 @@
         <div class="coffee-hours" aria-label="Dinner service">
           <div class="ch-block">
             <span class="ch-label">Dinner service &middot; 晚餐时间</span>
-            <span class="ch-val">Daily <span class="ital">17:30 &mdash; 22:00</span></span>
+            <span class="ch-val">Daily <span class="ital">18:00 &mdash; 22:00</span></span>
             <span class="ch-meta">每日 下午五点半至晚上十点</span>
           </div>
           <div class="ch-block ch-right">
@@ -1142,11 +1474,11 @@
 
         <div class="gal-grid">
           <div class="gal-slot sm">
-            <img src="assets/pics/food/1.jpg" alt="Food plate detail at Ravens kitchen Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/food/1.webp" alt="Food plate detail at Ravens kitchen Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Plate</span>
           </div>
           <div class="gal-slot hero" style="grid-column:2;grid-row:1 / span 2">
-            <img src="assets/pics/food/2.JPG" alt="Signature dish by Ravens at Blackmoon Listening Bar Beijing" loading="lazy">
+            <img src="assets/pics/food/2.webp" alt="Signature dish by Ravens at Blackmoon Listening Bar Beijing" loading="lazy">
             <span class="gal-cap">Signature</span>
           </div>
           <div class="gal-slot sm" style="grid-column:1">
@@ -1213,7 +1545,7 @@
     <section class="sec" id="coffee" data-screen-label="Coffee" aria-labelledby="coffee-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">05 / 09</div>
+          <div class="sec-num">05 / 10</div>
           <h2 class="sec-title" id="coffee-title">
             The <span class="ital">Day</span>.
             <span class="cn mono">咖啡</span>
@@ -1249,15 +1581,15 @@
 
         <div class="gal-grid">
           <div class="gal-slot hero">
-            <img src="assets/pics/coffee/1.jpg" alt="Pour-over coffee preparation at 古耳 Coffee Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/coffee/1.webp" alt="Pour-over coffee preparation at 古耳 Coffee Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Signature pour</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/coffee/2.jpg" alt="Pour over Espresso bar and coffee equipment at Blackmoon Beijing" loading="lazy">
+            <img src="assets/pics/coffee/2.webp" alt="Pour over Espresso bar and coffee equipment at Blackmoon Beijing" loading="lazy">
             <span class="gal-cap">Pour-over</span>
           </div>
           <div class="gal-slot sm">
-            <img src="assets/pics/coffee/3.jpg" alt="Coffee beans and latte at 古耳 Coffee Blackmoon" loading="lazy">
+            <img src="assets/pics/coffee/3.webp" alt="Coffee beans and latte at 古耳 Coffee Blackmoon" loading="lazy">
             <span class="gal-cap">Latte</span>
           </div>
         </div>
@@ -1312,7 +1644,7 @@
     <section class="sec" id="events" data-screen-label="Events" aria-labelledby="events-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">06 / 09</div>
+          <div class="sec-num">06 / 10</div>
           <h2 class="sec-title" id="events-title">
             Host a <span class="ital">Night</span>.
             <span class="cn mono">包场与活动</span>
@@ -1339,11 +1671,11 @@
         </div>
 
         <div class="gal-wide">
-          <div class="gal-slot w-hero"><img src="assets/pics/events/crowd.jpg" alt="A full house at a Blackmoon night in Beijing" loading="lazy"><span class="gal-cap">Full house</span></div>
-          <div class="gal-slot"><img src="assets/pics/events/ravens-dinner.jpg" alt="Long-table private dinner at Ravens" loading="lazy"><span class="gal-cap">Private dinner</span></div>
-          <div class="gal-slot"><img src="assets/pics/events/djs-group.jpg" alt="Guest selectors at the Blackmoon DJ booth" loading="lazy"><span class="gal-cap">Guest selectors</span></div>
-          <div class="gal-slot"><img src="assets/pics/events/cocktails-lamp.jpg" alt="Cocktails under a green lamp" loading="lazy"><span class="gal-cap">The bar</span></div>
-          <div class="gal-slot"><img src="assets/pics/events/lasagna.jpg" alt="Ravens lasagna" loading="lazy"><span class="gal-cap">Ravens kitchen</span></div>
+          <div class="gal-slot w-hero"><img src="assets/pics/events/crowd.webp" alt="A full house at a Blackmoon night in Beijing" loading="lazy"><span class="gal-cap">Full house</span></div>
+          <div class="gal-slot"><img src="assets/pics/events/ravens-dinner.webp" alt="Long-table private dinner at Ravens" loading="lazy"><span class="gal-cap">Private dinner</span></div>
+          <div class="gal-slot"><img src="assets/pics/events/djs-group.webp" alt="Guest selectors at the Blackmoon DJ booth" loading="lazy"><span class="gal-cap">Guest selectors</span></div>
+          <div class="gal-slot"><img src="assets/pics/events/cocktails-lamp.webp" alt="Cocktails under a green lamp" loading="lazy"><span class="gal-cap">The bar</span></div>
+          <div class="gal-slot"><img src="assets/pics/events/lasagna.webp" alt="Ravens lasagna" loading="lazy"><span class="gal-cap">Ravens kitchen</span></div>
         </div>
 
         <div class="block-label"><span>Minimum spend · 包场最低消费</span><span>On food &amp; drinks — no separate room fee</span></div>
@@ -1384,7 +1716,7 @@
     <section class="sec" id="catering" data-screen-label="Catering" aria-labelledby="catering-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">07 / 09</div>
+          <div class="sec-num">07 / 10</div>
           <h2 class="sec-title" id="catering-title">
             To <span class="ital">Go</span>.
             <span class="cn mono">外烩 · 盒饭 · 酒水外送</span>
@@ -1440,7 +1772,7 @@
         <p class="fine" style="margin-top:0;margin-bottom:16px">Dinner peaks 18:00 — 20:30; after 21:00 it's a drinking crowd. December — January is high season; Tue — Wed and February &amp; September are the best time for a buyout.</p>
         <div class="terms-grid">
           <div class="term"><h3>Deposit <span class="cn">定金</span></h3><p>50% of the minimum spend or quote secures the date; the balance is settled on the day. Monthly billing for corporate clients under contract.</p></div>
-          <div class="term"><h3>Cancellation <span class="cn">取消与改期</span></h3><p>14+ days: full refund or free reschedule · 7 — 13 days: 50% refund · under 7 days: non-refundable, one reschedule within 3 months.</p></div>
+          <div class="term"><h3>Cancellation <span class="cn">取消</span></h3><p>Cancel 7+ days ahead for a full refund.</p></div>
           <div class="term"><h3>Final headcount <span class="cn">人数确认</span></h3><p>Confirm numbers 72 hours ahead; we bill the higher of confirmed or actual guests.</p></div>
           <div class="term"><h3>Peak-hour groups <span class="cn">高峰时段订座</span></h3><p>Fri — Sat 18:00 — 21:00: groups of 8+ take a set menu with a 2-hour table; 12+ please book a semi-private area.</p></div>
           <div class="term"><h3>Quiet hours after 22:00 <span class="cn">安静时段</span></h3><p>From 22:00, music stays below 80 dB on our in-house meter, and no loud voices outdoors — please don't gather or smoke at the door. No confetti, smoke machines or open flames (cake candles fine).</p></div>
@@ -1473,7 +1805,7 @@
     <section class="sec" id="location" data-screen-label="Location" style="border-top:1px solid var(--rule)" aria-labelledby="loc-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">08 / 09</div>
+          <div class="sec-num">08 / 10</div>
           <h2 class="sec-title" id="loc-title">
             Find <span class="ital">Us</span>.
             <span class="cn mono">地点</span>
@@ -1595,9 +1927,9 @@
             <div class="hours" aria-label="Opening hours">
               <div class="hours-row" style="color:var(--accent)"><span class="day">Coffee · Daily</span><span>10:00 — 18:00</span></div>
               <div class="hours-row" data-days="1"><span class="day">Bar · Mon</span><span>Closed</span></div>
-              <div class="hours-row" data-days="2,3,4"><span class="day">Bar · Tue — Thu</span><span>17:30 — 01:00</span></div>
-              <div class="hours-row" data-days="5,6"><span class="day">Bar · Fri — Sat</span><span>17:30 — 02:00</span></div>
-              <div class="hours-row" data-days="0"><span class="day">Bar · Sun</span><span>16:00 — 00:00</span></div>
+              <div class="hours-row" data-days="2,3,4"><span class="day">Bar · Tue — Thu</span><span>18:00 — 01:00</span></div>
+              <div class="hours-row" data-days="5,6"><span class="day">Bar · Fri — Sat</span><span>18:00 — 01:30</span></div>
+              <div class="hours-row" data-days="0"><span class="day">Bar · Sun</span><span>18:00 — 01:00</span></div>
             </div>
           </address>
 
@@ -1620,7 +1952,7 @@
     <section class="sec" id="contact" data-screen-label="Contact" aria-labelledby="contact-title">
       <div class="wrap">
         <div class="sec-head">
-          <div class="sec-num">09 / 09</div>
+          <div class="sec-num">09 / 10</div>
           <h2 class="sec-title" id="contact-title">
             Stay in <span class="ital">Touch</span>.
             <span class="cn mono">联系方式</span>
@@ -1630,8 +1962,8 @@
         <!-- Reservations callout -->
         <aside class="reserve-band" aria-label="Reservations">
           <div class="left">
-            <span class="label">Reservations &middot; 预订</span>
-            <span class="title">Tables, private hire &amp; catering &mdash; <span class="ital">WeChat or phone</span>.</span>
+            <span class="label">Tables, events &amp; catering &middot; 预订</span>
+            <span class="title">Book by <span class="ital">WeChat or phone</span>.</span>
             <span class="meta">订座请添加微信 RavensDomain · 包场、外烩与盒饭请添加微信 ruhaox · 或致电 +86 18611741214 · 包场请至少提前 72 小时</span>
           </div>
           <div class="actions">
@@ -1657,7 +1989,7 @@
               Sets, dig of the week, and upcoming guest selectors. The fastest way to know what's spinning tonight.
             </p>
             <div class="qr-wrap" id="ig-qr">
-              <img class="qr-img" src="assets/qrcodes/instagram.png" alt="Instagram QR code">
+              <img class="qr-img" src="assets/qrcodes/instagram.webp" alt="Instagram QR code">
               <span class="qr-caption">Scan to follow on Instagram</span>
             </div>
             <div class="contact-action">
@@ -1675,7 +2007,7 @@
               Personal WeChat for private hire, events, catering, meal boxes and business inquiries.
             </p>
             <div class="qr-wrap" id="wechat-qr">
-              <img class="qr-img" src="assets/qrcodes/personal_wechat.png" alt="WeChat personal QR code">
+              <img class="qr-img" src="assets/qrcodes/personal_wechat.webp" alt="WeChat personal QR code">
               <span class="qr-caption">扫码添加 — Scan with WeChat</span>
             </div>
             <div class="contact-action">
@@ -1695,7 +2027,7 @@
               Space, records, event photos — visual notes updated weekly.
             </p>
             <div class="qr-wrap" id="xhs-qr">
-              <img class="qr-img" src="assets/qrcodes/xiaohongshu.png" alt="Xiaohongshu QR code">
+              <img class="qr-img" src="assets/qrcodes/xiaohongshu.webp" alt="Xiaohongshu QR code">
               <span class="qr-caption">扫码关注 — Scan to follow</span>
             </div>
             <div class="contact-action">
@@ -1713,7 +2045,7 @@
               Long-form posts: Roots culture and music related content, guest DJ lineups, menu updates, and more.
             </p>
             <div class="qr-wrap" id="oa-qr">
-              <img class="qr-img" src="assets/qrcodes/wechat_official_account.png" alt="WeChat Official Account QR code">
+              <img class="qr-img" src="assets/qrcodes/wechat_official_account.webp" alt="WeChat Official Account QR code">
               <span class="qr-caption">扫码关注 — Scan with WeChat to follow</span>
             </div>
             <div class="contact-action">
@@ -1805,6 +2137,28 @@
       </div>
     </aside>
 
+
+    <section class="sec" id="faq" data-screen-label="FAQ" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-num">10 / 10</div>
+          <h2 class="sec-title" id="faq-title">
+            Good to <span class="ital">Know</span>.
+            <span class="cn mono">常见问题</span>
+          </h2>
+        </div>
+        <div class="faq">
+          <details><summary>What is Blackmoon?</summary><p>Blackmoon (黑月) is a vinyl-only hi-fi listening bar on Beiluoguxiang in Beijing&#x27;s Dongcheng hutongs. It shares one roof with Ravens (乌鸦), a kitchen serving dinner since 2017, and 古耳 Gǔ Ěr, a specialty coffee bar. The records are hip-hop, soul/funk, jazz and City Pop.</p></details>
+          <details><summary>Where is Blackmoon and when is it open?</summary><p>No. 66 Beiluoguxiang, Dongcheng District, Beijing (北京市东城区北锣鼓巷 66 号). Coffee is served daily 10:00–18:00. The bar opens Tue–Thu 18:00–01:00, Fri–Sat 18:00–01:30 and Sun 18:00–01:00, and is closed on Mondays.</p></details>
+          <details><summary>How do I reserve a table?</summary><p>Add WeChat RavensDomain or call +86 186 1174 1214. On Friday and Saturday evenings (18:00–21:00), groups of 8 or more take a set menu with a 2-hour table, and groups of 12 or more should book a semi-private area.</p></details>
+          <details><summary>Can I book the whole bar for a private event?</summary><p>Yes. A full evening buyout (18:00–23:00) is a minimum spend on food and drinks: ¥6,000 Tue–Thu, ¥8,000 Sun, ¥12,000 Fri–Sat and from ¥15,000 on peak dates, for up to 40 seated guests. A semi-private area for 12–20 guests starts at ¥3,000. In February and September, buyout minimums are 20% off.</p></details>
+          <details><summary>How much are event packages per person?</summary><p>From 15 guests: Spin &amp; Sip ¥198 (2-hour reception, 2 drinks, snacks), Ravens Supper ¥298 (family-style three courses, 2 drinks) and Full Night ¥398 (signature feast, 4 drinks, dessert). Packages count toward the minimum spend.</p></details>
+          <details><summary>Can I bring my own DJ or band?</summary><p>Yes, free of charge. Sound check is before 17:00, and from 22:00 music must stay below 80 dB on our in-house meter. Our own selectors can also play a 3-hour vinyl set for ¥1,500.</p></details>
+          <details><summary>Do you do catering or meal boxes (盒饭)?</summary><p>Yes. Off-site catering is ¥98, ¥168 or ¥238 per guest (min. 15 guests or ¥2,000, 5 days&#x27; notice). Meal boxes are ¥68, ¥98 or ¥138 (min. 15 boxes, 2 days&#x27; notice), delivered within 5 km of Gulou for lunch (11:30–13:00, Tue–Fri) or dinner (17:30–19:00). We also run a mobile cocktail bar and a 古耳 coffee bar, ¥1,500 each.</p></details>
+          <details><summary>How do deposits and cancellations work?</summary><p>A 50% deposit secures the date. Cancel 7+ days ahead for a full refund. Fapiao are available.</p></details>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ─── Footer ─────────────────────────────────────────────── -->
@@ -1818,7 +2172,7 @@
         </div>
         <div class="foot-meta">
           66 Beiluoguxiang · Dongcheng · Beijing<br/>
-          Tue — Sun · 17:30 — Late
+          Bar · Tue — Sun · 18:00 — Late
         </div>
         <div class="foot-meta" style="text-align:right">
           Instagram · WeChat · 公众号 · 小红书<br/>
@@ -1865,6 +2219,32 @@
       document.querySelectorAll('.hours-row[data-days]').forEach(function(r){
         if (r.getAttribute('data-days').split(',').indexOf(String(d)) > -1) r.classList.add('today');
       });
+    })();
+  </script>
+
+  <script>
+    // Analytics: conversion events, sent to whichever provider is loaded (Baidu _hmt / Umami)
+    (function(){
+      function track(name, label){
+        if (window._hmt) window._hmt.push(['_trackEvent', 'conversion', name, label || '']);
+        if (window.umami && window.umami.track) window.umami.track(name, label ? {label: label} : undefined);
+      }
+      window.bmTrack = track;
+      document.addEventListener('click', function(e){
+        var a = e.target.closest('a, .wechat-card');
+        if (!a) return;
+        var h = a.getAttribute('href') || '';
+        if (a.hasAttribute('download')) track('brochure_download', document.documentElement.lang);
+        else if (h.indexOf('tel:') === 0) track('call');
+        else if (h.indexOf('mailto:') === 0) track('email');
+        else if (h.indexOf('map.qq.com') > -1) track('open_map');
+        else if (h.indexOf('dianping.com') > -1) track('dianping');
+        else if (h.indexOf('instagram.com') > -1) track('instagram');
+        else if (h.indexOf('xiaohongshu.com') > -1) track('xiaohongshu');
+        else if (a.classList.contains('lang-link')) track('switch_language', a.textContent.trim());
+        else if (a.classList.contains('wechat-card')) track('wechat_qr', a.id || '');
+        else if (h === '#events' || h === '#catering') track('view_events_cta');
+      }, true);
     })();
   </script>
 
