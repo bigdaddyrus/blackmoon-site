@@ -1,0 +1,28 @@
+# Blackmoon 黑月 · blackmoonbeijing.com
+# Search engines and AI assistants are welcome to read and cite this site.
+User-agent: *
+Allow: /
+Disallow: /uploads/
+Disallow: /tweaks-app.jsx
+Disallow: /tweaks-panel.jsx
+Disallow: /menu-transcription.txt
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+Sitemap: https://blackmoonbeijing.com/sitemap.xml

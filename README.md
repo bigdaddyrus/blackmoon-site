@@ -17,7 +17,7 @@ Official website for Blackmoon·黑月, a vinyl listening bar, kitchen, and coff
 
 **Hours**:
 - Coffee: Daily 10:00 — 18:00
-- Bar: Tue-Thu 18:00 — 01:00 | Fri-Sat 18:00 — 02:00 | Sun 16:00 — 00:00
+- Bar: Tue-Thu 18:00 — 01:00 | Fri-Sat 18:00 — 01:30 | Sun 18:00 — 01:00
 - Closed Mondays
 
 ## Features
