@@ -108,7 +108,7 @@
         "acceptsReservations": true,
         "currenciesAccepted": "CNY",
         "hasMap": "https://apis.map.qq.com/uri/v1/marker?marker=coord:39.943247,116.403009;title:Blackmoon·黑月;addr:北京市东城区北锣鼓巷66号",
-        "maximumAttendeeCapacity": 40,
+        "maximumAttendeeCapacity": 60,
         "amenityFeature": [
           {
             "@type": "LocationFeatureSpecification",
@@ -174,8 +174,8 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Full venue buyout (evening)",
-                "description": "Minimum spend on food & drinks, Tue–Thu 18:00–23:00. Sun ¥8,000, Fri–Sat ¥12,000, peak dates from ¥15,000. Up to 40 seated."
+                "name": "Full venue buyout (seated or standing, evening)",
+                "description": "Minimum spend on food & drinks, Tue–Thu 18:00–23:00. Sun ¥8,000, Fri–Sat ¥12,000, peak dates on request. ~30–35 seated or 50–60 standing."
               },
               "priceSpecification": {
                 "@type": "PriceSpecification",
@@ -187,8 +187,8 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Semi-private area (evening)",
-                "description": "Minimum spend for 12–20 guests, Tue–Thu. Sun ¥4,000, Fri–Sat ¥5,000."
+                "name": "Semi-private area (seated or standing, evening)",
+                "description": "Minimum spend for ~12–18 seated or 20–30 standing guests, Tue–Thu. Sun ¥4,000, Fri–Sat ¥5,000, peak dates on request."
               },
               "priceSpecification": {
                 "@type": "PriceSpecification",
@@ -200,42 +200,14 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Event package: Spin & Sip",
-                "description": "2-hour reception, 2 drinks, Ravens snacks & platters. From 15 guests."
+                "name": "Daytime venue hire",
+                "description": "10:00–17:00 for shoots, workshops and launches (min. 2 hours). Tue–Thu ¥500/h, Fri–Sun ¥700/h."
               },
               "priceSpecification": {
                 "@type": "PriceSpecification",
-                "price": 198,
+                "price": 500,
                 "priceCurrency": "CNY",
-                "unitText": "per guest"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Event package: Ravens Supper",
-                "description": "Family-style three courses with welcome cocktail + 1 drink. From 15 guests."
-              },
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": 298,
-                "priceCurrency": "CNY",
-                "unitText": "per guest"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Event package: Full Night",
-                "description": "Signature feast, welcome cocktail + 3 drinks, Basque cheesecake. From 15 guests."
-              },
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": 398,
-                "priceCurrency": "CNY",
-                "unitText": "per guest"
+                "unitText": "per hour"
               }
             },
             {
@@ -243,7 +215,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Off-site catering",
-                "description": "Ravens platters and sharing feasts delivered within 5 km of Gulou; ¥98 / ¥168 / ¥238 per guest. Min. 15 guests or ¥2,000."
+                "description": "Ravens platters and sharing feasts delivered within 5 km of Gulou; from ¥98 / ¥168 / ¥238 per guest. Min. 15 guests or ¥2,000."
               },
               "priceSpecification": {
                 "@type": "PriceSpecification",
@@ -271,20 +243,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Mobile cocktail bar",
-                "description": "1 bartender, 3 hours, up to 50 guests."
-              },
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": 1500,
-                "priceCurrency": "CNY"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Gǔ Ěr coffee bar",
-                "description": "1 barista, 3 hours, 50 cups included."
+                "description": "1 bartender, 3 hours, up to 50 guests, ice & glassware included."
               },
               "priceSpecification": {
                 "@type": "PriceSpecification",
@@ -344,15 +303,15 @@
         "name": "Can I book the whole bar for a private event?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. A full evening buyout (18:00–23:00) is a minimum spend on food and drinks: ¥6,000 Tue–Thu, ¥8,000 Sun, ¥12,000 Fri–Sat and from ¥15,000 on peak dates, for up to 40 seated guests. A semi-private area for 12–20 guests starts at ¥3,000. In February and September, buyout minimums are 20% off."
+          "text": "Yes. Both seated and standing buyouts are available. A full evening buyout (18:00–23:00, ~30–35 seated or 50–60 standing) is a minimum spend on food and drinks: ¥6,000 Tue–Thu, ¥8,000 Sun, ¥12,000 Fri–Sat (peak dates on request). A semi-private area (~12–18 seated or 20–30 standing) starts at ¥3,000. Daytime hire (10:00–17:00, min. 2 hours) starts at ¥500/h. In February and September, evening buyout minimums are 20% off."
         }
       },
       {
         "@type": "Question",
-        "name": "How much are event packages per person?",
+        "name": "How do event menus work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "From 15 guests: Spin & Sip ¥198 (2-hour reception, 2 drinks, snacks), Ravens Supper ¥298 (family-style three courses, 2 drinks) and Full Night ¥398 (signature feast, 4 drinks, dessert). Packages count toward the minimum spend."
+          "text": "Event menus are tailored to your format and budget — seated plated courses, family-style sharing feasts or standing reception platters — and count 100% toward the minimum spend."
         }
       },
       {
@@ -360,7 +319,7 @@
         "name": "Can I bring my own DJ or band?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, free of charge. Sound check is before 17:00, and from 22:00 music must stay below 80 dB on our in-house meter. Our own selectors can also play a 3-hour vinyl set for ¥1,500."
+          "text": "Yes, free of charge. Sound check is before 17:00, and from 22:00 music must stay below 80 dB on our in-house meter. Our own selectors can also play a 2-hour vinyl set for ¥1,500."
         }
       },
       {
@@ -368,7 +327,7 @@
         "name": "Do you do catering or meal boxes (盒饭)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Off-site catering is ¥98, ¥168 or ¥238 per guest (min. 15 guests or ¥2,000, 5 days' notice). Meal boxes are ¥68, ¥98 or ¥138 (min. 15 boxes, 2 days' notice), delivered within 5 km of Gulou for lunch (11:30–13:00, Tue–Fri) or dinner (17:30–19:00). We also run a mobile cocktail bar and a 古耳 coffee bar, ¥1,500 each."
+          "text": "Yes. Off-site catering starts at ¥98, ¥168 or ¥238 per guest (min. 15 guests or ¥2,000, 5 days' notice). Meal boxes are ¥68, ¥98 or ¥138 (min. 15 boxes, 2 days' notice), delivered within 5 km of Gulou for lunch (11:30–13:00, Tue–Fri) or dinner (17:30–19:00). We also run a mobile cocktail bar (¥1,500)."
         }
       },
       {
@@ -391,7 +350,7 @@
            <script defer src="https://cloud.umami.is/script.js" data-website-id="WEBSITE_ID"></script>
        Conversion clicks are tracked by the track() helper at the end of <body>.
   ──────────────────────────────────────────────────────────────── -->
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="d06d15f5-08f2-4c68-95e5-508470fb8c60"></script>
+  <script defer src="/u/script.js" data-host-url="/u" data-website-id="d06d15f5-08f2-4c68-95e5-508470fb8c60" onerror="var s=document.createElement('script');s.defer=true;s.src='https://cloud.umami.is/script.js';s.setAttribute('data-website-id','d06d15f5-08f2-4c68-95e5-508470fb8c60');document.head.appendChild(s)"></script>
 
   <!-- ─── Fonts ──────────────────────────────────────────────── -->
   <link href="/assets/fonts/fonts.css" rel="stylesheet" />
@@ -1273,7 +1232,7 @@
             A listening room and dining lounge behind a <span class="accent">black hutong door</span> &mdash; brick, tungsten, vinyl, and very little else.
           </p>
           <div class="gallery-body">
-            <p>Forty seats across the main listening room and dining lounge. A vinyl wall stretching the full length behind the bar, and a single warm-glow filament behind the booth.</p>
+            <p>Thirty to thirty-five seats across the main listening room and dining lounge (and up to 50–60 for standing receptions). A vinyl wall stretching the full length behind the bar, and a single warm-glow filament behind the booth.</p>
           </div>
         </div>
 
@@ -1303,7 +1262,7 @@
         <div class="space-meta">
           <div>
             <span class="space-stat-label">Capacity</span>
-            <span class="space-stat-val">40 <span class="ital">seats</span></span>
+            <span class="space-stat-val">30–35 <span class="ital">seats</span></span>
           </div>
           <div>
             <span class="space-stat-label">Established</span>
@@ -1463,7 +1422,7 @@
           <div class="ch-block">
             <span class="ch-label">Dinner service &middot; 晚餐时间</span>
             <span class="ch-val">Daily <span class="ital">18:00 &mdash; 22:00</span></span>
-            <span class="ch-meta">每日 下午五点半至晚上十点</span>
+            <span class="ch-meta">每日 下午六点至晚上十点</span>
           </div>
           <div class="ch-block ch-right">
             <span class="ch-label">Kitchen &middot; 厨房</span>
@@ -1662,11 +1621,11 @@
         </div>
 
         <div class="svc-grid">
-          <div class="svc"><span class="svc-num">01</span><h3 class="svc-title">Private buyouts <span class="cn">包场 · 私人活动</span></h3><p>Whole-venue or semi-private hire of the listening room, dining lounge and DJ booth.</p></div>
+          <div class="svc"><span class="svc-num">01</span><h3 class="svc-title">Private buyouts <span class="cn">包场 · 私人活动</span></h3><p>Full or semi-private hire — seated or standing — across the listening room, dining lounge and DJ booth.</p></div>
           <div class="svc"><span class="svc-num">02</span><h3 class="svc-title">Brand &amp; corporate <span class="cn">品牌 · 商务活动</span></h3><p>Launches, client dinners, team nights, press and listening sessions, with custom music, menus and cocktails.</p></div>
           <div class="svc"><span class="svc-num">03</span><h3 class="svc-title">Parties &amp; DJ nights <span class="cn">派对 · 音乐之夜</span></h3><p>Themed vinyl sets by our selectors, or bring your own DJ or band.</p></div>
           <div class="svc"><span class="svc-num">04</span><h3 class="svc-title">Food catering <span class="cn">餐饮外送 · 外烩</span></h3><p>Ravens sharing platters and family-style feasts, delivered to your office, gallery or set.</p></div>
-          <div class="svc"><span class="svc-num">05</span><h3 class="svc-title">Cocktail &amp; coffee bar <span class="cn">鸡尾酒 · 酒水 · 咖啡</span></h3><p>A mobile bar with our bartenders, custom brand signatures, and a Gǔ Ěr pour-over bar for daytime events.</p></div>
+          <div class="svc"><span class="svc-num">05</span><h3 class="svc-title">Cocktail &amp; mobile bar <span class="cn">鸡尾酒 · 移动吧台</span></h3><p>A mobile bar with our bartenders, custom brand signatures, draft beer and zero-proof pours at your venue.</p></div>
           <div class="svc"><span class="svc-num">06</span><h3 class="svc-title">Meal boxes <span class="cn">盒饭 · 团餐</span></h3><p>Ravens signatures packed per person for offices, shoots and workshops.</p></div>
         </div>
 
@@ -1681,33 +1640,28 @@
         <div class="block-label"><span>Minimum spend · 包场最低消费</span><span>On food &amp; drinks — no separate room fee</span></div>
         <div class="ptable-wrap">
           <table class="ptable">
-            <thead><tr><th>Evening · 18:00 — 23:00</th><th>Tue — Thu</th><th>Sun</th><th>Fri — Sat</th><th>Peak dates*</th></tr></thead>
+            <thead><tr><th>Evening · 18:00 — 23:00 (Seated &amp; Standing)</th><th>Tue — Thu</th><th>Sun</th><th>Fri — Sat</th><th>Peak dates*</th></tr></thead>
             <tbody>
-              <tr><td>Full buyout<small>Listening room, dining lounge &amp; DJ booth · up to 40 seated</small></td><td>¥6,000</td><td>¥8,000</td><td>¥12,000</td><td class="peak">from ¥15,000</td></tr>
-              <tr><td>Semi-private area<small>12 — 20 guests</small></td><td>¥3,000</td><td>¥4,000</td><td>¥5,000</td><td class="peak">from ¥6,500</td></tr>
-              <tr><td>Daytime hire<small>10:00 — 17:00 · shoots, workshops, launches · min. 3 hours, with Gǔ Ěr</small></td><td>¥500/h</td><td>¥700/h</td><td>¥700/h</td><td class="peak">on request</td></tr>
+              <tr><td>Seated · Full buyout<small>Listening room, dining lounge &amp; DJ booth · ~30 — 35 seated</small></td><td>¥6,000</td><td>¥8,000</td><td>¥12,000</td><td class="peak">Enquire</td></tr>
+              <tr><td>Seated · Semi-private<small>Dedicated zone · ~12 — 18 seated</small></td><td>¥3,000</td><td>¥4,000</td><td>¥5,000</td><td class="peak">Enquire</td></tr>
+              <tr><td>Standing · Full buyout<small>Whole-venue reception or party (flexible seating) · ~50 — 60 standing</small></td><td>¥6,000</td><td>¥8,000</td><td>¥12,000</td><td class="peak">Enquire</td></tr>
+              <tr><td>Standing · Semi-private<small>Dedicated zone · ~20 — 30 standing</small></td><td>¥3,000</td><td>¥4,000</td><td>¥5,000</td><td class="peak">Enquire</td></tr>
+              <tr><td>Daytime hire<small>10:00 — 17:00 · shoots, workshops, launches · min. 2 hours</small></td><td>¥500/h</td><td>¥700/h</td><td>¥700/h</td><td class="peak">Enquire</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="fine">* Peak dates: Fri — Sat from December to mid-January, Christmas, New Year's Eve, Valentine's, Qixi and public-holiday eves. The minimum covers food &amp; drinks; any shortfall is charged as a venue fee.</p>
+        <p class="fine">* Peak dates: Fri — Sat from December to mid-January, Christmas, New Year's Eve, Valentine's, Qixi and public-holiday eves — enquire for quote. The minimum spend goes entirely toward food &amp; drinks (custom menus tailored to plated courses, family-style sharing or standing canapés); any shortfall is charged as a venue fee.</p>
         <div class="offpeak"><b>Off-peak offer · 淡季礼遇</b> &mdash; throughout February and September, 20% off the minimum spend for full and semi-private buyouts (not combinable with peak dates; daytime hire excluded). Full buyouts also get a complimentary vinyl set by our selector.</div>
 
-        <div class="block-label"><span>Per-guest packages · 人均套餐</span><span>From 15 guests · counts toward the minimum</span></div>
-        <div class="pkg-grid">
-          <div class="pkg"><h3 class="pkg-name">Spin &amp; Sip <span class="ital">酒会</span></h3><div class="pkg-price">¥198<small>/ guest</small></div><ul><li>2-hour standing reception</li><li>2 drinks — cocktail, draft or zero-proof</li><li>Ravens snacks &amp; sharing platters</li></ul></div>
-          <div class="pkg"><h3 class="pkg-name">Ravens Supper <span class="ital">乌鸦晚宴</span></h3><div class="pkg-price">¥298<small>/ guest</small></div><ul><li>Family-style three courses</li><li>Duck confit, lasagna &amp; more to share</li><li>Welcome cocktail + 1 drink</li></ul></div>
-          <div class="pkg"><h3 class="pkg-name">Full Night <span class="ital">尽兴之夜</span></h3><div class="pkg-price">¥398<small>/ guest</small></div><ul><li>Signature feast — duck, rib-eye, honey ribs</li><li>Welcome cocktail + 3 drinks</li><li>Basque cheesecake</li></ul></div>
-        </div>
-
-        <div class="block-label"><span>Add-ons · 加选</span><span></span></div>
+        <div class="block-label"><span>Add-ons · 加选服务</span><span>Mix &amp; match for your night</span></div>
         <div class="addon-grid menu" style="margin-top:0;padding-top:0;border-top:0">
-          <div class="menu-row"><div><span class="menu-name">Guest selector <span class="ital">vinyl set</span></span><span class="menu-desc">3 hours, pulled to your theme</span></div><span class="menu-price">¥ 1,500</span></div>
+          <div class="menu-row"><div><span class="menu-name">Guest selector <span class="ital">vinyl set</span></span><span class="menu-desc">2 hours, pulled to your theme</span></div><span class="menu-price">¥ 1,500</span></div>
           <div class="menu-row"><div><span class="menu-name">Bring your own <span class="ital">DJ or band</span></span><span class="menu-desc">Sound check before 17:00 · under 80 dB after 22:00</span></div><span class="menu-price">Free</span></div>
           <div class="menu-row"><div><span class="menu-name">Listening <span class="ital">session</span></span><span class="menu-desc">Album curation &amp; host</span></div><span class="menu-price">¥ 800</span></div>
           <div class="menu-row"><div><span class="menu-name">Custom brand <span class="ital">cocktail</span></span><span class="menu-desc">Created &amp; named for you · waived on spends over ¥10,000</span></div><span class="menu-price">¥ 800</span></div>
-          <div class="menu-row"><div><span class="menu-name">Free-flow <span class="ital">draft &amp; house wine</span></span><span class="menu-desc">2 hours</span></div><span class="menu-price">+¥ 158 / guest</span></div>
           <div class="menu-row"><div><span class="menu-name">Extension <span class="ital">past closing</span></span><span class="menu-desc">Per hour</span></div><span class="menu-price">¥ 800</span></div>
-          <div class="menu-row"><div><span class="menu-name">Corkage</span><span class="menu-desc">Wine / spirits, per bottle · your own cake is free</span></div><span class="menu-price">¥ 100 / 200</span></div>
+          <div class="menu-row"><div><span class="menu-name">Corkage <span class="ital">(wine only)</span></span><span class="menu-desc">No outside spirits · per bottle · your own cake is free</span></div><span class="menu-price">¥ 100</span></div>
+          <div class="menu-row"><div><span class="menu-name">Bespoke <span class="ital">vinyl playlist / gift records</span></span><span class="menu-desc">Custom record selection or vinyl gifts for guests</span></div><span class="menu-price">Enquire</span></div>
         </div>
       </div>
     </section>
@@ -1756,13 +1710,13 @@
           <div><span class="space-stat-label">Free delivery</span><span class="space-stat-val">30+ <span class="ital">boxes</span></span></div>
           <div><span class="space-stat-label">Volume</span><span class="space-stat-val">5% / 10% <span class="ital">off</span></span></div>
         </div>
-        <p class="fine">Lunch Tue — Fri. Final count by 18:00 the day before. 5% off 50+ boxes, 10% off 100+. Add a soft drink ¥10, Gǔ Ěr coffee ¥25 or Basque cheesecake ¥30. Monthly billing for crews and regular orders.</p>
+        <p class="fine">Lunch Tue — Fri. Final count by 18:00 the day before. 5% off 50+ boxes, 10% off 100+. Add a soft drink ¥10 or Basque cheesecake ¥30. Monthly billing for crews and regular orders.</p>
 
-        <div class="block-label"><span>Drinks &amp; coffee bar · 酒水外烩</span><span>Book 7 days ahead</span></div>
+        <div class="block-label"><span>Drinks catering · 酒水外烩</span><span>Book 7 days ahead</span></div>
         <div class="menu" style="margin-top:0;padding-top:0;border-top:0">
           <div class="menu-row"><div><span class="menu-name">Mobile <span class="ital">bar</span> <span class="cn">移动吧台</span></span><span class="menu-desc">1 bartender, 3 hours, up to 50 guests, ice &amp; glassware. Extra bartender ¥800 · extra hour ¥400.</span></div><span class="menu-price">¥ 1,500</span></div>
           <div class="menu-row"><div><span class="menu-name">Drink <span class="ital">packages</span></span><span class="menu-desc">2 or 3 drinks per guest — cocktails, draft or zero-proof. Or per drink: cocktail ¥60 · beer ¥45, min. ¥3,000.</span></div><span class="menu-price">¥ 128 / 168</span></div>
-          <div class="menu-row"><div><span class="menu-name">Gǔ Ěr <span class="ital">coffee bar</span> <span class="cn">古耳咖啡吧</span></span><span class="menu-desc">1 barista, 3 hours, 50 cups included · extra cup ¥30.</span></div><span class="menu-price">¥ 1,500</span></div>
+          <div class="menu-row"><div><span class="menu-name">Custom brand <span class="ital">cocktail</span> <span class="cn">品牌定制特调</span></span><span class="menu-desc">Bespoke recipe &amp; naming for your event.</span></div><span class="menu-price">¥ 800</span></div>
         </div>
 
         <div class="block-label"><span>Booking terms · 预订须知</span><span>Prices in RMB, service included · valid until 31 March 2027</span></div>
@@ -2151,10 +2105,10 @@
           <details><summary>What is Blackmoon?</summary><p>Blackmoon (黑月) is a vinyl-only hi-fi listening bar on Beiluoguxiang in Beijing&#x27;s Dongcheng hutongs. It shares one roof with Ravens (乌鸦), a kitchen serving dinner since 2017, and 古耳 Gǔ Ěr, a specialty coffee bar. The records are hip-hop, soul/funk, jazz and City Pop.</p></details>
           <details><summary>Where is Blackmoon and when is it open?</summary><p>No. 66 Beiluoguxiang, Dongcheng District, Beijing (北京市东城区北锣鼓巷 66 号). Coffee is served daily 10:00–18:00. The bar opens Tue–Thu 18:00–01:00, Fri–Sat 18:00–01:30 and Sun 18:00–01:00, and is closed on Mondays.</p></details>
           <details><summary>How do I reserve a table?</summary><p>Add WeChat RavensDomain or call +86 186 1174 1214. On Friday and Saturday evenings (18:00–21:00), groups of 8 or more take a set menu with a 2-hour table, and groups of 12 or more should book a semi-private area.</p></details>
-          <details><summary>Can I book the whole bar for a private event?</summary><p>Yes. A full evening buyout (18:00–23:00) is a minimum spend on food and drinks: ¥6,000 Tue–Thu, ¥8,000 Sun, ¥12,000 Fri–Sat and from ¥15,000 on peak dates, for up to 40 seated guests. A semi-private area for 12–20 guests starts at ¥3,000. In February and September, buyout minimums are 20% off.</p></details>
-          <details><summary>How much are event packages per person?</summary><p>From 15 guests: Spin &amp; Sip ¥198 (2-hour reception, 2 drinks, snacks), Ravens Supper ¥298 (family-style three courses, 2 drinks) and Full Night ¥398 (signature feast, 4 drinks, dessert). Packages count toward the minimum spend.</p></details>
-          <details><summary>Can I bring my own DJ or band?</summary><p>Yes, free of charge. Sound check is before 17:00, and from 22:00 music must stay below 80 dB on our in-house meter. Our own selectors can also play a 3-hour vinyl set for ¥1,500.</p></details>
-          <details><summary>Do you do catering or meal boxes (盒饭)?</summary><p>Yes. Off-site catering is ¥98, ¥168 or ¥238 per guest (min. 15 guests or ¥2,000, 5 days&#x27; notice). Meal boxes are ¥68, ¥98 or ¥138 (min. 15 boxes, 2 days&#x27; notice), delivered within 5 km of Gulou for lunch (11:30–13:00, Tue–Fri) or dinner (17:30–19:00). We also run a mobile cocktail bar and a 古耳 coffee bar, ¥1,500 each.</p></details>
+          <details><summary>Can I book the whole bar for a private event?</summary><p>Yes. Both seated and standing buyouts are available. A full evening buyout (18:00–23:00, ~30–35 seated or 50–60 standing) is a minimum spend on food and drinks: ¥6,000 Tue–Thu, ¥8,000 Sun, ¥12,000 Fri–Sat (peak dates on request). A semi-private area (~12–18 seated or 20–30 standing) starts at ¥3,000. Daytime hire (10:00–17:00, min. 2 hours) starts at ¥500/h. In February and September, evening buyout minimums are 20% off.</p></details>
+          <details><summary>How do event menus work?</summary><p>Event menus are tailored to your format and budget — seated plated courses, family-style sharing feasts or standing reception platters — and count 100% toward the minimum spend.</p></details>
+          <details><summary>Can I bring my own DJ or band?</summary><p>Yes, free of charge. Sound check is before 17:00, and from 22:00 music must stay below 80 dB on our in-house meter. Our own selectors can also play a 2-hour vinyl set for ¥1,500.</p></details>
+          <details><summary>Do you do catering or meal boxes (盒饭)?</summary><p>Yes. Off-site catering starts at ¥98, ¥168 or ¥238 per guest (min. 15 guests or ¥2,000, 5 days&#x27; notice). Meal boxes are ¥68, ¥98 or ¥138 (min. 15 boxes, 2 days&#x27; notice), delivered within 5 km of Gulou for lunch (11:30–13:00, Tue–Fri) or dinner (17:30–19:00). We also run a mobile cocktail bar (¥1,500).</p></details>
           <details><summary>How do deposits and cancellations work?</summary><p>A 50% deposit secures the date. Cancel 7+ days ahead for a full refund. Fapiao are available.</p></details>
         </div>
       </div>
@@ -2182,7 +2136,7 @@
       </div>
       <div class="foot-bottom">
         <span>© 2026 Blackmoon Listening Bar</span>
-        <span>京 ICP 备 XXXXXXXX 号</span>
+        <span>Beiluoguxiang · Beijing</span>
       </div>
     </div>
   </footer>
@@ -2237,7 +2191,7 @@
         if (a.hasAttribute('download')) track('brochure_download', document.documentElement.lang);
         else if (h.indexOf('tel:') === 0) track('call');
         else if (h.indexOf('mailto:') === 0) track('email');
-        else if (h.indexOf('map.qq.com') > -1) track('open_map');
+        else if (h.indexOf('map.qq.com') > -1 || h.indexOf('amap.com') > -1 || h.indexOf('maps.apple.com') > -1) track('open_map');
         else if (h.indexOf('dianping.com') > -1) track('dianping');
         else if (h.indexOf('instagram.com') > -1) track('instagram');
         else if (h.indexOf('xiaohongshu.com') > -1) track('xiaohongshu');
